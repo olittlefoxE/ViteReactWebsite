@@ -5,7 +5,7 @@ export const NavBar = () => {
   const Projects = "Projects";
   const Contact = "Contact";
   return (
-    <nav className="sticky flex items-center justify-between bg-gray-700 px-5 py-3 text-white">
+    <nav className="flex items-center justify-between rounded-md bg-gray-700 px-5 py-3 text-white">
       <div className="flex space-x-4">
         <a href /*="#"*/ className="hover:text-gray-300">
           {About}

@@ -1,27 +1,47 @@
 import React from "react";
-import { Footer } from "./components/App-Footer.jsx";
-import { Header } from "./components/App-Header.jsx";
-import { NavBar } from "./components/App-Navbar.jsx";
-import { ToggleThemeButton } from "./components/App-ToggleThemeButton.jsx";
-import { Panel } from "./components/App-Panel__Body.jsx";
-import { AnimatedPanel } from "./components/App-Panel__Aninmation.jsx";
+import { Footer } from "./components/Footer.App.jsx";
+import { Header } from "./components/Header.App.jsx";
+import { NavBar } from "./components/NavBar.App.jsx";
+import { ToggleThemeButton } from "./components/ToggleThemeButton.App.jsx";
+import { Panel } from "./components/Panel.App.jsx";
+import { AnimatedPanel } from "./components/AnimatedPanel.App.jsx";
 
 const App = () => {
   return (
-    <div className="min-h-screen dark:bg-gray-900">
-      <div className="flex min-h-screen items-center justify-center dark:bg-gray-900">
+    <div className="flex min-h-screen flex-col dark:bg-gray-900">
+      {/* Animated Panel Section */}
+      <main className="flex flex-grow items-center justify-center dark:bg-gray-900">
         <AnimatedPanel />
-      </div>
-      <Header />
-      <NavBar />
-      <ToggleThemeButton />
-      <main className="container flex flex-grow py-10">
-        <Panel
-          title="Features"
-          content="Here are some features of our website."
-        />
       </main>
-      <Footer />
+
+      {/* Header, NavBar, and ToggleButton Section */}
+      <section className="relative bg-gray-100 py-4 dark:bg-gray-800">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
+          <div className="rounded-lg bg-white/70 px-3 py-2 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+            <Header />
+          </div>
+          <div className="rounded-lg bg-white/70 px-3 py-2 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+            <NavBar />
+          </div>
+          <div className="rounded-lg bg-white/70 px-3 py-2 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+            <ToggleThemeButton />
+          </div>
+        </div>
+      </section>
+
+      {/* Panel Section (Scrollable) */}
+      <section className="relative py-10">
+        <div className="flex space-x-5 overflow-x-auto px-4">
+          {Array.from({ length: 15 }).map((_, idx) => (
+            <Panel key={idx} />
+          ))}
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <section className="relative bg-gray-100 py-4 dark:bg-gray-800">
+        <Footer />
+      </section>
     </div>
   );
 };

@@ -2,7 +2,7 @@
 Our website with ReactJS and TailwindCSS
 
 ## Authors
-- Author: @olittlefoxe [little_fox_E](https://github.com/olittlefoxE)
+- Author: @olittlefoxE [little_fox_E](https://github.com/olittlefoxE)
 
 ## Contributors:
 - Contributor: @MinecraftLetsPlay [Minecraft Lets Play](https://github.com/MinecraftLetsPlay)

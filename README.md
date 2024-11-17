@@ -1,11 +1,11 @@
 # React-Website
 Our website with ReactJS and TailwindCSS
 
-## Autohors
-- Author: Little_Fox_E [@olittlefoxE](https://github.com/olittlefoxE)
+## Authors
+- Author: @olitgtlefoxe [little_fox_E](https://github.com/olittlefoxE)
 
 ## Contributors:
-- Contributor: Minecraft Lets Play [@MinecraftLetsPlay](https://github.com/MinecraftLetsPlay)
+- Contributor: @MinecraftLetsPlay [Minecraft Lets Play](https://github.com/MinecraftLetsPlay)
 
 ## What's the purpose?
 - Our website is a project designed to help us deepen our knowledge of HTML, CSS and React.
@@ -14,7 +14,7 @@ Our website with ReactJS and TailwindCSS
 
 - All this allows us to improve our abilities while sharing our work with others.
 
-## Software and Tools used to biuld our Website
+## Software and Tools used to build our Website
 - [ChatGPT](https://chatgpt.com/) Model 4o, 4o Mini and the Icon Generator
 
 - [W3Schols](https://www.w3schools.com) For ressearching functionalities

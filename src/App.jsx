@@ -10,10 +10,7 @@ const App = () => {
   return (
     <div className="min-h-screen dark:bg-gray-900">
       <div className="flex min-h-screen items-center justify-center dark:bg-gray-900">
-        <AnimatedPanel
-          title="Boid Animation"
-          content="A mesmerizing flocking simulation powered by Boid algorithm and rendered on canvas."
-        />
+        <AnimatedPanel />
       </div>
       <Header />
       <NavBar />

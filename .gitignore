@@ -4,12 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
+/external_scripts
 
 # testing
-/coverage
+App.test.js
+reportWebVitals.js
+setupTests.js
 
 # production
-/build
 
 # misc
 .DS_Store
@@ -17,6 +19,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.prettierrc
 /src/components/Contact.jsx
 
 npm-debug.log*

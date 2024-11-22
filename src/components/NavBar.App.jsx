@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const About = "About";
@@ -7,15 +8,15 @@ export const NavBar = () => {
   return (
     <nav className="flex items-center justify-between rounded-md bg-gray-700 px-5 py-3 text-white">
       <div className="flex space-x-4">
-        <a href /*="#"*/ className="hover:text-gray-300">
+        <Link to="/about" className="hover:text-gray-300">
           {About}
-        </a>
-        <a href /*="#"*/ className="hover:text-gray-300">
+        </Link>
+        <Link to="/projects" className="hover:text-gray-300">
           {Projects}
-        </a>
-        <a href /*="#"*/ className="hover:text-gray-300">
+        </Link>
+        <Link to="/contact" className="hover:text-gray-300">
           {Contact}
-        </a>
+        </Link>
       </div>
     </nav>
   );

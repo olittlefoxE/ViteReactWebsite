@@ -199,7 +199,6 @@ export const AnimatedPanel = ({ title, content }) => {
 
     animate();
 
-    // Cleanup on unmount
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animate);
@@ -208,7 +207,7 @@ export const AnimatedPanel = ({ title, content }) => {
 
 
   return (
-    <div className="relative m-4 rounded-lg bg-gray-800 p-8 text-white shadow-md">
+    <div className="relative bg-gray-800 p-8 text-white shadow-md">
       <h2 className="mb-4 text-xl font-bold">{title}</h2>
       <p className="mb-4 text-gray-300">{content}</p>
       <canvas ref={canvasRef} className="h-[calc(100vh-30rem)] w-[calc(100vw-10rem)]"></canvas>

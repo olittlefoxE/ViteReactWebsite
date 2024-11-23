@@ -55,8 +55,10 @@ const App = () => {
         {currentPage === "contact" && <Contact />}
         {currentPage === "about" && (
           <div className="flex flex-col items-center justify-center min-h-screen">
-            <h1 className="text-3xl font-bold">About Us</h1>
-            <p className="text-gray-600 mt-4 text-center">
+             <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+              About Us
+             </h1>
+             <p className="text-gray-600 dark:text-gray-400 mt-4 text-center">
               Welcome to Robin & Dennis' Code Forge!
               <br></br>
               <br></br>

@@ -17,6 +17,6 @@ Our website with ReactJS and TailwindCSS
 ## Software and Tools used to build our Website
 - [ChatGPT](https://chatgpt.com/) Model 4o, 4o Mini and the Icon Generator
 
-- [W3schools](https://www.w3schools.com) For ressearching functionalities
+- [W3Schools](https://www.w3schools.com) For ressearching functionalities
 
 - [Visual Studio Code](https://code.visualstudio.com/) Editor used to code the Webiste

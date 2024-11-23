@@ -4,6 +4,7 @@ import { Header } from "./components/Header.App.jsx";
 import { Panel } from "./components/Panel.App.jsx";
 import { NavBar } from "./components/NavBar.App.jsx";
 import { ToggleThemeButton } from "./components/ToggleThemeButton.App.jsx";
+import { AnimatedPanel } from ".components/AnimatedPanel.App.jsx";
 
 const App = () => {
   return (

@@ -31,15 +31,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* Panel Section (Scrollable) */}
-      <section className="relative py-10">
-        <div className="flex space-x-5 overflow-x-auto px-4">
-          {Array.from({ length: 15 }).map((_, idx) => (
-            <Panel key={idx} />
-          ))}
-        </div>
-      </section>
-
       {/* Dynamic Routes Section */}
       <section className="relative py-10">
         <Routes>

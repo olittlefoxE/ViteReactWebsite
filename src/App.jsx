@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimatedPanel } from "./components/AnimatedPanel.App.jsx";
 import { Footer } from "./components/Footer.App.jsx";
 import { Header } from "./components/Header.App.jsx";
 import { Panel } from "./components/Panel.App.jsx";

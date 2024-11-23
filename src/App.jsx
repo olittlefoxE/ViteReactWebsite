@@ -57,7 +57,29 @@ const App = () => {
           <div className="flex flex-col items-center justify-center min-h-screen">
             <h1 className="text-3xl font-bold">About Us</h1>
             <p className="text-gray-600 mt-4 text-center">
-              Welcome to Robin & Dennis' Code Forge! Explore our journey into tech and innovation.
+              Welcome to Robin & Dennis' Code Forge!
+              <br></br>
+              <br></br>
+              This website is a project of mine, olittlefoxE aka Robin stiller and Minecraftletsplay aka Dennis Plischke.
+              <br></br>
+              <br></br>
+              (olittlefoxE) For my part, i am a student
+              <br></br>
+              <br></br>
+              (Minecraftletsplay) I am a student at a technical high-school with focus an computer science and my hobby is programming (Mainly in C#)
+              <br></br>
+              <br></br>
+              Our website is a project designed to help us deepen our knowledge of HTML, CSS and React and also how to set up, run and maintain a webiste.
+              <br></br>
+              <br></br>
+              Through this Project, we aim to showcase our programming skills by presenting various projects we've created in different programming languages.
+              <br></br>
+              You have the ability to hover over any Programming language and see a description of what that langage is, for what it is used and when and who developed it.
+              <br></br>
+              By clicking on it, you will be presented with our projects written in this laguage (if existing).
+              <br></br>
+              <br></br>
+              So overall its just a hobby project and our first professional public website!
             </p>
           </div>
         )}

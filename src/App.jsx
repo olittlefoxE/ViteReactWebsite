@@ -1,11 +1,12 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
 import { Footer } from "./components/Footer.App.jsx";
 import { Header } from "./components/Header.App.jsx";
 import { NavBar } from "./components/NavBar.App.jsx";
 import { ToggleThemeButton } from "./components/ToggleThemeButton.App.jsx";
 import { Panel } from "./components/Panel.App.jsx";
 import { AnimatedPanel } from "./components/AnimatedPanel.App.jsx";
-import { Routes, Route } from "react-router-dom";
 import { Contact } from "./components/Contact";
 
 const App = () => {

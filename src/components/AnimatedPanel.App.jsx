@@ -209,8 +209,8 @@ export const AnimatedPanel = ({ title, content }) => {
 
   return (
     <div className="relative m-4 rounded-lg bg-gray-800 p-8 text-white shadow-md">
-      <h2 className="mb-4 text-xl font-bold">dadad</h2>
-      <p className="mb-4 text-gray-300">dasdda</p>
+      <h2 className="mb-4 text-xl font-bold">{title}</h2>
+      <p className="mb-4 text-gray-300">{content}</p>
       <canvas ref={canvasRef} className="h-[calc(100vh-2rem)] w-full"></canvas>
     </div>
   );

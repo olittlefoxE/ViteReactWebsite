@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 import { Footer } from "./components/Footer.App.jsx";
 import { Header } from "./components/Header.App.jsx";
 import { NavBar } from "./components/NavBar.App.jsx";

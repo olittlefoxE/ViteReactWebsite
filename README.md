@@ -19,4 +19,4 @@ Our website with ReactJS and TailwindCSS
 
 - [W3Schools](https://www.w3schools.com) For ressearching functionalities
 
-- [Visual Studio Code](https://code.visualstudio.com/) Editor used to code the Webiste
+- [Visual Studio Code](https://code.visualstudio.com/) Editor used to code the Website

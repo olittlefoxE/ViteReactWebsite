@@ -1,13 +1,10 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-
+import { AnimatedPanel } from "./components/AnimatedPanel.App.jsx";
 import { Footer } from "./components/Footer.App.jsx";
 import { Header } from "./components/Header.App.jsx";
+import { Panel } from "./components/Panel.App.jsx";
 import { NavBar } from "./components/NavBar.App.jsx";
 import { ToggleThemeButton } from "./components/ToggleThemeButton.App.jsx";
-import { Panel } from "./components/Panel.App.jsx";
-import { AnimatedPanel } from "./components/AnimatedPanel.App.jsx";
-import { Contact } from "./components/Contact";
 
 const App = () => {
   return (
@@ -34,19 +31,11 @@ const App = () => {
 
       {/* Dynamic Routes Section */}
       <section className="relative py-10">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="flex space-x-5 overflow-x-auto px-4">
-                {Array.from({ length: 15 }).map((_, idx) => (
-                  <Panel key={idx} />
-                ))}
-              </div>
-            }
-          />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="flex space-x-5 overflow-x-auto px-4">
+          {Array.from({ length: 15 }).map((_, idx) => (
+          <Panel key={idx} />
+          ))}
+        </div>
       </section>
 
       {/* Footer Section */}

@@ -15,36 +15,54 @@ export const ToggleThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={`flex h-12 w-12 items-center justify-center rounded-full ${
-        isDarkMode
-          ? "bg-gray-700 text-yellow-400"
-          : "bg-gray-300 text-yellow-600"
-      } hover:opacity-80`}
+      className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gray-300 dark:bg-gray-700 hover:opacity-80 overflow-hidden"
       aria-label="Toggle Theme"
     >
-      {isDarkMode ? (
-        /* Moon SVG for Dark Mode */
+      {/* Sun Animation */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${
+          isDarkMode ? "translate-y-[150%]" : "translate-y-0"
+        }`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path d="M12 3.5a8.5 8.5 0 007.313 13.588A8.01 8.01 0 0112 21a8.5 8.5 0 010-17z" />
-        </svg>
-      ) : (
-        /* Sun SVG for Light Mode */
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="h-6 w-6 text-yellow-600"
           viewBox="0 0 24 24"
           fill="currentColor"
         >
           <circle cx="12" cy="12" r="4" />
-          <line x1="12" y1="2" x2="12" y2="6" stroke="currentColor" strokeWidth="2" />
-          <line x1="12" y1="18" x2="12" y2="22" stroke="currentColor" strokeWidth="2" />
-          <line x1="2" y1="12" x2="6" y2="12" stroke="currentColor" strokeWidth="2" />
-          <line x1="18" y1="12" x2="22" y2="12" stroke="currentColor" strokeWidth="2" />
+          <line
+            x1="12"
+            y1="2"
+            x2="12"
+            y2="6"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <line
+            x1="12"
+            y1="18"
+            x2="12"
+            y2="22"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <line
+            x1="2"
+            y1="12"
+            x2="6"
+            y2="12"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <line
+            x1="18"
+            y1="12"
+            x2="22"
+            y2="12"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
           <line
             x1="4.93"
             y1="4.93"
@@ -68,7 +86,7 @@ export const ToggleThemeButton = () => {
             y2="16.24"
             stroke="currentColor"
             strokeWidth="2"
-            />
+          />
           <line
             x1="16.24"
             y1="7.76"
@@ -78,7 +96,23 @@ export const ToggleThemeButton = () => {
             strokeWidth="2"
           />
         </svg>
-      )}
+      </div>
+
+      {/* Moon Animation */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${
+          isDarkMode ? "translate-y-0" : "translate-y-[-150%]"
+        }`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-yellow-400"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M12 3.5a8.5 8.5 0 007.313 13.588A8.01 8.01 0 0112 21a8.5 8.5 0 010-17z" />
+        </svg>
+      </div>
     </button>
   );
 };

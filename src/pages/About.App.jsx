@@ -13,7 +13,7 @@ export const About = () => {
         This website is a collaborative project created by <span className="font-medium">Robin Stiller</span> (aka <em>olittlefoxE</em>) and <span className="font-medium">Dennis Plischke</span> (aka <em>Minecraftletsplay</em>).
         <br />
         <br />
-        <strong>(Robin)</strong> I am currently a student, passionate about learning and honing my programming skills.
+        <strong>(Robin)</strong> I am currently a student, passionate about learning and honing my programming skills. Im focused on Front-End-Dev.
         <br />
         <br />
         <strong>(Dennis)</strong> I am a student at a technical high school focusing on computer science, with a passion for programming - primarily in C#.

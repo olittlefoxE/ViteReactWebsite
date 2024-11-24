@@ -35,7 +35,7 @@ const App = () => {
       </section>
 
       {/* Navigation Bar and Toggle Button */}
-      <header className="sticky top-0 z-10 bg-gray-100 py-4 shadow-md dark:bg-gray-800">
+      <section className="sticky top-0 z-10 bg-gray-400 py-4 shadow-md dark:bg-gray-800">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
           <div className="rounded-lg bg-white/70 px-3 py-2 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <NavBar navigateTo={navigateTo} />
@@ -44,7 +44,8 @@ const App = () => {
             <ToggleThemeButton />
           </div>
         </div>
-      </header>
+      </section>
+
 
       {/* Conditional Page Rendering */}
       <main className="flex-grow relative">

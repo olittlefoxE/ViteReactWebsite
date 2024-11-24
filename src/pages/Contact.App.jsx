@@ -55,7 +55,7 @@ export const Contact = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* YouTube */}
           <a
-            href="https://www.youtube.com/"
+            href="https://www.youtube.com/@minecraftletsplay2912"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-4 p-4 bg-red-100 dark:bg-red-700 rounded-lg shadow-lg hover:scale-105 transition transform"
@@ -66,13 +66,13 @@ export const Contact = () => {
               </g>
             </svg>
             <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-            YouTube Channel
+            Youtube
             </span>
           </a>
 
           {/* Discord */}
           <a
-            href="https://discord.com/"
+            href="https://discord.gg/tssKYweM3h"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-4 p-4 bg-blue-100 dark:bg-blue-900 rounded-lg shadow-lg hover:scale-105 transition transform"

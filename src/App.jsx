@@ -29,7 +29,7 @@ const App = () => {
       {/* Animated Panel Section */}
       <section className="relative">
         <AnimatedPanel />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center z-20">
           <Header />
         </div>
       </section>

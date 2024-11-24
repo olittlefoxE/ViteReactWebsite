@@ -16,7 +16,7 @@ export const About = () => {
         <strong>(Robin)</strong> I am currently a student, passionate about learning and honing my programming skills.
         <br />
         <br />
-        <strong>(Dennis)</strong> I am a student at a technical high school focusing on computer science, with a passion for programming—primarily in C#.
+        <strong>(Dennis)</strong> I am a student at a technical high school focusing on computer science, with a passion for programming - primarily in C#.
         <br />
         <br />
         Our goal is to use this website as a platform to deepen our knowledge of HTML, CSS, React, and the intricacies of web development, including how to set up, run, and maintain a website.
@@ -26,7 +26,7 @@ export const About = () => {
         You can hover over any programming language on our website to learn about its purpose, history, and key features. Clicking on a language will reveal projects we've created using it (if available).
         <br />
         <br />
-        This is our first professional public website—a hobby project born from our shared interest in programming and web development. We hope you enjoy exploring it as much as we enjoyed creating it!
+        This is our first professional public website. Its a hobby project born from our shared interest in programming and web development. We hope you enjoy exploring it as much as we enjoyed creating it!
       </p>
     </div>
   );

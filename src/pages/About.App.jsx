@@ -6,7 +6,7 @@ export const About = () => {
       <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
         About Us
       </h1>
-      <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+      <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
         Welcome to <span className="font-semibold">Robin & Dennis' Code Forge!</span>
         <br />
         <br />

@@ -46,7 +46,6 @@ const App = () => {
         </div>
       </section>
 
-
       {/* Conditional Page Rendering */}
       <main className="flex-grow relative">
         {currentPage === "home" && (

@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/build
 
 # testing
 App.test.js
@@ -19,7 +20,7 @@ setupTests.js
 # Miscellaneous
 .DS_Store
 Thumbs.db
-
+.prettierrc
 
 # Logs
 logs

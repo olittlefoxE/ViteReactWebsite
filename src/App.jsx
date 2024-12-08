@@ -3,10 +3,11 @@ import { Header } from "./components/Header.App.jsx";
 import { AnimatedPanel } from "./components/AnimatedPanel.App.jsx";
 import { NavBar } from "./components/NavBar.App.jsx";
 import { ToggleThemeButton } from "./components/ToggleThemeButton.App.jsx";
-import { Panel } from "./components/Panel.App.jsx";
+import { ProjectsPanel } from "./components/ProjectsPanel.App.jsx";
 import { Footer } from "./components/Footer.App.jsx";
 import { Contact } from "./pages/Contact.App.jsx";
 import { About } from "./pages/About.App.jsx";
+import { ProgrammingLanguages } from "./pages/ProgrammingLanguages.App.jsx";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -16,16 +17,13 @@ const App = () => {
     setCurrentPage(path);
   }, []);
 
-  // Function to handle page changes
   const navigateTo = (page) => {
     setCurrentPage(page);
-  
-    // Update the URL without reloading the page
     window.history.pushState(null, "", `/${page}`);
   };
 
- return (
-    <div className="flex min-h-screen flex-col dark:bg-gray-900">
+  return (
+    <div className="flex min-h-screen flex-col dark:bg-gray-700">
       {/* Animated Panel Section */}
       <section className="relative">
         <AnimatedPanel />
@@ -34,35 +32,47 @@ const App = () => {
         </div>
       </section>
 
-      {/* Navigation Bar and Toggle Button */}
-      <section className="sticky top-0 z-10 bg-gray-400 py-4 shadow-md dark:bg-gray-800">
+      {/* Navigation Bar */}
+      <section className="sticky top-0 z-10 py-4 bg-gray-400 shadow-md dark:bg-gray-800">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
-          <div className="rounded-lg bg-white/70 px-3 py-2 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+          <div className="rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <NavBar navigateTo={navigateTo} />
           </div>
-          <div className="rounded-lg bg-white/70 px-3 py-2 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+          <div className="rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <ToggleThemeButton />
           </div>
         </div>
       </section>
 
-      {/* Conditional Page Rendering */}
-      <main className="flex-grow relative">
+      {/* Projects Panel; Home */}
+      <main className="flex-grow relative overflow-hidden">
         {currentPage === "home" && (
           <section className="relative py-10">
-            <div className="flex space-x-5 overflow-x-auto px-4">
-              {Array.from({ length: 15 }).map((_, idx) => (
-                <Panel key={idx} />
+            <div className="mx-auto max-w-screen-lg px-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {Array.from({ length: 10 }).map((_, idx) => (
+                <ProjectsPanel
+                  key={idx}
+                  tags={["React", "JavaScript", idx % 2 === 0 ? "AI" : "Manual"]}
+                  author={`Author ${idx + 1}`}
+                  isAIUsed={idx % 2 === 0}
+                  dependencies={["Framer Motion", "TailwindCSS"]}
+                  logoSrc="/path/to/logo.png"
+                  repoLink="https://github.com/example/repo"
+                />
               ))}
             </div>
           </section>
         )}
         {currentPage === "contact" && <Contact />}
         {currentPage === "about" && <About />}
+        {currentPage === "languages" && <ProgrammingLanguages />}
       </main>
 
-      {/* Footer */}
-      <Footer />
+       {/* Footer */}
+      <div className="my-3">
+        <Footer />
+      </div>
+    
     </div>
   );
 };

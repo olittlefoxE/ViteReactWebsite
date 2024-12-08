@@ -2,8 +2,8 @@ import React from "react";
 
 export const About = () => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 px-8 py-10 rounded-lg shadow-lg max-w-5xl mx-auto mt-10">
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+    <div className="bg-gray-200 dark:bg-gray-800 px-8 py-10 rounded-lg shadow-lg max-w-5xl mx-auto mt-10 my-10">
+      <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">
         About Us
       </h1>
       <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">

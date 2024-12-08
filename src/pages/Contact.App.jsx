@@ -4,7 +4,7 @@ export const Contact = () => {
   return (
     <div className="min-h-screen dark:gray-800 flex flex-col justify-center items-center p-6">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-lg">
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 text-center mb-6">
+        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 text-center">
           Contact Us
         </h1>
         <p className="text-gray-700 dark:text-gray-300 text-center mb-8">

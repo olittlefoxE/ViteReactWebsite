@@ -1,14 +1,18 @@
+// src/App.jsx in React-Website
 import React, { useState, useEffect } from "react";
-import { Header } from "./components/Header.App.jsx";
-import { AnimatedPanel } from "./components/AnimatedPanel.App.jsx";
-import { NavBar } from "./components/NavBar.App.jsx";
-import { ToggleThemeButton } from "./components/ToggleThemeButton.App.jsx";
-import { ProjectsPanel } from "./components/ProjectsPanel.App.jsx";
-import { Footer } from "./components/Footer.App.jsx";
-import { Contact } from "./pages/Contact.App.jsx";
-import { About } from "./pages/About.App.jsx";
-import { ProgrammingLanguages } from "./pages/ProgrammingLanguages.App.jsx";
-import { projectData } from "./components/panels.js"; // const for <ProjectsPanel { ...project } />
+import { Header } from "./components/HeroTitle.jsx";
+import { AnimatedPanel } from "./components/AnimatedPanel.jsx";
+import { NavBar } from "./components/NavBar.jsx";
+import { ToggleThemeButton } from "./components/ToggleThemeButton.jsx";
+import { ProjectsPanel } from "./components/ProjectsPanel.jsx";
+import { Footer } from "./components/Footer.jsx";
+import { Contact } from "./pages/Contact.jsx";
+import { About } from "./pages/About.jsx";
+import { ProgrammingLanguages } from "./pages/ProgrammingLanguages.jsx";
+import { projectData } from "./components/PanelData.js";
+
+// Import TemperatureCalculator from the symlinked folder
+import TemperatureCalculator from "temperaturecalculator/components/TemperatureCalculator.jsx";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -53,13 +57,12 @@ const App = () => {
               <section className="relative py-10">
                 <div className="mx-auto max-w-screen-lg px-4">
                   <div className="flex flex-wrap justify-between gap-6">
-                    {/* Map through projectData array and render ProjectsPanel for each project */}
                     {projectData.map((project, index) => (
                       <div
                         key={index}
                         className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
                       >
-                        <ProjectsPanel { ...project } />
+                        <ProjectsPanel {...project} setCurrentPage={navigateTo} />
                       </div>
                     ))}
                   </div>
@@ -73,6 +76,9 @@ const App = () => {
         {currentPage === "contact" && <Contact />}
         {currentPage === "about" && <About />}
         {currentPage === "languages" && <ProgrammingLanguages />}
+
+        {/* Render Frontend Project Pages */}
+        {currentPage === "temperaturecalculator" && <TemperatureCalculator />}
       </main>
 
       {/* Footer */}
@@ -84,3 +90,4 @@ const App = () => {
 };
 
 export default App;
+

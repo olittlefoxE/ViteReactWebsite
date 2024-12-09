@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer.App.jsx";
 import { Contact } from "./pages/Contact.App.jsx";
 import { About } from "./pages/About.App.jsx";
 import { ProgrammingLanguages } from "./pages/ProgrammingLanguages.App.jsx";
+import { projectData } from "./panels.js"; // const for <ProjectsPanel { ...project } />
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -21,51 +22,6 @@ const App = () => {
     setCurrentPage(page);
     window.history.pushState(null, "", `/${page}`);
   };
-
-  // Data for multiple projects
-  const projectData = [
-    {
-      tags: ["React", "JavaScript", "AI"],
-      isAIUsed: true,
-      dependencies: ["Framer Motion", "TailwindCSS"],
-      logoSrc: "/path/to/logo1.png",
-      repoLink: "https://github.com/example/repo1",
-      authors: ["John Doe"]
-    },
-    {
-      tags: ["Vue", "TypeScript", "Machine Learning"],
-      isAIUsed: false,
-      dependencies: ["Vuex", "Vuetify"],
-      logoSrc: "/path/to/logo2.png",
-      repoLink: "https://github.com/example/repo2",
-      authors: ["Jane Smith"]
-    },
-    {
-      tags: ["Angular", "CSS", "AI"],
-      isAIUsed: true,
-      dependencies: ["RxJS", "Angular Material"],
-      logoSrc: "/path/to/logo3.png",
-      repoLink: "https://github.com/example/repo3",
-      authors: ["Alice Johnson", "Bob Brown"]
-    },
-    {
-      tags: ["Node.js", "Express", "Database"],
-      isAIUsed: false,
-      dependencies: ["MongoDB", "Mongoose"],
-      logoSrc: "/path/to/logo4.png",
-      repoLink: "https://github.com/example/repo4",
-      authors: ["Carlos Black"]
-    },
-    {
-      tags: ["Next.js", "React", "GraphQL"],
-      isAIUsed: true,
-      dependencies: ["Apollo Client", "GraphQL"],
-      logoSrc: "/path/to/logo5.png",
-      repoLink: "https://github.com/example/repo5",
-      authors: ["Lily Green"]
-    },
-    // Add more projects here as needed...
-  ];
 
   return (
     <div className="flex min-h-screen flex-col dark:bg-gray-700">
@@ -103,7 +59,7 @@ const App = () => {
                         key={index}
                         className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
                       >
-                        <ProjectsPanel {...project} />
+                        <ProjectsPanel { ...project } />
                       </div>
                     ))}
                   </div>

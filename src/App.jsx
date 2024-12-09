@@ -8,7 +8,7 @@ import { Footer } from "./components/Footer.App.jsx";
 import { Contact } from "./pages/Contact.App.jsx";
 import { About } from "./pages/About.App.jsx";
 import { ProgrammingLanguages } from "./pages/ProgrammingLanguages.App.jsx";
-import { projectData } from "./panels.js"; // const for <ProjectsPanel { ...project } />
+import { projectData } from "./components/panels.js"; // const for <ProjectsPanel { ...project } />
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");

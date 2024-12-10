@@ -1,36 +1,27 @@
-import React, { Suspense, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { Suspense, lazy } from "react";
 
-export const DynamicProject = ({ projectName }) => {
-  const [Component, setComponent] = useState(null);
+export const ProjectPage = ({ projectName }) => {
+  let ProjectComponent;
 
-  React.useEffect(() => {
-    import(`../../external-projects/${projectName}/index.jsx`) // Adjust path based on structure
-      .then((module) => {
-        setComponent(() => module.default);
-      })
-      .catch(() => {
-        setComponent(() => () => <p>Project not found!</p>);
-      });
-  }, [projectName]);
-
-  if (!Component) {
-    return <p>Loading...</p>;
+  try {
+    // Dynamically import the component from the projects folder
+    ProjectComponent = lazy(() => 
+      import(`../components/projects/${projectName}`)
+    );
+  } catch (error) {
+    console.error("Failed to load project:", error);
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <h1 className="text-4xl font-bold">Error</h1>
+        <p className="mt-4 text-lg text-gray-600">Project not found: {projectName}</p>
+      </div>
+    );
   }
 
-  return <Component />;
-};
-
-export const ProjectPage = () => {
-  const { projectname } = useParams();
-
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-center mt-4">
-        {projectname.replace('-', ' ')}
-      </h1>
-      <Suspense fallback={<p>Loading project...</p>}>
-        <DynamicProject projectName={projectname} />
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <Suspense fallback={<p>Loading {projectName}...</p>}>
+        <ProjectComponent />
       </Suspense>
     </div>
   );

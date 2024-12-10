@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer.jsx";
 import { ProjectsPanelData } from "./components/ProjectsPanelData.js";
 // ./src/pages/*.{jsx,js}
 import { ProgrammingLanguages } from "./pages/ProgrammingLanguages.jsx";
-import { ProjectPage } from "./pages/template.ProjectsPage.jsx";
+import { ProjectPage } from "./pages/DynamicProjectsPage.jsx";
 import { Contact } from "./pages/Contact.jsx";
 import { About } from "./pages/About.jsx";
 

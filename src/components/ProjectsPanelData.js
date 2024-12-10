@@ -1,5 +1,5 @@
 // src/components/PanelData.js
-export const PanelData = [
+export const ProjectsPanelData = [
   {
     name: "Project One",
     languages: ["JavaScript", "HTML", "CSS"],

@@ -1,57 +1,85 @@
+// src/components/ProjectsPanel.jsx
 import React from "react";
+import PropTypes from "prop-types";
 
-export const ProjectsPanel = ({
-  tags,
-  isAIUsed,
-  dependencies,
-  logoSrc,
-  repoLink,
-  authors,
-  setCurrentPage,
-  isFrontendProject,
-  frontendPage,
+export const ProjectsPanel = ({ 
+  name, 
+  languages, 
+  dependencies, 
+  usesAI, 
+  isFrontend, 
+  githubLink, 
+  setCurrentPage 
 }) => {
-  const handleFrontendNavigation = () => {
-    if (isFrontendProject && frontendPage) {
-      setCurrentPage(frontendPage);
+  const navigateToProjectPage = () => {
+    if (isFrontend) {
+      setCurrentPage(`projects/${name.toLowerCase()}`);
     }
   };
 
   return (
-    <div className="bg-gray-200 dark:bg-slate-600 rounded-2xl shadow-md flex flex-col justify-between p-4 w-full aspect-square max-w-xs mx-auto">
-      <div className="flex items-start space-x-2">
-        <img src={logoSrc} alt="Project Logo" className="w-10 h-10 object-contain rounded-md" />
-        <div className="flex flex-wrap gap-1">
-          {tags.map((tag, index) => (
-            <span key={index} className="bg-gray-200 px-2 py-1 rounded-md text-xs">
-              {tag}
-            </span>
-          ))}
-        </div>
+    <div className="rounded-lg border border-gray-300 bg-white p-4 shadow-md dark:bg-gray-800">
+      {/* Project Title */}
+      <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200">{name}</h3>
+      
+      {/* Tags for Programming Languages */}
+      <div className="mt-2 flex flex-wrap gap-2">
+        {languages.map((lang, index) => (
+          <span 
+            key={index} 
+            className="inline-block rounded-md bg-blue-100 px-2 py-1 text-xs text-blue-800 dark:bg-blue-800 dark:text-blue-200"
+          >
+            {lang}
+          </span>
+        ))}
       </div>
 
-      <div className="flex-grow flex items-center justify-center">
-        {isFrontendProject ? (
-          <button
-            onClick={handleFrontendNavigation}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+      {/* Tags for Dependencies and AI */}
+      <div className="mt-2 flex flex-wrap gap-2">
+        {dependencies.map((dep, index) => (
+          <span 
+            key={index} 
+            className="inline-block rounded-md bg-green-100 px-2 py-1 text-xs text-green-800 dark:bg-green-800 dark:text-green-200"
           >
-            Open Project
-          </button>
-        ) : (
-          <a href={repoLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-4 py-2 rounded-md">
-            View Repository
-          </a>
+            {dep}
+          </span>
+        ))}
+        {usesAI && (
+          <span className="inline-block rounded-md bg-red-100 px-2 py-1 text-xs text-red-800 dark:bg-red-800 dark:text-red-200">
+            AI Used
+          </span>
         )}
       </div>
 
-      <div className="text-right">
-        <span className="text-sm font-light">Authors: {authors.join(" & ")}</span>
+      {/* Action Buttons */}
+      <div className="mt-4 flex items-center justify-center gap-4">
+        <a 
+          href={githubLink} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="rounded bg-gray-700 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-gray-800"
+        >
+          View on GitHub
+        </a>
+        {isFrontend && (
+          <button 
+            onClick={navigateToProjectPage} 
+            className="rounded bg-blue-600 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-blue-700"
+          >
+            View Project
+          </button>
+        )}
       </div>
     </div>
   );
 };
 
-
-
-
+ProjectsPanel.propTypes = {
+  name: PropTypes.string.isRequired,
+  languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+  dependencies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  usesAI: PropTypes.bool.isRequired,
+  isFrontend: PropTypes.bool.isRequired,
+  githubLink: PropTypes.string.isRequired,
+  setCurrentPage: PropTypes.func.isRequired,
+};

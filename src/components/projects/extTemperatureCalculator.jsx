@@ -5,7 +5,6 @@ const convertTemperature = (value, fromUnit, toUnit) => {
 
   const temp = parseFloat(value);
 
-  // Convert from the input unit to Celsius
   let celsius;
   switch (fromUnit) {
     case "Celsius":
@@ -21,7 +20,6 @@ const convertTemperature = (value, fromUnit, toUnit) => {
       return "";
   }
 
-  // Convert from Celsius to the output unit
   switch (toUnit) {
     case "Celsius":
       return celsius;
@@ -34,7 +32,7 @@ const convertTemperature = (value, fromUnit, toUnit) => {
   }
 };
 
-export const TemperatureCalculator = () => {
+const TemperatureCalculator = () => {
   const [inputValue, setInputValue] = useState("");
   const [inputUnit, setInputUnit] = useState("Celsius");
   const [outputUnit, setOutputUnit] = useState("Fahrenheit");
@@ -108,23 +106,20 @@ export const TemperatureCalculator = () => {
           <option value="Kelvin">Kelvin</option>
         </select>
       </div>
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-          Result
-        </label>
-        <input
-          type="text"
-          value={result}
-          readOnly
-          className="w-full px-3 py-2 border rounded-md dark:bg-gray-700 dark:text-gray-200"
-        />
+      <div className="text-center mb-4">
+        <p className="text-lg font-bold dark:text-gray-300">
+          Result: {result}
+        </p>
       </div>
       <button
         onClick={resetFields}
-        className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200"
+        className="w-full bg-red-600 text-white px-4 py-2 rounded-md"
       >
         Reset
       </button>
     </div>
   );
 };
+
+export default TemperatureCalculator;
+

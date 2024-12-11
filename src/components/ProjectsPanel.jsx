@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 // Dynamic project loader
 const loadProjectComponent = (name) => {
   try {
+    console.log("Attempting to load:", name); // Debug log
     return lazy(() => import(`./projects/${name}`));
   } catch (error) {
     console.error(`Error loading project component "${name}":`, error);
@@ -26,6 +27,7 @@ export const ProjectsPanel = ({
       const ProjectComponent = loadProjectComponent(name);
 
       if (ProjectComponent) {
+        console.log("Navigating to project:", name); // Debug log
         setCurrentPage(
           <div className="flex flex-col items-center justify-center min-h-screen">
             <Suspense fallback={<p>Loading {name}...</p>}>
@@ -34,6 +36,7 @@ export const ProjectsPanel = ({
           </div>
         );
       } else {
+        console.error(`Failed to load project: ${name}`);
         setCurrentPage(
           <div className="flex flex-col items-center justify-center min-h-screen">
             <h1 className="text-4xl font-bold">Error</h1>
@@ -48,12 +51,10 @@ export const ProjectsPanel = ({
 
   return (
     <div className="relative rounded-lg border border-gray-300 bg-white p-4 shadow-md dark:bg-gray-800">
-      {/* Project Title */}
       <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
         {name}
       </h3>
 
-      {/* Tags for Programming Languages */}
       <div className="mt-2 flex flex-wrap gap-2">
         {languages.map((lang, index) => (
           <span
@@ -65,7 +66,6 @@ export const ProjectsPanel = ({
         ))}
       </div>
 
-      {/* Tags for Dependencies and AI */}
       <div className="mt-2 flex flex-wrap gap-2">
         {dependencies.map((dep, index) => (
           <span
@@ -82,7 +82,6 @@ export const ProjectsPanel = ({
         )}
       </div>
 
-      {/* Action Buttons */}
       <div className="mt-4 flex items-center justify-center gap-4">
         <a
           href={githubLink}
@@ -102,10 +101,8 @@ export const ProjectsPanel = ({
         )}
       </div>
 
-      {/* Accent Line */}
       <hr className="my-4 border-t border-gray-300 dark:border-gray-700" />
 
-      {/* Author */}
       <p className="text-right text-xs text-gray-400 dark:text-gray-500">
         By: {author}
       </p>
@@ -120,7 +117,6 @@ ProjectsPanel.propTypes = {
   usesAI: PropTypes.bool.isRequired,
   isFrontend: PropTypes.bool.isRequired,
   githubLink: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired, // Ensure the author is required
+  author: PropTypes.string.isRequired,
   setCurrentPage: PropTypes.func.isRequired,
 };
-

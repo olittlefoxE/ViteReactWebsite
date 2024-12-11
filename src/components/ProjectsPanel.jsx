@@ -1,17 +1,6 @@
 // ReactWebsite/src/components/ProjectsPanel.jsx
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-
-// Dynamic project loader
-const loadProjectComponent = (name) => {
-  try {
-    console.log("Attempting to load:", name); // Debug log
-    return lazy(() => import(`./projects/${name}`));
-  } catch (error) {
-    console.error(`Error loading project component "${name}":`, error);
-    return null;
-  }
-};
 
 export const ProjectsPanel = ({
   name,
@@ -21,32 +10,12 @@ export const ProjectsPanel = ({
   isFrontend,
   githubLink,
   author,
-  setCurrentPage,
+  navigateTo,
 }) => {
   const navigateToProjectPage = () => {
     if (isFrontend) {
-      const ProjectComponent = loadProjectComponent(name);
-
-      if (ProjectComponent) {
-        console.log("Navigating to project:", name); // Debug log
-        setCurrentPage(
-          <div className="flex flex-col items-center justify-center min-h-screen">
-            <Suspense fallback={<p>Loading {name}...</p>}>
-              <ProjectComponent />
-            </Suspense>
-          </div>
-        );
-      } else {
-        console.error(`Failed to load project: ${name}`);
-        setCurrentPage(
-          <div className="flex flex-col items-center justify-center min-h-screen">
-            <h1 className="text-4xl font-bold">Error</h1>
-            <p className="mt-4 text-lg text-gray-600">
-              Failed to load project: {name}
-            </p>
-          </div>
-        );
-      }
+      // Trigger navigation via `navigateTo` to project-specific pages
+      navigateTo(`projects/${name}`);
     }
   };
 
@@ -119,5 +88,5 @@ ProjectsPanel.propTypes = {
   isFrontend: PropTypes.bool.isRequired,
   githubLink: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  setCurrentPage: PropTypes.func.isRequired,
+  navigateTo: PropTypes.func.isRequired, // Changed to use `navigateTo` for routing
 };

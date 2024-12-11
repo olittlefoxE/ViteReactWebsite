@@ -12,13 +12,22 @@ export const ProjectPage = ({ projectName }) => {
     );
   }
 
-  let ProjectComponent;
-
   try {
-    ProjectComponent = lazy(() => import(`../components/projects/${projectName}`));
-    console.log(`Loading project: ${projectName}`); // Debug log
+    const ProjectComponent = lazy(() =>
+      import(`../components/projects/${projectName}`).catch(() => {
+        throw new Error(`Component "${projectName}" not found.`);
+      })
+    );
+
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <Suspense fallback={<p>Loading {projectName}...</p>}>
+          <ProjectComponent />
+        </Suspense>
+      </div>
+    );
   } catch (error) {
-    console.error("Failed to load project:", error);
+    console.error("Failed to load project component:", error.message);
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-4xl font-bold">Error</h1>
@@ -26,12 +35,5 @@ export const ProjectPage = ({ projectName }) => {
       </div>
     );
   }
-
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <Suspense fallback={<p>Loading {projectName}...</p>}>
-        <ProjectComponent />
-      </Suspense>
-    </div>
-  );
 };
+

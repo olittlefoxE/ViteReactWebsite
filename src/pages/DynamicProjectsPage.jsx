@@ -1,3 +1,4 @@
+// ReactWebsite/src/pages/DynamicProjectsPage.jsx
 import React, { Suspense, lazy } from "react";
 
 export const ProjectPage = ({ projectName }) => {

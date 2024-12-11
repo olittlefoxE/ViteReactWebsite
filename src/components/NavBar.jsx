@@ -1,3 +1,4 @@
+// ReactWebsite/src/components/NavBar.jsx
 import React from "react";
 import { motion } from "framer-motion";
 

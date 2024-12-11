@@ -1,4 +1,6 @@
+// ReactWebsite/src/components/AnimatedPanel.jsx
 import React, { useEffect, useRef } from "react";
+
 export const AnimatedPanel = ({ title, content }) => {
   const canvasRef = useRef(null);
 

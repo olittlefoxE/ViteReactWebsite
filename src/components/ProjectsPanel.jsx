@@ -1,3 +1,4 @@
+// ReactWebsite/src/components/ProjectsPanel.jsx
 import React, { lazy, Suspense } from "react";
 import PropTypes from "prop-types";
 

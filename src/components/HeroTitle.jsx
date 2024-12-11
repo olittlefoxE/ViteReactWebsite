@@ -1,3 +1,4 @@
+// ReactWebsite/src/components/HeroTitle.jsx
 import React from "react";
 
 export const HeroTitle = () => {

@@ -8,6 +8,7 @@ export const NavBar = ({ navigateTo }) => {
     Home: "home",
     About: "about",
     Contact: "contact",
+    Languages: "languages"
   };
 
   // Framer Motion animation variants for the buttons

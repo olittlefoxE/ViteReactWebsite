@@ -19,9 +19,11 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
   const [projectName, setProjectName] = useState(null);
 
+  // set default page name to /home
   useEffect(() => {
     const path = window.location.pathname.replace("/", "") || "home";
 
+    // set the page url name to /projects/ if the projects button is clicked 
     if (path.startsWith("projects/")) {
       const project = path.replace("projects/", "");
       setProjectName(project);
@@ -31,7 +33,7 @@ const App = () => {
       setProjectName(null);
     }
   }, []);
-
+  // set the page url name to /projects/ fallback
   const navigateTo = (page) => {
     if (!page) {
       console.error("Invalid navigation page:", page);
@@ -86,7 +88,7 @@ const App = () => {
                     {ProjectsPanelData.map((project, index) => (
                       <div
                         key={index}
-                        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
+                        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 hover:shadow-lg transition-shadow"
                       >
                         <ProjectsPanel {...project} navigateTo={navigateTo} />
                       </div>
@@ -98,15 +100,14 @@ const App = () => {
           </div>
         )}
 
+        {/*Navigation*/ }
         {currentPage === "contact" && <Contact />}
         {currentPage === "about" && <About />}
+        {currentPage === "projectPage" && projectName && (<ProjectPage projectName={projectName} />)}
         {currentPage === "languages" && <ProgrammingLanguages />}
-        {currentPage === "projectPage" && projectName && (
-          <ProjectPage projectName={projectName} />
-        )}
       </main>
 
-      <div className="my-3">
+      <div className="my-3 pb-0">
         <Footer />
       </div>
     </div>

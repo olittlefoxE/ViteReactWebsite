@@ -3,7 +3,6 @@ import React, { Suspense, lazy } from "react";
 
 export const ProjectPage = ({ projectName }) => {
   if (!projectName || typeof projectName !== "string") {
-    console.error("Invalid project name:", projectName);
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-4xl font-bold">Error</h1>
@@ -27,7 +26,6 @@ export const ProjectPage = ({ projectName }) => {
       </div>
     );
   } catch (error) {
-    console.error("Failed to load project component:", error.message);
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
         <h1 className="text-4xl font-bold">Error</h1>

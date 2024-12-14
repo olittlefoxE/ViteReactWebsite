@@ -1,3 +1,4 @@
+// ReactWebsite/src/components/ProgrammingLanguagesPanel.jsx
 import React from "react";
 
 export const ProgrammingLanguagesPanel = ({ language }) => {

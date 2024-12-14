@@ -20,7 +20,7 @@ export const ProjectsPanel = ({
   };
 
   return (
-    <div className="relative rounded-lg border border-gray-300 bg-white p-4 shadow-md dark:bg-gray-800">
+    <div className="relative rounded-lg border-[1px] border-gray-300 bg-gray-100 p-4 shadow-md transition-shadow hover:shadow-xl dark:border-gray-400 dark:bg-gray-800">
       <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
         {name}
       </h3>
@@ -57,7 +57,7 @@ export const ProjectsPanel = ({
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded bg-gray-700 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-gray-800"
+          className="rounded bg-neutral-800 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-neutral-700"
         >
           View on GitHub
         </a>

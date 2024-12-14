@@ -59,7 +59,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col dark:bg-gray-700">
+    <div className="flex flex-col dark:bg-gray-700">
       <section className="relative">
         <AnimatedPanel />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
@@ -72,7 +72,7 @@ const App = () => {
           <div className="min-h-12 rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <NavBar navigateTo={navigateTo} />
           </div>
-          <div className="p-1 rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+          <div className="rounded-lg bg-white/70 p-1 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <ToggleThemeButton />
           </div>
         </div>
@@ -91,13 +91,13 @@ const App = () => {
                   {/* Projects Panel */}
                   <div className="flex flex-wrap justify-between gap-6">
                     {ProjectsPanelData.map((project, index) => (
-                    <div
-                      key={index}
-                      className="w-full transition-shadow hover:shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
-                    >
-                    <ProjectsPanel {...project} navigateTo={navigateTo} />
-                  </div>
-                  ))}
+                      <div
+                        key={index}
+                        className="w-full transition-shadow hover:shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
+                      >
+                        <ProjectsPanel {...project} navigateTo={navigateTo} />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </section>
@@ -112,7 +112,6 @@ const App = () => {
         )}
         {currentPage === "languages" && <ProgrammingLanguages />}
       </main>
-
 
       <div className="inline py-3 pb-0">
         <Footer />

@@ -4,7 +4,7 @@ import React from "react";
 export const Contact = () => {
   return (
     <div className="dark:gray-800 flex min-h-screen flex-col items-center justify-center p-6">
-      <div className="w-full max-w-lg rounded-lg bg-white p-8 shadow-xl dark:bg-gray-800">
+      <div className="w-full max-w-lg rounded-lg border-[1px] border-gray-300 bg-white p-8 shadow-xl dark:border-gray-400 dark:bg-gray-800">
         <h1 className="text-center text-4xl font-extrabold text-gray-900 dark:text-gray-100">
           Contact Us
         </h1>
@@ -107,7 +107,7 @@ export const Contact = () => {
             href="https://github.com/olittlefoxE"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex transform items-center space-x-4 rounded-lg bg-gray-100 p-4 shadow-lg transition hover:scale-105 dark:bg-gray-700"
+            className="flex transform items-center space-x-4 rounded-lg bg-gray-100 p-4 shadow-lg transition hover:scale-105 dark:bg-gray-800"
           >
             <svg
               className="h-10 w-10"
@@ -127,7 +127,7 @@ export const Contact = () => {
             href="https://github.com/MinecraftLetsPlay"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex transform items-center space-x-4 rounded-lg bg-gray-100 p-4 shadow-lg transition hover:scale-105 dark:bg-gray-700"
+            className="flex transform items-center space-x-4 rounded-lg bg-gray-100 p-4 shadow-lg transition hover:scale-105 dark:bg-gray-800"
           >
             <svg
               className="h-10 w-10"
@@ -146,4 +146,3 @@ export const Contact = () => {
     </div>
   );
 };
-

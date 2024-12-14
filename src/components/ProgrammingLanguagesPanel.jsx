@@ -6,7 +6,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
     language;
 
   return (
-    <div className="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg dark:bg-gray-800 dark:text-gray-200">
+    <div className="rounded-lg border-[1px] border-gray-300 bg-white p-6 text-gray-800 shadow-md transition-shadow hover:shadow-xl dark:border-gray-400 dark:bg-gray-800 dark:text-gray-200">
       {/* Top section: Logo and name */}
       <div className="mb-4 flex items-center">
         <img
@@ -52,7 +52,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+            className="inline-block rounded bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 hover:opacity-95"
           >
             Visit Official Website
           </a>

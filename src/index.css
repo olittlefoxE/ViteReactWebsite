@@ -10,7 +10,7 @@
     transform: translateY(100%);
   }
 }
-  
+
 @keyframes moonUp {
   0% {
     transform: translateY(-100%);
@@ -19,11 +19,11 @@
     transform: translateY(0);
   }
 }
-  
+
 .sun-animation {
   animation: sunDown 0.5s forwards;
 }
-  
+
 .moon-animation {
   animation: moonUp 0.5s forwards;
 }

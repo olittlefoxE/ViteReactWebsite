@@ -8,7 +8,7 @@ export const NavBar = ({ navigateTo }) => {
     Home: "home",
     About: "about",
     Contact: "contact",
-    Languages: "languages"
+    Languages: "languages",
   };
 
   // Framer Motion animation variants for the buttons
@@ -40,7 +40,7 @@ export const NavBar = ({ navigateTo }) => {
             whileTap="tap"
             // Use the pageMap to navigate to the corresponding page
             onClick={() => navigateTo(pageMap[label])}
-            className="px-4 py-2 font-semibold transition-all rounded-md focus:outline-none"
+            className="rounded-md px-4 py-2 font-semibold transition-all focus:outline-none"
           >
             {label}
           </motion.button>

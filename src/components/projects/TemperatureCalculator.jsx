@@ -63,8 +63,8 @@ const TemperatureCalculator = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md max-w-sm mx-auto">
-      <h1 className="text-xl font-bold mb-4 text-center text-gray-800 dark:text-gray-200">
+    <div className="mx-auto max-w-sm rounded-lg bg-gray-100 p-6 shadow-md dark:bg-gray-800">
+      <h1 className="mb-4 text-center text-xl font-bold text-gray-800 dark:text-gray-200">
         Temperature Converter
       </h1>
       <div className="mb-4">
@@ -76,7 +76,7 @@ const TemperatureCalculator = () => {
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Enter value"
-          className="w-full px-3 py-2 border rounded-md dark:bg-gray-700 dark:text-gray-200"
+          className="w-full rounded-md border px-3 py-2 dark:bg-gray-700 dark:text-gray-200"
         />
       </div>
       <div className="mb-4">
@@ -86,7 +86,7 @@ const TemperatureCalculator = () => {
         <select
           value={inputUnit}
           onChange={handleInputUnitChange}
-          className="w-full px-3 py-2 border rounded-md dark:bg-gray-700 dark:text-gray-200"
+          className="w-full rounded-md border px-3 py-2 dark:bg-gray-700 dark:text-gray-200"
         >
           <option value="Celsius">Celsius</option>
           <option value="Fahrenheit">Fahrenheit</option>
@@ -100,21 +100,19 @@ const TemperatureCalculator = () => {
         <select
           value={outputUnit}
           onChange={handleOutputUnitChange}
-          className="w-full px-3 py-2 border rounded-md dark:bg-gray-700 dark:text-gray-200"
+          className="w-full rounded-md border px-3 py-2 dark:bg-gray-700 dark:text-gray-200"
         >
           <option value="Celsius">Celsius</option>
           <option value="Fahrenheit">Fahrenheit</option>
           <option value="Kelvin">Kelvin</option>
         </select>
       </div>
-      <div className="text-center mb-4">
-        <p className="text-lg font-bold dark:text-gray-300">
-          Result: {result}
-        </p>
+      <div className="mb-4 text-center">
+        <p className="text-lg font-bold dark:text-gray-300">Result: {result}</p>
       </div>
       <button
         onClick={resetFields}
-        className="w-full bg-red-600 text-white px-4 py-2 rounded-md"
+        className="w-full rounded-md bg-red-600 px-4 py-2 text-white"
       >
         Reset
       </button>
@@ -123,4 +121,3 @@ const TemperatureCalculator = () => {
 };
 
 export default TemperatureCalculator;
-

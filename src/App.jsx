@@ -23,7 +23,7 @@ const App = () => {
   useEffect(() => {
     const path = window.location.pathname.replace("/", "") || "home";
 
-    // set the page url name to /projects/ if the projects button is clicked 
+    // set the page url name to /projects/ if the projects button is clicked
     if (path.startsWith("projects/")) {
       const project = path.replace("projects/", "");
       setProjectName(project);
@@ -62,12 +62,12 @@ const App = () => {
     <div className="flex min-h-screen flex-col dark:bg-gray-700">
       <section className="relative">
         <AnimatedPanel />
-        <div className="absolute inset-0 flex items-center justify-center z-20">
+        <div className="absolute inset-0 z-20 flex items-center justify-center">
           <HeroTitle />
         </div>
       </section>
 
-      <section className="sticky top-0 z-10 py-4 bg-gray-400 shadow-md dark:bg-gray-800">
+      <section className="sticky top-0 z-10 bg-gray-400 py-4 shadow-md dark:bg-gray-800">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
           <div className="rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <NavBar navigateTo={navigateTo} />
@@ -78,17 +78,17 @@ const App = () => {
         </div>
       </section>
 
-      <main className="flex-grow relative overflow-hidden">
+      <main className="relative flex-grow overflow-hidden">
         {currentPage === "home" && (
           <div className="flex min-h-screen flex-col dark:bg-gray-700">
-            <div className="flex-grow relative py-10">
+            <div className="relative flex-grow py-10">
               <section className="relative py-10">
                 <div className="mx-auto max-w-screen-lg px-4">
                   <div className="flex flex-wrap justify-between gap-6">
                     {ProjectsPanelData.map((project, index) => (
                       <div
                         key={index}
-                        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 hover:shadow-lg transition-shadow"
+                        className="w-full transition-shadow hover:shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
                       >
                         <ProjectsPanel {...project} navigateTo={navigateTo} />
                       </div>
@@ -100,10 +100,12 @@ const App = () => {
           </div>
         )}
 
-        {/*Navigation*/ }
+        {/*Navigation*/}
         {currentPage === "contact" && <Contact />}
         {currentPage === "about" && <About />}
-        {currentPage === "projectPage" && projectName && (<ProjectPage projectName={projectName} />)}
+        {currentPage === "projectPage" && projectName && (
+          <ProjectPage projectName={projectName} />
+        )}
         {currentPage === "languages" && <ProgrammingLanguages />}
       </main>
 

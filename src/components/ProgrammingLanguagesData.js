@@ -201,6 +201,46 @@ const ProgrammingLanguagesData = [
     website: "https://www.haskell.org/",
   },
   {
+    name: "Dart",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
+    founders: ["Google"],
+    year: 2011,
+    background:
+      "Dart is a client-optimized programming language for developing fast apps on any platform, especially for mobile and web development.",
+    relatedLanguages: ["JavaScript", "TypeScript", "Kotlin"],
+    website: "https://dart.dev/",
+  },
+  {
+    name: "MATLAB",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png",
+    founders: ["Cleve Moler"],
+    year: 1984,
+    background:
+      "MATLAB is a high-performance language for technical computing, integrating computation, visualization, and programming.",
+    relatedLanguages: ["R", "Python", "Octave"],
+    website: "https://www.mathworks.com/",
+  },
+  {
+    name: "Lisp",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/48/Lisp_logo.svg",
+    founders: ["John McCarthy"],
+    year: 1958,
+    background:
+      "Lisp is one of the oldest high-level programming languages, known for its powerful macro system and use in artificial intelligence research.",
+    relatedLanguages: ["Scheme", "Clojure", "Common Lisp"],
+    website: "https://lisp-lang.org/",
+  },
+  {
+    name: "Fortran",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Fortran_logo.svg",
+    founders: ["John Backus"],
+    year: 1957,
+    background:
+      "Fortran (Formula Translation) is a programming language that excels in numerical computation and scientific computing, still widely used in high-performance computing.",
+    relatedLanguages: ["C", "Ada", "COBOL"],
+    website: "https://fortran-lang.org/",
+  },
+  {
     name: "jQuery",
     logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/JQuery_icon.svg",
     founders: ["John Resig"],

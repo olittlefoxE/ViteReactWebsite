@@ -28,7 +28,7 @@ export const NavBar = ({ navigateTo }) => {
   };
 
   return (
-    <nav className="flex items-center justify-between rounded-md bg-gray-700 px-5 py-3 text-white">
+    <nav className="inline-flex items-center justify-between rounded-md bg-gray-700 px-5 py-3 text-white">
       <div className="flex space-x-4">
         {/* Render navigation buttons dynamically from pageMap */}
         {Object.keys(pageMap).map((label) => (

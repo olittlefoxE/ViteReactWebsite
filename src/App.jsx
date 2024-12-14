@@ -69,10 +69,10 @@ const App = () => {
 
       <section className="sticky top-0 z-10 bg-gray-400 py-4 shadow-md dark:bg-gray-800">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
-          <div className="rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+          <div className="min-h-12 rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <NavBar navigateTo={navigateTo} />
           </div>
-          <div className="rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+          <div className="p-1 rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <ToggleThemeButton />
           </div>
         </div>
@@ -84,23 +84,27 @@ const App = () => {
             <div className="relative flex-grow py-10">
               <section className="relative py-10">
                 <div className="mx-auto max-w-screen-lg px-4">
+                  {/* Heading */}
+                  <h1 className="mb-8 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
+                    Projects
+                  </h1>
+                  {/* Projects Panel */}
                   <div className="flex flex-wrap justify-between gap-6">
                     {ProjectsPanelData.map((project, index) => (
-                      <div
-                        key={index}
-                        className="w-full transition-shadow hover:shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
-                      >
-                        <ProjectsPanel {...project} navigateTo={navigateTo} />
-                      </div>
-                    ))}
+                    <div
+                      key={index}
+                      className="w-full transition-shadow hover:shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
+                    >
+                    <ProjectsPanel {...project} navigateTo={navigateTo} />
+                  </div>
+                  ))}
                   </div>
                 </div>
               </section>
             </div>
           </div>
         )}
-
-        {/*Navigation*/}
+        {/* Navigation */}
         {currentPage === "contact" && <Contact />}
         {currentPage === "about" && <About />}
         {currentPage === "projectPage" && projectName && (
@@ -109,7 +113,8 @@ const App = () => {
         {currentPage === "languages" && <ProgrammingLanguages />}
       </main>
 
-      <div className="my-3 pb-0">
+
+      <div className="inline py-3 pb-0">
         <Footer />
       </div>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-400 py-6 text-black dark:bg-gray-800 dark:text-white">
+    <footer className="bg-gray-400 text-black dark:bg-gray-800 dark:text-white">
       <div className="container mx-auto px-4">
         {/* Decorative line */}
         <div className="mb-4 border-t border-gray-300 dark:border-gray-600"></div>

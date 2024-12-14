@@ -49,8 +49,3 @@ export const NavBar = ({ navigateTo }) => {
     </nav>
   );
 };
-
-
-
-
-

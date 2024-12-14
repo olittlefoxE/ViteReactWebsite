@@ -27,8 +27,10 @@ export const About = () => {
         This website is a collaborative project created by{" "}
         {teamMembers.map((member, index) => (
           <React.Fragment key={index}>
-            <span className="font-medium">{member.name}</span> (aka{" "}
-            <em>{member.nickname}</em>)
+            <span className="font-medium text-gray-800 dark:text-gray-200">
+              {member.name}
+            </span>{" "}
+            (aka <em className="text-gray-600 dark:text-gray-400">{member.nickname}</em>)
             {index < teamMembers.length - 1 && " and "}
           </React.Fragment>
         ))}
@@ -36,8 +38,14 @@ export const About = () => {
       </p>
       <div className="mt-6">
         {teamMembers.map((member, index) => (
-          <div key={index} className="mb-6">
-            <strong>({member.name.split(" ")[0]})</strong> {member.bio}
+          <div
+            key={index}
+            className="mb-6 text-gray-700 dark:text-gray-300 leading-relaxed"
+          >
+            <strong className="text-gray-900 dark:text-gray-100">
+              ({member.name.split(" ")[0]})
+            </strong>{" "}
+            {member.bio}
           </div>
         ))}
       </div>

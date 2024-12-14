@@ -1,23 +1,24 @@
 const ProgrammingLanguagesData = [
+
   {
-    name: "JavaScript",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-    founders: ["Brendan Eich"],
-    year: 1995,
+    name: "HTML",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+    founders: ["Tim Berners-Lee"],
+    year: 1993,
     background:
-      "JavaScript is a versatile programming language primarily used for web development. It allows developers to create interactive and dynamic web pages.",
-    relatedLanguages: ["TypeScript", "CoffeeScript", "ActionScript"],
-    website: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "HTML (HyperText Markup Language) is the standard language for creating and structuring content on the web.",
+    relatedLanguages: ["CSS", "JavaScript"],
+    website: "https://html.com",
   },
   {
-    name: "Python",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-    founders: ["Guido van Rossum"],
-    year: 1991,
+    name: "CSS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+    founders: ["Håkon Wium Lie"],
+    year: 1996,
     background:
-      "Python is a high-level, general-purpose programming language known for its simplicity and readability. It's widely used in data science, web development, and automation.",
-    relatedLanguages: ["Ruby", "Julia", "Perl"],
-    website: "https://www.python.org/",
+      "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+    relatedLanguages: ["HTML", "JavaScript"],
+    website: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     name: "Java",
@@ -28,6 +29,26 @@ const ProgrammingLanguagesData = [
       "Java is a class-based, object-oriented programming language designed to have minimal implementation dependencies. It is widely used for building enterprise-scale applications.",
     relatedLanguages: ["C#", "Kotlin", "Scala"],
     website: "https://www.java.com/",
+  },
+  {
+    name: "JavaScript",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png",
+    founders: ["Brendan Eich"],
+    year: 1995,
+    background:
+      "JavaScript is a versatile programming language primarily used for web development. It allows developers to create interactive and dynamic web pages.",
+    relatedLanguages: ["TypeScript", "CoffeeScript", "ActionScript"],
+    website: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "Python",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg",
+    founders: ["Guido van Rossum"],
+    year: 1991,
+    background:
+      "Python is a high-level, general-purpose programming language known for its simplicity and readability. It's widely used in data science, web development, and automation.",
+    relatedLanguages: ["Ruby", "Julia", "Perl"],
+    website: "https://www.python.org/",
   },
   {
     name: "C++",
@@ -41,7 +62,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "C#",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/C-Sharp_Logo.svg",
     founders: ["Anders Hejlsberg"],
     year: 2000,
     background:
@@ -101,7 +122,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Vue.js",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Vue.js_Logo_2.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
     founders: ["Evan You"],
     year: 2014,
     background:
@@ -111,7 +132,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Solid.js",
-    logo: "https://solidjs.com/logo.png",
+    logo: "https://cdn.brandfetch.io/idJhxDJuoj/w/180/h/180/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
     founders: ["Ryan Carniato"],
     year: 2020,
     background:
@@ -131,7 +152,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Angular",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Angular_logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png",
     founders: ["Misko Hevery", "Brad Green"],
     year: 2010,
     background:
@@ -140,8 +161,48 @@ const ProgrammingLanguagesData = [
     website: "https://angular.io/",
   },
   {
+    name: "Perl",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Perl_Code_Logo.svg",
+    founders: ["Larry Wall"],
+    year: 1987,
+    background:
+      "Perl is a high-level, general-purpose, interpreted, and dynamic programming language known for its powerful text processing capabilities.",
+    relatedLanguages: ["Python", "Ruby"],
+    website: "https://www.perl.org/",
+  },
+  {
+    name: "R",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg",
+    founders: ["Ross Ihaka", "Robert Gentleman"],
+    year: 1993,
+    background:
+      "R is a programming language and software environment for statistical computing and graphics. It's widely used in data analysis and research.",
+    relatedLanguages: ["Python", "MATLAB"],
+    website: "https://www.r-project.org/",
+  },
+  {
+    name: "Scala",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/39/Scala-full-color.svg",
+    founders: ["Martin Odersky"],
+    year: 2004,
+    background:
+      "Scala is a general-purpose programming language that integrates functional and object-oriented programming. It's often used in big data and distributed systems.",
+    relatedLanguages: ["Java", "Kotlin", "Haskell"],
+    website: "https://www.scala-lang.org/",
+  },
+  {
+    name: "Haskell",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg",
+    founders: ["Lennart Augustsson", "John Hughes", "Simon Peyton Jones"],
+    year: 1990,
+    background:
+      "Haskell is a standardized, general-purpose, purely functional programming language with non-strict semantics.",
+    relatedLanguages: ["Lisp", "Scala", "OCaml"],
+    website: "https://www.haskell.org/",
+  },
+  {
     name: "jQuery",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/JQuery_logo_2010.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/JQuery_icon.svg",
     founders: ["John Resig"],
     year: 2006,
     background:
@@ -161,7 +222,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "SQL",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/67/SQL_logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Sql_data_base_with_logo.svg",
     founders: ["Donald D. Chamberlin", "Raymond F. Boyce"],
     year: 1974,
     background:
@@ -171,7 +232,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "TypeScript",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/e/ec/TypeScript_logo_2020.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/37/Typescript_fullstack_logo.png",
     founders: ["Anders Hejlsberg"],
     year: 2012,
     background:
@@ -181,7 +242,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "ASP.NET",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/ASP.NET_Logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/13/Asp.net.svg",
     founders: ["Microsoft"],
     year: 2002,
     background:
@@ -189,8 +250,16 @@ const ProgrammingLanguagesData = [
     relatedLanguages: ["C#", "VB.NET"],
     website: "https://dotnet.microsoft.com/en-us/apps/aspnet",
   },
+  {
+    name: "Shell Script",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png",
+    founders: ["Ken Thompson"],
+    year: 1971,
+    background:
+      "Shell scripting involves writing scripts for Unix/Linux shell to automate tasks and execute commands in batch.",
+    relatedLanguages: ["Python", "Perl", "Ruby"],
+    website: "https://www.gnu.org/software/bash/",
+  },
 ];
 
 export default ProgrammingLanguagesData;
-
-

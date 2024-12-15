@@ -1,4 +1,4 @@
-// ReactWebsite/src/components/projects/extTemperatureCalculator.jsx
+// ReactWebsite/src/components/projects/TemperatureCalculator.jsx
 import React, { useState } from "react";
 
 const convertTemperature = (value, fromUnit, toUnit) => {
@@ -63,12 +63,12 @@ const TemperatureCalculator = () => {
   };
 
   return (
-    <div className="mx-auto max-w-sm rounded-lg bg-gray-100 p-6 shadow-md dark:bg-gray-800">
+    <div className="mx-auto max-w-sm rounded-lg border-[1px] border-gray-300 bg-gray-100 p-6 shadow-md dark:border-gray-400 dark:bg-gray-800">
       <h1 className="mb-4 text-center text-xl font-bold text-gray-800 dark:text-gray-200">
         Temperature Converter
       </h1>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
           Starting Value
         </label>
         <input
@@ -76,17 +76,17 @@ const TemperatureCalculator = () => {
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Enter value"
-          className="w-full rounded-md border px-3 py-2 dark:bg-gray-700 dark:text-gray-200"
+          className="w-full rounded-md bg-gray-200 px-3 py-2 dark:bg-gray-700 dark:text-gray-200"
         />
       </div>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
           Starting Unit
         </label>
         <select
           value={inputUnit}
           onChange={handleInputUnitChange}
-          className="w-full rounded-md border px-3 py-2 dark:bg-gray-700 dark:text-gray-200"
+          className="w-full rounded-md bg-gray-200 px-3 py-2 dark:bg-gray-700 dark:text-gray-300"
         >
           <option value="Celsius">Celsius</option>
           <option value="Fahrenheit">Fahrenheit</option>
@@ -94,13 +94,13 @@ const TemperatureCalculator = () => {
         </select>
       </div>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
           Result Unit
         </label>
         <select
           value={outputUnit}
           onChange={handleOutputUnitChange}
-          className="w-full rounded-md border px-3 py-2 dark:bg-gray-700 dark:text-gray-200"
+          className="w-full rounded-md bg-gray-200 px-3 py-2 dark:bg-gray-700 dark:text-gray-300"
         >
           <option value="Celsius">Celsius</option>
           <option value="Fahrenheit">Fahrenheit</option>

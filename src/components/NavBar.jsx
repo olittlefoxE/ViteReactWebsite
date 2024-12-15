@@ -6,9 +6,9 @@ export const NavBar = ({ navigateTo }) => {
   // Map button labels to their corresponding page keys
   const pageMap = {
     Home: "home",
+    Languages: "languages",
     About: "about",
     Contact: "contact",
-    Languages: "languages",
   };
 
   // Framer Motion animation variants for the buttons

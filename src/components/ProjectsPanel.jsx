@@ -20,7 +20,7 @@ export const ProjectsPanel = ({
   };
 
   return (
-    <div className="relative rounded-lg border-[1px] border-gray-300 bg-gray-100 p-4 shadow-md transition-shadow hover:shadow-xl dark:border-gray-400 dark:bg-gray-800">
+    <div className="relative overflow-hidden rounded-lg border-[1px] border-gray-400 bg-gray-100 p-4 shadow-md transition-shadow hover:shadow-xl dark:border-gray-400 dark:bg-gray-800">
       <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
         {name}
       </h3>
@@ -29,7 +29,7 @@ export const ProjectsPanel = ({
         {languages.map((lang, index) => (
           <span
             key={index}
-            className="inline-block rounded-md bg-blue-100 px-2 py-1 text-xs text-blue-800 dark:bg-blue-800 dark:text-blue-200"
+            className="inline-block leading-none max-w-full rounded-md bg-blue-100 px-2 py-1 text-xs text-blue-800 dark:bg-blue-800 dark:text-blue-200"
           >
             {lang}
           </span>
@@ -40,13 +40,13 @@ export const ProjectsPanel = ({
         {dependencies.map((dep, index) => (
           <span
             key={index}
-            className="inline-block rounded-md bg-green-100 px-2 py-1 text-xs text-green-800 dark:bg-green-800 dark:text-green-200"
+            className="inline-block leading-none truncate max-w-full rounded-md bg-green-100 px-2 py-1 text-xs text-green-800 dark:bg-green-800 dark:text-green-200"
           >
             {dep}
           </span>
         ))}
         {usesAI && (
-          <span className="inline-block rounded-md bg-red-100 px-2 py-1 text-xs text-red-800 dark:bg-red-800 dark:text-red-200">
+          <span className="inline-block leading-none truncate rounded-md bg-red-100 px-2 py-1 text-xs text-red-800 dark:bg-red-800 dark:text-red-200">
             AI Used
           </span>
         )}
@@ -57,14 +57,14 @@ export const ProjectsPanel = ({
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded bg-neutral-800 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-neutral-700"
+          className="w-[140px] rounded bg-neutral-800 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-neutral-700"
         >
           View on GitHub
         </a>
         {isFrontend && (
           <button
             onClick={navigateToProjectPage}
-            className="rounded bg-blue-600 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-blue-700"
+            className="w-[140px] rounded bg-blue-600 px-3 py-2 text-sm font-medium text-white shadow-md hover:bg-blue-700"
           >
             View Project
           </button>

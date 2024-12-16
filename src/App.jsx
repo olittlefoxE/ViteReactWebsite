@@ -93,9 +93,11 @@ const App = () => {
                     {ProjectsPanelData.map((project, index) => (
                       <div
                         key={index}
-                        className="w-full transition-shadow hover:shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
+                        className="relative w-full p-1 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
                       >
+                        <div className="relative -m-1 rounded-lg bg-white shadow-md hover:shadow-xl transition-shadow dark:bg-gray-800">
                         <ProjectsPanel {...project} navigateTo={navigateTo} />
+                        </div>
                       </div>
                     ))}
                   </div>

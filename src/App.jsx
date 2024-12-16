@@ -67,7 +67,7 @@ const App = () => {
         </div>
       </section>
 
-      <section className="sticky top-0 z-10 bg-gray-400/70 py-4 shadow-md dark:bg-gray-800/70">
+      <section className="sticky top-0 z-10 bg-gray-400 py-4 shadow-md dark:bg-gray-800">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
           <div className="min-h-12 rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <NavBar navigateTo={navigateTo} />

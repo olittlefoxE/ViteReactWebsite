@@ -62,7 +62,7 @@ export const Contact = () => {
             className="flex transform items-center space-x-4 rounded-lg bg-red-100 p-4 shadow-lg transition hover:scale-105 dark:bg-red-700"
           >
             <svg
-              className="h-10 w-10"
+              className="max-h-8 max-w-8"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 461.001 461.001"
             >
@@ -86,7 +86,7 @@ export const Contact = () => {
             className="flex transform items-center space-x-4 rounded-lg bg-red-100 p-4 shadow-lg transition hover:scale-105 dark:bg-red-700"
           >
             <svg
-              className="h-10 w-10"
+              className="max-h-8 max-w-8"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 461.001 461.001"
             >
@@ -110,7 +110,7 @@ export const Contact = () => {
             className="flex transform items-center space-x-4 rounded-lg bg-neutral-200 p-4 shadow-lg transition hover:scale-105 dark:bg-gray-800"
           >
             <svg
-              className="h-10 w-10"
+              className="max-h-8 max-w-8"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -130,7 +130,7 @@ export const Contact = () => {
             className="flex transform items-center space-x-4 rounded-lg bg-neutral-200 p-4 shadow-lg transition hover:scale-105 dark:bg-gray-800"
           >
             <svg
-              className="h-10 w-10"
+              className="max-h-8 max-w-8"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

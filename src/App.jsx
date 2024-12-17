@@ -72,7 +72,7 @@ const App = () => {
           <div className="min-h-12 rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
             <NavBar navigateTo={navigateTo} />
           </div>
-          <div className="rounded-lg bg-gray-400 p-1 shadow-md backdrop-blur-sm dark:bg-gray-700">
+          <div className="rounded-lg bg-gray-700 p-2 shadow-md backdrop-blur-sm dark:bg-gray-700">
             <ToggleThemeButton />
           </div>
         </div>
@@ -95,8 +95,8 @@ const App = () => {
                         key={index}
                         className="relative w-full p-1 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
                       >
-                        <div className="relative -m-1 rounded-lg bg-white shadow-md hover:shadow-xl transition-shadow dark:bg-gray-800">
-                        <ProjectsPanel {...project} navigateTo={navigateTo} />
+                        <div className="relative -m-1 rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl dark:bg-gray-800">
+                          <ProjectsPanel {...project} navigateTo={navigateTo} />
                         </div>
                       </div>
                     ))}

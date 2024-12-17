@@ -1,7 +1,7 @@
 // src/components/PanelData.js
 export const ProjectsPanelData = [
   {
-    name: "TemperatureCalculator",
+    name: "Temperature Calculator",
     languages: ["JavaScript"],
     dependencies: ["React", "TailwindCSS"],
     usesAI: true,
@@ -11,22 +11,24 @@ export const ProjectsPanelData = [
   },
 
   {
-    name: "Digital Clock (12H & 24H)",
+    name: "Digital Clock",
     languages: ["C#"],
-    dependencies: ["Microsoft .NET Framework"],
+    dependencies: ["Microsoft .NET"],
     usesAI: true,
     isFronted: false,
-    githubLink: "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Digital%20Clock%20(12H%20%26%2024H)",
-    author: "MinecraftLetsPlay"
+    githubLink:
+      "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Digital%20Clock%20(12H%20%26%2024H)",
+    author: "MinecraftLetsPlay",
   },
 
   {
     name: "Password Generator",
     languages: ["C#"],
-    dependencies: ["Microsoft .NET Framework"],
+    dependencies: ["Microsoft .NET"],
     usesAI: true,
     isFronted: false,
-    githubLink: "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Password%20Generator",
-    author: "MinecraftLetsPlay"
+    githubLink:
+      "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Password%20Generator",
+    author: "MinecraftLetsPlay",
   },
 ];

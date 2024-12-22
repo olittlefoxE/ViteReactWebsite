@@ -9,8 +9,16 @@ module.exports = {
   ],
   darkMode: "class", // Enable dark mode via a class
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // define font families
+        Roboto: ["Roboto", "sans-serif"],
+        FiraSans: ["Fira Sans", "sans-serif"],
+        FiraMono: ["Fira Mono", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"],
+        RobotoSlab: ["Roboto Slab", "sans-serif"],
+      },
+    },
   },
-  plugins: [
-  ],
+  plugins: [],
 };

@@ -7,10 +7,12 @@ export const HeroTitle = () => {
 
   return (
     <header className="drop-shadow-neutral-500 z-10 text-center drop-shadow-lg">
-      <h1 className="text-4xl font-bold text-white drop-shadow-md">
+      <h1 className="font-RobotoSlab text-4xl font-bold text-white drop-shadow-md">
         {Heading}
       </h1>
-      <p className="text-lg font-light text-gray-200">{headingDescription}</p>
+      <p className="font-FiraSans text-lg font-light text-gray-200">
+        {headingDescription}
+      </p>
     </header>
   );
 };

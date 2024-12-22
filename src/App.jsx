@@ -85,7 +85,7 @@ const App = () => {
               <section className="relative py-10">
                 <div className="mx-auto max-w-screen-lg px-4">
                   {/* Heading */}
-                  <h1 className="mb-8 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
+                  <h1 className="font-Exo mb-8 text-center text-4xl font-extrabold text-gray-900 dark:text-gray-100">
                     Projects
                   </h1>
                   {/* Projects Panel */}

@@ -16,7 +16,7 @@ const teamMembers = [
 
 export const About = () => {
   return (
-    <div className="dark:border:gray-700 mx-auto mb-10 mt-10 max-w-5xl rounded-lg border-[1px] border-gray-300 p-8 shadow-lg dark:border-gray-400 dark:bg-gray-800">
+    <div className="dark:border:gray-700 mx-auto mb-10 mt-10 max-w-5xl rounded-lg border-[1px] border-gray-300 p-8 font-RobotoSlab shadow-lg dark:border-gray-400 dark:bg-gray-800">
       <h1 className="mb-6 text-center text-4xl font-extrabold text-gray-900 dark:text-gray-100">
         About Us
       </h1>

@@ -20,16 +20,14 @@ export const ProjectsPanel = ({
   };
 
   return (
-    <div className="relative min-h-[250px] overflow-hidden rounded-lg border-[1px] border-gray-300 bg-gray-100 p-4 shadow-md transition-shadow hover:shadow-xl dark:border-gray-400 dark:bg-gray-800">
-      <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-        {name}
-      </h3>
+    <div className="relative min-h-[250px] overflow-hidden rounded-lg border-[1px] p-4 shadow-md transition-shadow hover:shadow-xl">
+      <h3 className="text-xl font-semibold">{name}</h3>
 
       <div className="mt-2 flex flex-wrap gap-2">
         {languages.map((lang, index) => (
           <span
             key={index}
-            className="inline-block max-w-full rounded-md bg-blue-100 px-2 py-1 text-xs leading-none text-blue-800 dark:bg-blue-800 dark:text-blue-200"
+            className="inline-block max-w-full rounded-md bg-indigo-100 px-2 py-1 text-xs leading-none text-indigo-800 dark:bg-indigo-700 dark:text-indigo-200"
           >
             {lang}
           </span>
@@ -40,13 +38,13 @@ export const ProjectsPanel = ({
         {dependencies.map((dep, index) => (
           <span
             key={index}
-            className="inline-block max-w-full truncate rounded-md bg-green-100 px-2 py-1 text-xs leading-none text-green-800 dark:bg-green-800 dark:text-green-200"
+            className="inline-block max-w-full truncate rounded-md bg-teal-100 px-2 py-1 text-xs leading-none text-teal-800 dark:bg-teal-700 dark:text-teal-200"
           >
             {dep}
           </span>
         ))}
         {usesAI && (
-          <span className="inline-block truncate rounded-md bg-red-100 px-2 py-1 text-xs leading-none text-red-800 dark:bg-red-800 dark:text-red-200">
+          <span className="inline-block truncate rounded-md bg-red-100 px-2 py-1 text-xs leading-none text-red-800 dark:bg-red-700 dark:text-red-200">
             AI Used
           </span>
         )}
@@ -71,9 +69,9 @@ export const ProjectsPanel = ({
         )}
       </div>
 
-      <hr className="my-4 border-t border-gray-300 dark:border-gray-700" />
+      <hr className="my-4 border-t border-neutral-300 dark:border-neutral-700" />
 
-      <p className="text-right text-xs text-gray-400 dark:text-gray-500">
+      <p className="text-right text-xs text-neutral-500 dark:text-neutral-400">
         By: {author}
       </p>
     </div>

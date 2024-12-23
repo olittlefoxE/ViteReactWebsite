@@ -1,4 +1,3 @@
-// ReactWebsite/src/components/NavBar.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -16,7 +15,6 @@ export const NavBar = ({ navigateTo }) => {
     initial: { x: 0, opacity: 1, rotate: 0 },
     hover: {
       x: 5,
-      color: "#e0e0e0",
       opacity: 1,
       transition: { type: "spring", stiffness: 300, damping: 15 },
     },
@@ -28,7 +26,7 @@ export const NavBar = ({ navigateTo }) => {
   };
 
   return (
-    <nav className="inline-flex items-center justify-between rounded-md bg-gray-700 px-5 py-3 text-white">
+    <nav className="inline-flex items-center justify-between rounded-md bg-gradient-to-tr px-5 py-3">
       <div className="flex space-x-4">
         {/* Render navigation buttons dynamically from pageMap */}
         {Object.keys(pageMap).map((label) => (

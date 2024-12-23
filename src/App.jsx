@@ -1,4 +1,3 @@
-// ReactWebsite/src/App.jsx
 import React, { useState, useEffect } from "react";
 // ReactWebsite/src/components/*.jsx
 import { HeroTitle } from "./components/HeroTitle.jsx";
@@ -33,6 +32,7 @@ const App = () => {
       setProjectName(null);
     }
   }, []);
+
   // set the page url name to /projects/ fallback
   const navigateTo = (page) => {
     if (!page) {
@@ -59,7 +59,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col dark:bg-gray-700">
+    <div className="flex flex-col">
       <section className="relative">
         <AnimatedPanel />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
@@ -67,25 +67,25 @@ const App = () => {
         </div>
       </section>
 
-      <section className="sticky top-0 z-10 bg-gray-400 py-4 shadow-md dark:bg-gray-800">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
-          <div className="min-h-12 rounded-lg bg-white/70 shadow-md backdrop-blur-sm dark:bg-gray-900/70">
+      <section className="sticky top-0 z-10 py-7 shadow-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="min-h-12 rounded-lg shadow-md">
             <NavBar navigateTo={navigateTo} />
           </div>
-          <div className="rounded-lg bg-gray-700 p-2 shadow-md backdrop-blur-sm dark:bg-gray-700">
+          <div className="from-ingotDeep via-ingotMolten to-ingotLight rounded-lg bg-gradient-to-tl p-2 shadow-md">
             <ToggleThemeButton />
           </div>
         </div>
       </section>
 
-      <main className="relative flex-grow overflow-hidden">
+      <main className="text-darkText dark:text-lightText from-lightBackground via-lightBackgroundMuted to-lightBackgroundShade dark:from-darkBackground dark:via-darkBackgroundMuted dark:to-darkBackgroundShade relative flex-grow overflow-hidden bg-gradient-to-b">
         {currentPage === "home" && (
-          <div className="flex min-h-screen flex-col dark:bg-gray-700">
-            <div className="relative flex-grow py-10">
-              <section className="relative py-10">
+          <div className="flex min-h-screen flex-col">
+            <div className="relative flex-grow">
+              <section className="py-10">
                 <div className="mx-auto max-w-screen-lg px-4">
                   {/* Heading */}
-                  <h1 className="font-Exo mb-8 text-center text-4xl font-extrabold text-gray-900 dark:text-gray-100">
+                  <h1 className="font-Exo mb-8 text-center text-4xl font-extrabold underline underline-offset-4">
                     Projects
                   </h1>
                   {/* Projects Panel */}
@@ -95,7 +95,7 @@ const App = () => {
                         key={index}
                         className="relative w-full p-1 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4"
                       >
-                        <div className="relative -m-1 rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl dark:bg-gray-800">
+                        <div className="relative -m-1 rounded-lg shadow-md transition-shadow hover:shadow-xl">
                           <ProjectsPanel {...project} navigateTo={navigateTo} />
                         </div>
                       </div>
@@ -106,6 +106,7 @@ const App = () => {
             </div>
           </div>
         )}
+
         {/* Navigation */}
         {currentPage === "contact" && <Contact />}
         {currentPage === "about" && <About />}

@@ -16,11 +16,9 @@ const teamMembers = [
 
 export const About = () => {
   return (
-    <div className="dark:border:gray-700 mx-auto mb-10 mt-10 max-w-5xl rounded-lg border-[1px] border-gray-300 p-8 font-RobotoSlab shadow-lg dark:border-gray-400 dark:bg-gray-800">
-      <h1 className="mb-6 text-center text-4xl font-extrabold text-gray-900 dark:text-gray-100">
-        About Us
-      </h1>
-      <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+    <div className="mx-auto mb-10 mt-10 max-w-5xl rounded-lg p-8 font-RobotoSlab shadow-lg">
+      <h1 className="mb-6 text-center text-4xl font-extrabold">About Us</h1>
+      <p className="text-lg leading-relaxed">
         Welcome to{" "}
         <span className="font-semibold">Robin & Dennis' Code Forge!</span>
         <br />
@@ -31,29 +29,23 @@ export const About = () => {
             <span className="font-medium text-gray-800 dark:text-gray-200">
               {member.name}
             </span>{" "}
-            (aka{" "}
-            <em className="text-gray-600 dark:text-gray-400">
-              {member.nickname}
-            </em>
-            ){index < teamMembers.length - 1 && " and "}
+            (aka <em className="text-black">{member.nickname}</em>)
+            {index < teamMembers.length - 1 && " and "}
           </React.Fragment>
         ))}
         .
       </p>
       <div className="mt-6">
         {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="mb-6 leading-relaxed text-gray-700 dark:text-gray-300"
-          >
-            <strong className="text-gray-900 dark:text-gray-100">
+          <div key={index} className="mb-6 leading-relaxed">
+            <strong className="text-black">
               ({member.name.split(" ")[0]})
             </strong>{" "}
             {member.bio}
           </div>
         ))}
       </div>
-      <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+      <p className="text-lg leading-relaxed text-black">
         Our goal is to use this website as a platform to deepen our knowledge of
         HTML, CSS, React, and the intricacies of web development, including how
         to set up, run, and maintain a website.

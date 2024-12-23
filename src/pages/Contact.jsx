@@ -3,11 +3,9 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <div className="dark:gray-800 mt-0 flex min-h-screen flex-col items-center justify-center pt-0 font-RobotoSlab">
-      <div className="w-full max-w-lg rounded-lg border-[1px] border-gray-300 bg-gray-100 p-8 shadow-xl dark:border-gray-400 dark:bg-gray-800">
-        <h1 className="mb-6 text-center text-4xl font-extrabold text-gray-900 dark:text-gray-100">
-          Contact Us
-        </h1>
+    <div className="mt-0 flex min-h-screen flex-col items-center justify-center pt-0 font-RobotoSlab">
+      <div className="w-full max-w-lg rounded-lg border-[1px] p-8 shadow-xl">
+        <h1 className="mb-6 text-center text-4xl font-extrabold">Contact Us</h1>
         <p className="mb-8 text-center text-gray-700 dark:text-gray-300">
           Feel free to reach out to us for collaboration, queries, or feedback!
         </p>

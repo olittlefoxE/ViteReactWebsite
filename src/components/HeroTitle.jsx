@@ -6,11 +6,11 @@ export const HeroTitle = () => {
   const headingDescription = "rd-code-forge.net";
 
   return (
-    <header className="drop-shadow-neutral-500 z-10 text-center drop-shadow-lg">
-      <h1 className="font-RobotoSlab text-4xl font-bold text-white drop-shadow-md">
+    <header className="z-10 text-center drop-shadow-lg">
+      <h1 className="text-fireBase font-RobotoSlab text-4xl font-bold drop-shadow-md">
         {Heading}
       </h1>
-      <p className="font-FiraSans text-lg font-light text-gray-200">
+      <p className="text-fireGlow font-FiraSans text-lg font-light">
         {headingDescription}
       </p>
     </header>

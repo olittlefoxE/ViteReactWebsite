@@ -16,7 +16,7 @@ export const ToggleThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-400 hover:opacity-80 dark:bg-gray-800"
+      className="bg-forgeAsh hover:bg-forgeSmoke relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full transition"
       aria-label="Toggle Theme"
     >
       {/* Sun Animation */}

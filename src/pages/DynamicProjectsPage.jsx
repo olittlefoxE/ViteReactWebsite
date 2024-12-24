@@ -1,7 +1,6 @@
-// ReactWebsite/src/pages/DynamicProjectsPage.jsx
 import React, { Suspense, lazy } from "react";
 
-export const ProjectPage = ({ projectName }) => {
+export const DynamicProjectsPage = ({ projectName }) => {
   if (!projectName || typeof projectName !== "string") {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center">

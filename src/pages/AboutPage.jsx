@@ -1,4 +1,3 @@
-// ReactWebsite/src/pages/About.jsx
 import React from "react";
 
 const teamMembers = [
@@ -14,7 +13,7 @@ const teamMembers = [
   },
 ];
 
-export const About = () => {
+export const AboutPage = () => {
   return (
     <div className="mx-auto mb-10 mt-10 max-w-5xl rounded-lg p-8 font-RobotoSlab shadow-lg">
       <h1 className="mb-6 text-center text-4xl font-extrabold">About Us</h1>

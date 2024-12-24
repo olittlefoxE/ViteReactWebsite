@@ -1,7 +1,6 @@
-// ReactWebsite/src/pages/Contact.jsx
 import React from "react";
 
-export const Contact = () => {
+export const ContactPage = () => {
   return (
     <div className="mt-0 flex min-h-screen flex-col items-center justify-center pt-0 font-RobotoSlab">
       <div className="w-full max-w-lg rounded-lg border-[1px] p-8 shadow-xl">

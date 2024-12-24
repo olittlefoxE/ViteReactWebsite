@@ -1,7 +1,6 @@
-// ReactWebsite/src/components/ProgrammingLanguagesPanel.jsx
 import React from "react";
 
-export const ProgrammingLanguagesPanel = ({ language }) => {
+export const ProgrammingLanguagesPage = ({ language }) => {
   const { name, logo, founders, year, background, relatedLanguages, website } =
     language;
 

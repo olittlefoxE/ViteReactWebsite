@@ -1,17 +1,17 @@
-// ReactWebsite/src/components/AnimatedPanel.jsx
 import React, { useEffect, useRef } from "react";
+import { ScrollButton } from "./ScrollButton"; // Import the ScrollButton component
 
-export const AnimatedPanel = () => {
+export const AnimationPanel = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    // Function to resize the canvas to fill its parent
+    // Function to resize the canvas to fill the viewport
     const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
 
     // Resize on mount and when the window resizes
@@ -208,11 +208,12 @@ export const AnimatedPanel = () => {
   }, []);
 
   return (
-    <div className="bg-forgeGradient dark:bg-forgeGradientDark m-0 h-full w-full p-8 shadow-md">
+    <div className="relative h-screen w-screen bg-forgeGradient dark:bg-forgeGradientDark">
       <canvas
         ref={canvasRef}
-        className="m-0 h-[calc(100vh-30em)] w-[calc(100vw-6em)] p-0"
+        className="absolute left-0 top-0 h-full w-full"
       ></canvas>
+      <ScrollButton targetId="content-below" />
     </div>
   );
 };

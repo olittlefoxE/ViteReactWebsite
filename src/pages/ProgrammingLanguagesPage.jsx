@@ -1,9 +1,8 @@
-// ReactWebsite/src/pages/ProgrammingLanguages.jsx
 import React from "react";
-import ProgrammingLanguagesData from "../components/ProgrammingLanguagesData.js";
-import { ProgrammingLanguagesPanel } from "../components/ProgrammingLanguagesPanel.jsx";
+import ProgrammingLanguagesData from "../data/ProgrammingLanguagesData.js";
+import { ProgrammingLanguagesPanel } from "./common/ProgrammingLanguagesPanel.jsx";
 
-export const ProgrammingLanguages = () => {
+export const ProgrammingLanguagesPage = () => {
   return (
     <div className="min-h-screen py-10">
       <div className="container mx-auto">

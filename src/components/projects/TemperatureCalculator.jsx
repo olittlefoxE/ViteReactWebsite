@@ -1,4 +1,3 @@
-// ReactWebsite/src/components/projects/TemperatureCalculator.jsx
 import React, { useState } from "react";
 
 const convertTemperature = (value, fromUnit, toUnit) => {

@@ -1,4 +1,3 @@
-// src/components/PanelData.js
 export const ProjectsPanelData = [
   {
     name: "Temperature Calculator",

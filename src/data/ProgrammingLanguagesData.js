@@ -1,4 +1,3 @@
-// ReactWebsite/src/components/ProgrammingLanguagesData.js
 const ProgrammingLanguagesData = [
   {
     name: "HTML",

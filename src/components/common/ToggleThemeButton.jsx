@@ -1,4 +1,3 @@
-// ReactWebsite/src/components/ToggleThemeButton.jsx
 import React, { useState } from "react";
 
 export const ToggleThemeButton = () => {
@@ -16,7 +15,7 @@ export const ToggleThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="bg-forgeAsh hover:bg-forgeSmoke relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full transition"
+      className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-forgeAsh transition hover:bg-forgeSmoke"
       aria-label="Toggle Theme"
     >
       {/* Sun Animation */}

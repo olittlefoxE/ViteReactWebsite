@@ -46,7 +46,7 @@ const App = () => {
   };
 
   return (
-    <div id="content-below" className="flex flex-col">
+    <div className="flex flex-col">
       {/* Hero Section with Animation and Title */}
       <section className="relative h-screen">
         <AnimationPanel />
@@ -56,7 +56,7 @@ const App = () => {
       </section>
 
       {/* Sticky Navigation Bar */}
-      <section className="z-1 sticky top-0 bg-gradient-to-r from-forgeDark via-forgeAsh to-forgeGrayAsh py-5 shadow-md">
+      <section className="z-1 top-0 bg-gradient-to-r from-forgeDark via-forgeAsh to-forgeGrayAsh py-5 shadow-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
           <NavBar navigateTo={navigateTo} />
           <div className="rounded-md bg-gradient-to-r from-fireBase via-fireCrimson to-fireBlaze p-2">
@@ -66,15 +66,15 @@ const App = () => {
       </section>
 
       {/* Main Content Area */}
-      <main className="flex-grow">
+      <div className="flex-grow bg-emberGradientGlow dark:bg-emberGradient">
         {currentPage === "home" && (
-          <div className="col-span-2 flex flex-col bg-gradient-to-b from-lightBackground via-lightBackgroundMuted to-lightBackgroundShade dark:from-darkBackground dark:via-darkBackgroundMuted dark:to-darkBackgroundShade">
-            <section className="py-10">
+          <section className="col-span-3 flex flex-col">
+            <div className="py-10">
               <div className="mx-auto mt-3 max-w-screen-lg">
                 <h1 className="font-Exo mb-6 text-center text-4xl font-bold">
                   Projects
                 </h1>
-                <div className="flex flex-wrap justify-between gap-6">
+                <div className="mx-auto flex flex-wrap justify-between gap-4">
                   {ProjectsPanelData.map((project, index) => (
                     <div
                       key={index}
@@ -85,8 +85,8 @@ const App = () => {
                   ))}
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
         )}
         {currentPage === "contact" && <ContactPage />}
         {currentPage === "about" && <AboutPage />}
@@ -94,7 +94,7 @@ const App = () => {
           <DynamicProjectsPage projectName={projectName} />
         )}
         {currentPage === "languages" && <ProgrammingLanguagesPage />}
-      </main>
+      </div>
 
       {/* Footer */}
       <Footer />

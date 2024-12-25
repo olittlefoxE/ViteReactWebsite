@@ -18,7 +18,7 @@ export const ProjectsPanel = ({
   };
 
   return (
-    <div className="relative min-h-[250px] overflow-hidden rounded-lg border-[1px] p-4 shadow-md transition-shadow hover:shadow-xl">
+    <div className="relative min-h-60 overflow-hidden rounded-lg border-[1px] p-4 shadow-md transition-shadow hover:shadow-xl">
       <h3 className="text-xl font-semibold">{name}</h3>
 
       {/* Programming Languages Tags */}

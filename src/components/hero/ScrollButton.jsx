@@ -10,8 +10,7 @@ export const ScrollButton = ({ targetId }) => {
 
   return (
     <button
-      id="scrollButton"
-      className="absolute bottom-8 left-1/2 flex -translate-x-1/2 transform items-center justify-center rounded bg-fireBase px-6 py-3 text-white shadow-xl hover:scale-105"
+      className="absolute bottom-8 left-1/2 flex -translate-x-1/2 transform items-center justify-center rounded bg-gradient-to-tr from-fireBase via-fireBlaze to-fireAccent px-6 py-3 text-white shadow-xl hover:scale-105"
       onClick={handleClick}
     >
       Scroll Down

@@ -5,11 +5,11 @@ import { ProgrammingLanguagesPanel } from "../components/common/ProgrammingLangu
 export const ProgrammingLanguagesPage = () => {
   return (
     <div className="min-h-screen py-10">
-      <div className="container mx-auto">
-        <h1 className="font-Exo mb-10 mt-10 text-center text-4xl font-extrabold">
+      <div className="container mx-auto max-w-6xl">
+        <h1 className="font-Exo mb-12 mt-24 text-center text-4xl font-extrabold text-forgeDark underline underline-offset-4 dark:text-forgeGrayBase">
           Programming Languages
         </h1>
-        {/* Grid Container */}
+
         <div
           className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           style={{

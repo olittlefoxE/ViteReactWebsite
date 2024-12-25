@@ -5,19 +5,21 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
     language;
 
   return (
-    <div className="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg dark:bg-gray-800 dark:text-gray-200">
+    <div className="max-w-6xl rounded-lg border border-forgeGrayWarm bg-gradient-to-bl from-forgeGraySoft via-forgeSmoke to-fireGlow p-6 text-forgeGrayAsh shadow-md transition-shadow hover:shadow-lg dark:border-forgeGrayDeep dark:from-forgeGrayAsh dark:via-forgeAsh dark:to-fireBase">
       {/* Top section: Logo and name */}
       <div className="mb-4 flex items-center">
         <img
           src={logo}
           alt={`${name} logo`}
-          className="mr-4 h-12 w-12 rounded-full border border-gray-300 object-contain dark:border-gray-700"
+          className="mr-4 h-12 w-12 rounded-full border border-forgeGrayWarm object-contain dark:border-forgeGrayDeep"
         />
-        <h2 className="text-2xl font-bold">{name}</h2>
+        <h2 className="text-2xl font-bold text-forgeGrayAsh dark:text-forgeGrayLight">
+          {name}
+        </h2>
       </div>
 
       {/* Founding details */}
-      <div className="mb-4">
+      <div className="mb-4 text-forgeGrayAsh dark:text-forgeGrayLight">
         <p>
           <strong>Founders:</strong> {founders.join(", ")}
         </p>
@@ -27,14 +29,14 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       </div>
 
       {/* Background info */}
-      <div className="mb-4">
+      <div className="mb-4 text-forgeGrayAsh dark:text-forgeGrayLight">
         <h3 className="mb-2 text-lg font-semibold">Background</h3>
         <p>{background}</p>
       </div>
 
       {/* Related languages */}
       {relatedLanguages && relatedLanguages.length > 0 && (
-        <div>
+        <div className="text-forgeGrayAsh dark:text-forgeGrayLight">
           <h3 className="mb-2 text-lg font-semibold">Related Languages</h3>
           <ul className="list-disc pl-5">
             {relatedLanguages.map((lang, index) => (
@@ -51,7 +53,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+            className="inline-block rounded bg-forgeGradientSteel px-4 py-2 text-sm font-semibold text-white transition-transform hover:scale-105"
           >
             Visit Official Website
           </a>

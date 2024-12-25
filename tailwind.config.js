@@ -74,11 +74,11 @@ module.exports = {
         fireGradientSpark: "linear-gradient(135deg, #FF6347, #FFBF00, #FF4500)", // Spark-inspired gradient
         fireGradientCore: "linear-gradient(135deg, #E65100, #FF5722, #FF7043)", // Core fire tones gradient
 
-        // Forge Gradients (Original + Additions)
+        // Forge Gradients
         forgeGradient: "linear-gradient(135deg, #212121, #424242, #D32F2F)", // Original forge gradient
         forgeGradientDark: "linear-gradient(135deg, #121212, #1C1C1C, #B71C1C)", // Original dark forge gradient
         forgeGradientSteel:
-          "linear-gradient(135deg, #1B1B1B, #333333, #CCCCCC)", // Forge steel tones
+          "linear-gradient(220deg, #1B1B1B, #333333, #CCCCCC)", // Forge steel tones
         forgeGradientAsh: "linear-gradient(135deg, #424242, #757575, #BDBDBD)", // Forge ash tones
         forgeGradientIron: "linear-gradient(135deg, #212121, #333333, #1B1B1B)", // Forge iron tones
         forgeGradientShadow:

@@ -15,6 +15,9 @@ import { DynamicProjectsPage } from "./pages/DynamicProjectsPage.jsx"; // Dynami
 // data
 import { ProjectsPanelData } from "./data/ProjectsPanelData.js";
 
+// Scroll Button component (imported from the ScrollButton file)
+import { ScrollButton } from "./components/hero/ScrollButton.jsx";
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
   const [projectName, setProjectName] = useState(null);
@@ -55,45 +58,50 @@ const App = () => {
         </div>
       </section>
 
-      {/* Sticky Navigation Bar */}
-      <section className="z-1 top-0 bg-gradient-to-r from-forgeDark via-forgeAsh to-forgeGrayAsh py-5 shadow-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
-          <NavBar navigateTo={navigateTo} />
-          <div className="rounded-md bg-gradient-to-r from-fireBase via-fireCrimson to-fireBlaze p-2">
-            <ToggleThemeButton />
-          </div>
-        </div>
-      </section>
+      {/* Scroll Button to scroll to Projects Section */}
+      <ScrollButton targetId="mainContent" />
 
-      {/* Main Content Area */}
-      <div className="flex-grow bg-emberGradientGlow dark:bg-emberGradient">
-        {currentPage === "home" && (
-          <section className="col-span-3 flex flex-col">
-            <div className="py-10">
-              <div className="mx-auto mt-3 max-w-screen-lg">
-                <h1 className="font-Exo mb-6 text-center text-4xl font-bold">
+      {/* Sticky Navigation Bar */}
+      <div id="mainContent">
+        <section className="z-1 sticky top-0 w-full bg-gradient-to-r from-forgeDark via-forgeAsh to-forgeGrayAsh py-5 shadow-md">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
+            <NavBar navigateTo={navigateTo} />
+            <div className="rounded-md bg-gradient-to-r from-fireBase via-fireCrimson to-fireBlaze p-2">
+              <ToggleThemeButton />
+            </div>
+          </div>
+        </section>
+
+        {/* Main Content Area */}
+        <div className="min-h-screen bg-forgeGradientAsh dark:bg-forgeGradientIron">
+          {currentPage === "home" && (
+            <section className="py-10">
+              <div className="containers min-h-4xl mx-auto max-w-5xl">
+                <h1 className="font-Exo mb-12 mt-24 text-center text-4xl font-extrabold text-forgeDark underline underline-offset-4 dark:text-forgeGrayBase">
                   Projects
                 </h1>
-                <div className="mx-auto flex flex-wrap justify-between gap-4">
+                <div
+                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                  style={{
+                    gridAutoRows: "1fr", // Ensures all grid items have uniform height
+                  }}
+                >
                   {ProjectsPanelData.map((project, index) => (
-                    <div
-                      key={index}
-                      className="relative w-full sm:w-1/2 md:w-1/3"
-                    >
+                    <div key={index} className="flex justify-center">
                       <ProjectsPanel {...project} navigateTo={navigateTo} />
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
-          </section>
-        )}
-        {currentPage === "contact" && <ContactPage />}
-        {currentPage === "about" && <AboutPage />}
-        {currentPage === "projectPage" && projectName && (
-          <DynamicProjectsPage projectName={projectName} />
-        )}
-        {currentPage === "languages" && <ProgrammingLanguagesPage />}
+            </section>
+          )}
+          {currentPage === "contact" && <ContactPage />}
+          {currentPage === "about" && <AboutPage />}
+          {currentPage === "projectPage" && projectName && (
+            <DynamicProjectsPage projectName={projectName} />
+          )}
+          {currentPage === "languages" && <ProgrammingLanguagesPage />}
+        </div>
       </div>
 
       {/* Footer */}

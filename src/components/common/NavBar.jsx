@@ -26,7 +26,7 @@ export const NavBar = ({ navigateTo }) => {
   };
 
   return (
-    <nav className="via-fireCrimson to-fireBlaze inline-flex items-center justify-between rounded-md bg-gradient-to-r from-fireBase px-5 py-3">
+    <nav className="inline-flex items-center justify-between rounded-md bg-gradient-to-r from-fireBase via-fireCrimson to-fireBlaze px-5 py-3">
       <div className="flex space-x-4">
         {/* Render navigation buttons dynamically from pageMap */}
         {Object.keys(pageMap).map((label) => (

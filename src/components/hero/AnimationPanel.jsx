@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ScrollButton } from "./ScrollButton";
 import { boidsAnimation } from "../animations/boidsAnimation";
 import { ashAnimation } from "../animations/ashAnimation";
 
@@ -39,7 +38,6 @@ export const AnimationPanel = () => {
         ref={canvasRef}
         className="absolute left-0 top-0 h-full w-full"
       ></canvas>
-      <ScrollButton targetId="toMain" />
     </div>
   );
 };

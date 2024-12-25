@@ -9,6 +9,10 @@ export function ashAnimation(canvas) {
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
 
+  // Minimum speed
+  const minSpeedY = 1; // Minimum upward speed
+  const minSpeedX = 0.1; // Minimum horizontal speed
+
   class AshParticle {
     constructor() {
       this.position = {
@@ -16,8 +20,8 @@ export function ashAnimation(canvas) {
         y: canvas.height + Math.random() * 100,
       };
       this.velocity = {
-        x: Math.random() * 0.5 - 0.25,
-        y: -(Math.random() * 2 + 1),
+        x: Math.random() * 0.5 - 0.25 + minSpeedX,
+        y: -(Math.random() * 2 + 1) + minSpeedY,
       };
       this.size = Math.random() * 3 + 1;
       this.opacity = Math.random() * 0.8 + 0.2;

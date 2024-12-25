@@ -51,7 +51,7 @@ const App = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section with Animation and Title */}
-      <section className="relative h-screen">
+      <section className="relative">
         <AnimationPanel />
         <div className="absolute inset-0 flex items-center justify-center">
           <IntroTitle />
@@ -59,7 +59,9 @@ const App = () => {
       </section>
 
       {/* Scroll Button to scroll to Projects Section */}
-      <ScrollButton targetId="mainContent" />
+      <div className="relative flex justify-center">
+        <ScrollButton targetId="mainContent" />
+      </div>
 
       {/* Sticky Navigation Bar */}
       <div id="mainContent">

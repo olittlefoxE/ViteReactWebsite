@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
+// hero
 import { AnimationPanel } from "./components/hero/AnimationPanel.jsx";
 import { IntroTitle } from "./components/hero/IntroTitle.jsx";
+// components present in every page (common)
 import { Footer } from "./components/common/Footer.jsx";
 import { NavBar } from "./components/common/NavBar.jsx";
 import { ProjectsPanel } from "./components/common/ProjectsPanel.jsx";
 import { ToggleThemeButton } from "./components/common/ToggleThemeButton.jsx";
+// pages from the navbar
 import { AboutPage } from "./pages/AboutPage.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
-import { DynamicProjectsPage } from "./pages/DynamicProjectsPage.jsx";
-import { ProgrammingLanguagesPage } from "./components/common/ProgrammingLanguagesPanel.jsx";
+import { ProgrammingLanguagesPage } from "./pages/ProgrammingLanguagesPage.jsx";
+import { DynamicProjectsPage } from "./pages/DynamicProjectsPage.jsx"; // Dynamic page for handling the preview of projects on projects panel
+// data
 import { ProjectsPanelData } from "./data/ProjectsPanelData.js";
 
 const App = () => {
@@ -52,19 +56,21 @@ const App = () => {
       </section>
 
       {/* Sticky Navigation Bar */}
-      <section className="sticky top-0 z-10 bg-forgeDark py-5 shadow-md">
+      <section className="z-1 sticky top-0 bg-gradient-to-r from-forgeDark via-forgeAsh to-forgeGrayAsh py-5 shadow-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
           <NavBar navigateTo={navigateTo} />
-          <ToggleThemeButton />
+          <div className="rounded-md bg-gradient-to-r from-fireBase via-fireCrimson to-fireBlaze p-2">
+            <ToggleThemeButton />
+          </div>
         </div>
       </section>
 
       {/* Main Content Area */}
       <main className="flex-grow">
         {currentPage === "home" && (
-          <div className="flex flex-col">
+          <div className="col-span-2 flex flex-col bg-gradient-to-b from-lightBackground via-lightBackgroundMuted to-lightBackgroundShade dark:from-darkBackground dark:via-darkBackgroundMuted dark:to-darkBackgroundShade">
             <section className="py-10">
-              <div className="mx-auto max-w-screen-lg">
+              <div className="mx-auto mt-3 max-w-screen-lg">
                 <h1 className="font-Exo mb-6 text-center text-4xl font-bold">
                   Projects
                 </h1>

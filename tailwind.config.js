@@ -2,9 +2,11 @@
 module.exports = {
   content: [
     "./public/index.html",
-    "./src/components/*.{js,jsx}",
     "./src/components/projects/*.{js,jsx}",
+    "./src/components/common/*.{js,jsx}",
+    "./src/components/hero/*.{js,jsx}",
     "./src/pages/*.{js,jsx}",
+    "./src/data/*.{js,jsx}",
     "./src/App.jsx",
   ],
   darkMode: "class", // Enable dark mode via a class

@@ -13,7 +13,6 @@ export const ProjectsPanel = ({
 }) => {
   const navigateToProjectPage = () => {
     if (isFrontend) {
-      // Trigger navigation via `navigateTo` to project-specific pages
       navigateTo(`projects/${name}`);
     }
   };
@@ -22,33 +21,36 @@ export const ProjectsPanel = ({
     <div className="relative min-h-[250px] overflow-hidden rounded-lg border-[1px] p-4 shadow-md transition-shadow hover:shadow-xl">
       <h3 className="text-xl font-semibold">{name}</h3>
 
+      {/* Programming Languages Tags */}
       <div className="mt-2 flex flex-wrap gap-2">
         {languages.map((lang, index) => (
           <span
             key={index}
-            className="inline-block max-w-full rounded-md bg-indigo-100 px-2 py-1 text-xs leading-none text-indigo-800 dark:bg-indigo-700 dark:text-indigo-200"
+            className="inline-block max-w-full rounded-md bg-blue-100 px-2 py-1 text-xs leading-none text-black dark:bg-blue-200"
           >
             {lang}
           </span>
         ))}
       </div>
 
+      {/* Dependencies and AI Used Tags */}
       <div className="mt-2 flex flex-wrap gap-2">
         {dependencies.map((dep, index) => (
           <span
             key={index}
-            className="inline-block max-w-full truncate rounded-md bg-teal-100 px-2 py-1 text-xs leading-none text-teal-800 dark:bg-teal-700 dark:text-teal-200"
+            className="inline-block max-w-full truncate rounded-md bg-green-100 px-2 py-1 text-xs leading-none text-black dark:bg-green-200"
           >
             {dep}
           </span>
         ))}
         {usesAI && (
-          <span className="inline-block truncate rounded-md bg-red-100 px-2 py-1 text-xs leading-none text-red-800 dark:bg-red-700 dark:text-red-200">
+          <span className="inline-block truncate rounded-md bg-red-100 px-2 py-1 text-xs leading-none text-black dark:bg-red-200">
             AI Used
           </span>
         )}
       </div>
 
+      {/* Buttons */}
       <div className="mt-4 flex items-center justify-center gap-4">
         <a
           href={githubLink}
@@ -68,8 +70,10 @@ export const ProjectsPanel = ({
         )}
       </div>
 
+      {/* Separator */}
       <hr className="my-4 border-t border-neutral-300 dark:border-neutral-700" />
 
+      {/* Author */}
       <p className="text-right text-xs text-neutral-500 dark:text-neutral-400">
         By: {author}
       </p>
@@ -77,7 +81,7 @@ export const ProjectsPanel = ({
   );
 };
 
-// props
+// Props Validation
 ProjectsPanel.propTypes = {
   name: PropTypes.string.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string).isRequired,

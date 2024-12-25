@@ -10,28 +10,19 @@ export const DynamicProjectsPage = ({ projectName }) => {
     );
   }
 
-  try {
-    const ProjectComponent = lazy(() =>
-      import(`../components/projects/${projectName}`).catch(() => {
-        throw new Error(`Component "${projectName}" not found.`);
-      }),
-    );
+  // Use lazy() with error handling inside the import() itself
+  const ProjectComponent = lazy(() =>
+    import(`../components/projects/${projectName}`).catch(() => {
+      // Handle the error by returning a fallback component or a specific message
+      return { default: () => <div>Component "{projectName}" not found.</div> };
+    }),
+  );
 
-    return (
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <Suspense fallback={<p>Loading {projectName}...</p>}>
-          <ProjectComponent />
-        </Suspense>
-      </div>
-    );
-  } catch (error) {
-    return (
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold">Error</h1>
-        <p className="mt-4 text-lg text-gray-600">
-          Project not found: {projectName}
-        </p>
-      </div>
-    );
-  }
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <Suspense fallback={<p>Loading {projectName}...</p>}>
+        <ProjectComponent />
+      </Suspense>
+    </div>
+  );
 };

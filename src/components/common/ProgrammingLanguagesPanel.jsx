@@ -12,6 +12,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
           src={logo}
           alt={`${name} logo`}
           className="mr-4 h-12 w-12 rounded-full border border-forgeGrayWarm object-contain dark:border-forgeGrayDeep"
+          style={{ backgroundColor: "lightgray" }}
         />
         <h2 className="text-2xl font-bold text-forgeGrayAsh dark:text-forgeGrayLight">
           {name}

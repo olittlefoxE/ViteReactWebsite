@@ -2,10 +2,10 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-forgeDark via-forgeAsh to-forgeGrayAsh pb-4 pt-4 font-Poppins">
+    <footer className="bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow pb-4 pt-4 font-Poppins text-forgeGrayBase dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh">
       <div className="container mx-auto px-4">
         {/* Decorative line */}
-        <div className="mb-4 border-t border-gray-300 dark:border-gray-600"></div>
+        <div className="mb-4 border-t border-forgeSmoke"></div>
 
         {/* Main Footer Content */}
         <div className="flex flex-col items-center justify-between md:flex-row">
@@ -28,7 +28,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Decorative Line */}
-        <div className="mt-4 border-t border-gray-300 dark:border-gray-600"></div>
+        <div className="mt-4 border-t border-forgeSmoke"></div>
       </div>
     </footer>
   );

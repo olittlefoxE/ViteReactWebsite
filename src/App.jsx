@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// hero
+// hero / intro
 import { AnimationPanel } from "./components/hero/AnimationPanel.jsx";
 import { IntroTitle } from "./components/hero/IntroTitle.jsx";
 // components present in every page (common)
@@ -14,8 +14,7 @@ import { ProgrammingLanguagesPage } from "./pages/ProgrammingLanguagesPage.jsx";
 import { DynamicProjectsPage } from "./pages/DynamicProjectsPage.jsx"; // Dynamic page for handling the preview of projects on projects panel
 // data
 import { ProjectsPanelData } from "./data/ProjectsPanelData.js";
-
-// Scroll Button component (imported from the ScrollButton file)
+// scroll button
 import { ScrollButton } from "./components/hero/ScrollButton.jsx";
 
 const App = () => {
@@ -65,7 +64,7 @@ const App = () => {
 
       {/* Sticky Navigation Bar */}
       <div id="mainContent">
-        <section className="z-1 sticky top-0 w-full bg-gradient-to-r from-forgeDark via-forgeAsh to-forgeGrayAsh py-5 shadow-md">
+        <section className="z-1 sticky top-0 w-full bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow py-5 shadow-md dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
             <NavBar navigateTo={navigateTo} />
             <div className="rounded-md bg-gradient-to-r from-fireBase via-fireCrimson to-fireBlaze p-2">

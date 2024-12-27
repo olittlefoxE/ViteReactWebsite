@@ -299,6 +299,66 @@ const ProgrammingLanguagesData = [
     relatedLanguages: ["Python", "Perl", "Ruby"],
     website: "https://www.gnu.org/software/bash/",
   },
+  {
+    name: "Laravel",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg",
+    founders: ["Taylor Otwell"],
+    year: 2011,
+    background:
+      "Laravel is a PHP framework designed to make web development elegant and efficient. It provides features like routing, authentication, and a templating engine.",
+    relatedLanguages: ["PHP", "JavaScript"],
+    website: "https://laravel.com/",
+  },
+  {
+    name: "COBOL",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/e/ea/COBOL_logo.svg",
+    founders: ["Grace Hopper", "CODASYL Committee"],
+    year: 1959,
+    background:
+      "COBOL (Common Business-Oriented Language) is a legacy programming language used in business, finance, and administrative systems.",
+    relatedLanguages: ["Fortran", "Ada"],
+    website: "https://opensource.com/article/20/7/cobol-resources",
+  },
+  {
+    name: "Elixir",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Elixir_logo.png",
+    founders: ["José Valim"],
+    year: 2011,
+    background:
+      "Elixir is a functional, concurrent programming language built on the Erlang VM. It's known for scalability and fault tolerance, often used in real-time systems.",
+    relatedLanguages: ["Erlang", "Ruby"],
+    website: "https://elixir-lang.org/",
+  },
+  {
+    name: "Ada",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/df/Ada_Programming_Language_logo.svg",
+    founders: ["Jean Ichbiah"],
+    year: 1980,
+    background:
+      "Ada is a structured, statically typed programming language used in mission-critical applications, including aerospace and defense systems.",
+    relatedLanguages: ["C", "Pascal"],
+    website: "https://www.adacore.com/",
+  },
+  {
+    name: "Crystal",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/07/Crystal_Programming_Language_logo.svg",
+    founders: ["Ary Borenszweig"],
+    year: 2011,
+    background:
+      "Crystal is a programming language that combines the syntax of Ruby with the performance of compiled languages like C.",
+    relatedLanguages: ["Ruby", "C"],
+    website: "https://crystal-lang.org/",
+  },
+  {
+    name: "Erlang",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/Erlang_logo.png",
+    founders: ["Joe Armstrong", "Robert Virding", "Mike Williams"],
+    year: 1986,
+    background:
+      "Erlang is a programming language used for building massively scalable soft real-time systems. It is known for its concurrency and fault tolerance.",
+    relatedLanguages: ["Elixir", "Prolog"],
+    website: "https://www.erlang.org/",
+  },
 ];
 
 export default ProgrammingLanguagesData;

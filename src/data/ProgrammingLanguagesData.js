@@ -321,7 +321,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Elixir",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Elixir_logo.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/92/Official_Elixir_logo.png",
     founders: ["José Valim"],
     year: 2011,
     background:
@@ -331,7 +331,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Ada",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/df/Ada_Programming_Language_logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ada_2022_logo-128x91.png",
     founders: ["Jean Ichbiah"],
     year: 1980,
     background:
@@ -341,7 +341,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Crystal",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/07/Crystal_Programming_Language_logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crystal_language_logo.svg",
     founders: ["Ary Borenszweig"],
     year: 2011,
     background:
@@ -351,7 +351,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Erlang",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/Erlang_logo.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/Erlang_logo.svg",
     founders: ["Joe Armstrong", "Robert Virding", "Mike Williams"],
     year: 1986,
     background:

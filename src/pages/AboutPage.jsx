@@ -61,10 +61,12 @@ export const AboutPage = () => {
             <br />
             Through this project, we aim to showcase our programming skills by
             presenting various projects we've developed in multiple programming
-            languages. You can hover over any programming language on our
-            website to learn about its purpose, history, and key features.
-            Clicking on a language will reveal projects we've created using it
-            (if available).
+            languages. You can learn about many different languages in the 'Languages' part
+            including info about its Founders and year of founding, its purpose and key features
+            and some related languages. 
+            <br />
+            Furthermore, you can visit a corresponding website to leran more.
+
             <br />
             <br />
             This is our first professional public website. It’s a hobby project

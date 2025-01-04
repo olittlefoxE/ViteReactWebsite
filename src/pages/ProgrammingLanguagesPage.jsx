@@ -1,5 +1,5 @@
 import React from "react";
-import ProgrammingLanguagesData from "../data/ProgrammingLanguagesData.js";
+import sortedProgrammingLanguagesData from "../data/ProgrammingLanguagesData.js";
 import { ProgrammingLanguagesPanel } from "../components/common/ProgrammingLanguagesPanel.jsx";
 
 export const ProgrammingLanguagesPage = () => {
@@ -16,7 +16,7 @@ export const ProgrammingLanguagesPage = () => {
             gridAutoRows: "1fr", // Ensures all grid items have uniform height
           }}
         >
-          {ProgrammingLanguagesData.map((language, index) => (
+          {sortedProgrammingLanguagesData.map((language, index) => (
             <ProgrammingLanguagesPanel key={index} language={language} />
           ))}
         </div>

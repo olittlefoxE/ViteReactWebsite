@@ -9,10 +9,11 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       {/* Top section: Logo and name */}
       <div className="mb-4 flex items-center">
         <img
-          src={logo}
+          src={logo || "/default-logo.png"} // Fallback for missing logos
           alt={`${name} logo`}
           className="mr-4 h-12 w-12 rounded-full border border-forgeGrayWarm object-contain dark:border-forgeGrayDeep"
           style={{ backgroundColor: "lightgray" }}
+          loading="lazy" // Optimizing for performance
         />
         <h2 className="text-2xl font-bold text-forgeGrayAsh dark:text-forgeGrayLight">
           {name}
@@ -22,7 +23,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       {/* Founding details */}
       <div className="mb-4 text-forgeGrayAsh dark:text-forgeGrayLight">
         <p>
-          <strong>Founders:</strong> {founders.join(", ")}
+          <strong>Founders:</strong> {founders?.length ? founders.join(", ") : "Unknown"}
         </p>
         <p>
           <strong>Year:</strong> {year}
@@ -30,13 +31,15 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       </div>
 
       {/* Background info */}
-      <div className="mb-4 text-forgeGrayAsh dark:text-forgeGrayLight">
-        <h3 className="mb-2 text-lg font-semibold">Background</h3>
-        <p>{background}</p>
-      </div>
+      {background && (
+        <div className="mb-4 text-forgeGrayAsh dark:text-forgeGrayLight">
+          <h3 className="mb-2 text-lg font-semibold">Background</h3>
+          <p>{background}</p>
+        </div>
+      )}
 
       {/* Related languages */}
-      {relatedLanguages && relatedLanguages.length > 0 && (
+      {relatedLanguages?.length > 0 && (
         <div className="text-forgeGrayAsh dark:text-forgeGrayLight">
           <h3 className="mb-2 text-lg font-semibold">Related Languages</h3>
           <ul className="list-disc pl-5">
@@ -48,8 +51,8 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       )}
 
       {/* Official Website Button */}
-      <div className="mt-4">
-        {website && (
+      {website && (
+        <div className="mt-4">
           <a
             href={website}
             target="_blank"
@@ -58,8 +61,8 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
           >
             Visit Official Website
           </a>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

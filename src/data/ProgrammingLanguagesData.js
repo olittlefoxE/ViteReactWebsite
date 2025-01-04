@@ -317,7 +317,7 @@ const ProgrammingLanguagesData = [
     background:
       "COBOL (Common Business-Oriented Language) is a legacy programming language used in business, finance, and administrative systems.",
     relatedLanguages: ["Fortran", "Ada"],
-    website: "https://opensource.com/article/20/7/cobol-resources",
+    website: "https://www.ibm.com/products/cobol-compiler-linux-x86",
   },
   {
     name: "Elixir",
@@ -361,4 +361,14 @@ const ProgrammingLanguagesData = [
   },
 ];
 
-export default ProgrammingLanguagesData;
+// Sorting Logic
+const sortedProgrammingLanguagesData = ProgrammingLanguagesData.sort((a, b) => {
+  // Within groups, sort alphabetically first
+  const nameComparison = a.name.localeCompare(b.name);
+  if (nameComparison !== 0) return nameComparison;
+
+  // If names are the same, sort by year
+  return a.year - b.year;
+});
+
+export default sortedProgrammingLanguagesData;

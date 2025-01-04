@@ -311,7 +311,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "COBOL",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/e/ea/COBOL_logo.svg",
+    logo: "",
     founders: ["Grace Hopper", "CODASYL Committee"],
     year: 1959,
     background:

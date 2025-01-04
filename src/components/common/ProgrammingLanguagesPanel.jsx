@@ -9,7 +9,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       {/* Top section: Logo and name */}
       <div className="mb-4 flex items-center">
         <img
-          src={logo || "/default-logo.png"} // Fallback for missing logos
+          src={logo || "/Icons/404.png"} // Fallback for missing logos
           alt={`${name} logo`}
           className="mr-4 h-12 w-12 rounded-full border border-forgeGrayWarm object-contain dark:border-forgeGrayDeep"
           style={{ backgroundColor: "lightgray" }}

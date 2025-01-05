@@ -341,7 +341,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Crystal",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Crystal_language_logo.svg",
+    logo: "",
     founders: ["Ary Borenszweig"],
     year: 2011,
     background:
@@ -359,6 +359,126 @@ const ProgrammingLanguagesData = [
     relatedLanguages: ["Elixir", "Prolog"],
     website: "https://www.erlang.org/",
   },
+  {
+    name: "C",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
+    founders: ["Dennis Ritchie"],
+    year: 1972,
+    background:
+      "C is a foundational, general-purpose programming language used in operating systems, embedded systems, and performance-critical applications.",
+    relatedLanguages: ["C++", "Objective-C"],
+    website: "https://en.wikipedia.org/wiki/C_(programming_language)",
+  },
+  {
+    name: "Objective-C",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
+    founders: ["Brad Cox", "Tom Love"],
+    year: 1984,
+    background:
+      "Objective-C is a general-purpose language that adds object-oriented features to C, primarily used in macOS and iOS development.",
+    relatedLanguages: ["C", "Swift"],
+    website: "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html",
+  },
+  {
+    name: "Julia",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Julia_Programming_Language_Logo.svg",
+    founders: ["Jeff Bezanson", "Alan Edelman", "Stefan Karpinski", "Viral B. Shah"],
+    year: 2012,
+    background:
+      "Julia is a high-performance programming language designed for technical computing, with syntax familiar to users of other technical computing environments.",
+    relatedLanguages: ["Python", "R"],
+    website: "https://julialang.org/",
+  },
+  {
+    name: "Lua",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg",
+    founders: ["Roberto Ierusalimschy", "Waldemar Celes", "Luiz Henrique de Figueiredo"],
+    year: 1993,
+    background:
+      "Lua is a lightweight, high-level scripting language commonly used in game development and embedded systems.",
+    relatedLanguages: ["Python", "JavaScript"],
+    website: "https://www.lua.org/",
+  },
+  {
+    name: "Powershell",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png",
+    founders: ["Jeffrey Snover"],
+    year: 2006,
+    background:
+      "Powershell is a task automation framework consisting of a command-line shell and scripting language built on .NET.",
+    relatedLanguages: ["Batch", "Shell Script"],
+    website: "https://learn.microsoft.com/en-us/powershell/",
+  },
+  {
+    name: "Batch",
+    logo: "",
+    founders: ["Microsoft"],
+    year: 1980,
+    background:
+      "Batch scripting is a native language for automating tasks in the Windows command-line interface.",
+    relatedLanguages: ["Powershell"],
+    website: "https://en.wikipedia.org/wiki/Batch_file",
+  },
+  {
+    name: "Flutter",
+    logo: "",
+    founders: ["Google"],
+    year: 2017,
+    background:
+      "Flutter is a UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+    relatedLanguages: ["Dart"],
+    website: "https://flutter.dev/",
+  },
+  {
+    name: "Godot",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
+    founders: ["Juan Linietsky", "Ariel Manzur"],
+    year: 2007,
+    background:
+      "Godot is an open-source game engine supporting GDScript, C#, and other languages, used for 2D and 3D game development.",
+    relatedLanguages: ["Python", "C#"],
+    website: "https://godotengine.org/",
+  },
+  {
+    name: "JSON",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg",
+    founders: ["Douglas Crockford"],
+    year: 2001,
+    background:
+      "JSON (JavaScript Object Notation) is a lightweight data-interchange format that's easy for humans to read and write.",
+    relatedLanguages: ["YAML", "XML"],
+    website: "https://www.json.org/",
+  },
+  {
+    name: "YAML",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Official_YAML_Logo.svg",
+    founders: ["Clark Evans"],
+    year: 2001,
+    background:
+      "YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files.",
+    relatedLanguages: ["JSON", "TOML"],
+    website: "https://yaml.org/",
+  },
+  {
+    name: "Markdown",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg",
+    founders: ["John Gruber"],
+    year: 2004,
+    background:
+      "Markdown is a lightweight markup language with plain text formatting syntax, often used for creating README files.",
+    relatedLanguages: ["HTML", "XML"],
+    website: "https://daringfireball.net/projects/markdown/",
+  },
+  {
+    name: "VBScript",
+    logo: "",
+    founders: ["Microsoft"],
+    year: 1996,
+    background:
+      "VBScript (Visual Basic Scripting Edition) is a lightweight, active scripting language developed by Microsoft. It is modeled on Visual Basic and designed for automation of tasks in Windows environments.",
+    relatedLanguages: ["Visual Basic", "Batch", "PowerShell"],
+    website: "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/3e9351ab(v=vs.85)"
+}
 ];
 
 // Sorting Logic

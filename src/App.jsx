@@ -64,8 +64,8 @@ const App = () => {
 
       {/* Sticky Navigation Bar */}
       <div id="mainContent">
-        <section className="z-1 sticky top-0 w-full bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow py-5 shadow-md dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
+        <section className="sticky top-0 z-50 w-full bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow py-[20px] shadow-md dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh">
+          <div className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-4">
             <NavBar navigateTo={navigateTo} />
             <div className="rounded-md bg-gradient-to-r from-fireBase via-fireCrimson to-fireBlaze p-2">
               <ToggleThemeButton />

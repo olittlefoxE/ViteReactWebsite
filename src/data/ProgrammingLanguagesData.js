@@ -362,7 +362,6 @@ const ProgrammingLanguagesData = [
 ];
 
 // Sorting Logic
-
 const sortedProgrammingLanguagesData = ProgrammingLanguagesData.sort((a, b) => {
   // Sort alphabetically first
   const nameComparison = a.name.localeCompare(b.name);

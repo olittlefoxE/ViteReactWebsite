@@ -1,4 +1,5 @@
 import React from "react";
+import fallbackLogo from "../../assets/images/404.png"
 
 export const ProgrammingLanguagesPanel = ({ language }) => {
   const { name, logo, founders, year, background, relatedLanguages, website } =
@@ -9,7 +10,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       {/* Top section: Logo and name */}
       <div className="mb-4 flex items-center">
         <img
-          src={logo || ""} // Fallback for missing logos
+          src={logo || fallbackLogo} // Fallback for missing logos
           alt={`${name} logo`}
           className="mr-4 h-12 w-12 rounded-full border border-forgeGrayWarm object-contain dark:border-forgeGrayDeep"
           style={{ backgroundColor: "lightgray" }}

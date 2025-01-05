@@ -1,3 +1,11 @@
+import batchLogo from "../assets/images/batch-file.png";
+import cobolLogo from "../assets/images/cobol.png"
+import crystalLogo from "../assets/images/crystal_icon.svg"
+import elixirLogo from "../assets/images/elixir.png"
+import erlangLogo from "../assets/images/erlang+text.png"
+import flutterLogo from "../assets/images/flutter.svg";
+import vbscriptLogo from "../assets/images/vbscript.png"
+
 const ProgrammingLanguagesData = [
   {
     name: "HTML",
@@ -311,7 +319,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "COBOL",
-    logo: "Icons/cobol.png",
+    logo: cobolLogo,
     founders: ["Grace Hopper", "CODASYL Committee"],
     year: 1959,
     background:
@@ -321,7 +329,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Elixir",
-    logo: "Icons/elixir.png",
+    logo: elixirLogo,
     founders: ["José Valim"],
     year: 2011,
     background:
@@ -341,7 +349,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Crystal",
-    logo: "Icons/crystal_icon.svg",
+    logo: crystalLogo,
     founders: ["Ary Borenszweig"],
     year: 2011,
     background:
@@ -351,7 +359,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Erlang",
-    logo: "Icons/erlang+text.png",
+    logo: erlangLogo,
     founders: ["Joe Armstrong", "Robert Virding", "Mike Williams"],
     year: 1986,
     background:
@@ -411,7 +419,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Batch",
-    logo: "Icons/batch.png",
+    logo: batchLogo,
     founders: ["Microsoft"],
     year: 1980,
     background:
@@ -421,7 +429,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Flutter",
-    logo: "Icons/flutter.svg",
+    logo: flutterLogo,
     founders: ["Google"],
     year: 2017,
     background:
@@ -471,7 +479,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "VBScript",
-    logo: "Icons/vbscript.png",
+    logo: vbscriptLogo,
     founders: ["Microsoft"],
     year: 1996,
     background:

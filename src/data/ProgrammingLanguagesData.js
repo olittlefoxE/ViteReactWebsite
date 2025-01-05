@@ -5,6 +5,7 @@ import elixirLogo from "../assets/images/elixir.png"
 import erlangLogo from "../assets/images/erlang+text.png"
 import flutterLogo from "../assets/images/flutter.svg";
 import vbscriptLogo from "../assets/images/vbscript.png"
+import typescriptLogo from "../assets/images/typescript.png"
 
 const ProgrammingLanguagesData = [
   {
@@ -279,7 +280,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "TypeScript",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/37/Typescript_fullstack_logo.png",
+    logo: typescriptLogo,
     founders: ["Anders Hejlsberg"],
     year: 2012,
     background:

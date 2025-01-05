@@ -311,7 +311,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "COBOL",
-    logo: "",
+    logo: "Icons/cobol.png",
     founders: ["Grace Hopper", "CODASYL Committee"],
     year: 1959,
     background:
@@ -321,7 +321,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Elixir",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/92/Official_Elixir_logo.png",
+    logo: "Icons/elixir.png",
     founders: ["José Valim"],
     year: 2011,
     background:
@@ -341,7 +341,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Crystal",
-    logo: "",
+    logo: "Icons/crystal_icon.svg",
     founders: ["Ary Borenszweig"],
     year: 2011,
     background:
@@ -351,7 +351,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Erlang",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/Erlang_logo.svg",
+    logo: "Icons/erlang+text.png",
     founders: ["Joe Armstrong", "Robert Virding", "Mike Williams"],
     year: 1986,
     background:
@@ -411,7 +411,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Batch",
-    logo: "",
+    logo: "Icons/batch.png",
     founders: ["Microsoft"],
     year: 1980,
     background:
@@ -421,7 +421,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "Flutter",
-    logo: "",
+    logo: "Icons/flutter.svg",
     founders: ["Google"],
     year: 2017,
     background:
@@ -471,7 +471,7 @@ const ProgrammingLanguagesData = [
   },
   {
     name: "VBScript",
-    logo: "",
+    logo: "Icons/vbscript.png",
     founders: ["Microsoft"],
     year: 1996,
     background:

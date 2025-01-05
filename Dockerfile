@@ -1,5 +1,5 @@
 # Verwende ein Node.js-Image als Basis
-FROM node:18-alpine
+FROM nginx:1-alpine-slim
 
 # Setze das Arbeitsverzeichnis im Container
 WORKDIR /app

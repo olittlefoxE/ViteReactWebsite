@@ -9,7 +9,7 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       {/* Top section: Logo and name */}
       <div className="mb-4 flex items-center">
         <img
-          src={logo || "/Icons/404.png"} // Fallback for missing logos
+          src={logo || ""} // Fallback for missing logos
           alt={`${name} logo`}
           className="mr-4 h-12 w-12 rounded-full border border-forgeGrayWarm object-contain dark:border-forgeGrayDeep"
           style={{ backgroundColor: "lightgray" }}
@@ -23,7 +23,8 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       {/* Founding details */}
       <div className="mb-4 text-forgeGrayAsh dark:text-forgeGrayLight">
         <p>
-          <strong>Founders:</strong> {founders?.length ? founders.join(", ") : "Unknown"}
+          <strong>Founders:</strong>{" "}
+          {founders?.length ? founders.join(", ") : "Unknown"}
         </p>
         <p>
           <strong>Year:</strong> {year}

@@ -57,7 +57,7 @@ const ProgrammingLanguagesData = [
     background:
       "C++ is an extension of the C programming language. It is widely used for systems programming, game development, and performance-critical applications.",
     relatedLanguages: ["C", "Rust", "Objective-C"],
-    website: "https://isocpp.org/",
+    website: "https://www.w3schools.com/cpp/",
   },
   {
     name: "C#",
@@ -367,7 +367,7 @@ const ProgrammingLanguagesData = [
     background:
       "C is a foundational, general-purpose programming language used in operating systems, embedded systems, and performance-critical applications.",
     relatedLanguages: ["C++", "Objective-C"],
-    website: "https://en.wikipedia.org/wiki/C_(programming_language)",
+    website: "https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170",
   },
   {
     name: "Objective-C",
@@ -477,7 +477,7 @@ const ProgrammingLanguagesData = [
     background:
       "VBScript (Visual Basic Scripting Edition) is a lightweight, active scripting language developed by Microsoft. It is modeled on Visual Basic and designed for automation of tasks in Windows environments.",
     relatedLanguages: ["Visual Basic", "Batch", "PowerShell"],
-    website: "https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/3e9351ab(v=vs.85)"
+    website: "https://en.wikipedia.org/wiki/VBScript"
 }
 ];
 

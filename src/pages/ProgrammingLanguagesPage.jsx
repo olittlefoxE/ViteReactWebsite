@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import sortedProgrammingLanguagesData from "../data/ProgrammingLanguagesData.js";
 import { ProgrammingLanguagesPanel } from "../components/common/ProgrammingLanguagesPanel.jsx";
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ashAnimation } from "../animations/ashAnimation";
 
 export const AnimationPanel = () => {

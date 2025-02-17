@@ -1,4 +1,8 @@
-import React from "react";
+import PropTypes from 'prop-types';
+
+ScrollButton.propTypes = {
+  targetId: PropTypes.string.isRequired
+};
 
 export const ScrollButton = ({ targetId }) => {
   const handleClick = () => {

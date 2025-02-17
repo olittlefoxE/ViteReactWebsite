@@ -1,4 +1,3 @@
-import React from "react";
 import youtubeIcon from "../assets/icons/youtubeIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 
@@ -60,7 +59,7 @@ export const ContactPage = () => {
               alt="YouTube Logo"
               className="max-h-8 max-w-8 flex-shrink-0"
             />
-            <span className="text-sm font-semibold">littlefoxE's YouTube</span>
+            <span className="text-sm font-semibold">littlefoxE&aposs YouTube</span>
           </a>
 
           {/* MinecraftLetsPlay's YouTube */}
@@ -79,7 +78,7 @@ export const ContactPage = () => {
               className="max-h-8 max-w-8 flex-shrink-0"
             />
             <span className="text-sm font-semibold">
-              MinecraftLetsPlay's YouTube
+              MinecraftLetsPlay&aposs YouTube
             </span>
           </a>
 
@@ -98,7 +97,7 @@ export const ContactPage = () => {
               alt="GitHub Logo"
               className="max-h-8 max-w-8 flex-shrink-0"
             />
-            <span className="text-sm font-semibold">olittlefoxE's GitHub</span>
+            <span className="text-sm font-semibold">olittlefoxE&aposs GitHub</span>
           </a>
 
           {/* MinecraftLetsPlay's GitHub */}
@@ -117,7 +116,7 @@ export const ContactPage = () => {
               className="max-h-8 max-w-8 flex-shrink-0"
             />
             <span className="text-sm font-semibold">
-              Minecraftletsplay's GitHub
+              Minecraftletsplay&aposs GitHub
             </span>
           </a>
         </div>

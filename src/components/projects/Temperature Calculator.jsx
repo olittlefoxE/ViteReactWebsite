@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import { useState } from 'react';
 const convertTemperature = (value, fromUnit, toUnit) => {
   if (value === "" || isNaN(value)) return "";
 

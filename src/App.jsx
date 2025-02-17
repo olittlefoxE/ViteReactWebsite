@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 // hero / intro
 import { AnimationPanel } from "./components/hero/AnimationPanel.jsx";
 import { IntroTitle } from "./components/hero/IntroTitle.jsx";

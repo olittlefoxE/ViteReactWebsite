@@ -1,4 +1,9 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
+import PropTypes from 'prop-types';
+
+DynamicProjectsPage.propTypes = {
+  projectName: PropTypes.string.isRequired
+};
 
 export const DynamicProjectsPage = ({ projectName }) => {
   if (!projectName || typeof projectName !== "string") {
@@ -14,7 +19,7 @@ export const DynamicProjectsPage = ({ projectName }) => {
   const ProjectComponent = lazy(() =>
     import(`../components/projects/${projectName}`).catch(() => {
       // Handle the error by returning a fallback component or a specific message
-      return { default: () => <div>Component "{projectName}" not found.</div> };
+      return { default: () => <div>Component &quot{projectName}&quot not found.</div> };
     }),
   );
 

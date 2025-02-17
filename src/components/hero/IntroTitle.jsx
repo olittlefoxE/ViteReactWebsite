@@ -1,5 +1,3 @@
-import React from "react";
-
 export const IntroTitle = () => {
   const Heading = "Robin's & Dennis' Code Forge";
   const headingDescription = "rd-code-forge.net";

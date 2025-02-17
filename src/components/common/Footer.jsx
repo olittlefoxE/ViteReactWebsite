@@ -1,4 +1,3 @@
-import React from "react";
 
 export const Footer = () => {
   return (
@@ -11,7 +10,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center justify-between md:flex-row">
           {/* Logo/Brand Name */}
           <div className="mb-4 md:mb-0">
-            <h2 className="text-lg font-bold">Robin & Dennis' Code Forge</h2>
+            <h2 className="text-lg font-bold">Robin & Dennis&apos Code Forge</h2>
           </div>
 
           {/* Copyright Section */}

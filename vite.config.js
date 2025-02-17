@@ -1,12 +1,15 @@
 import { defineConfig } from "vite";
-import reactRefresh from "@vitejs/plugin-react";
+import react from "@vite/plugin-react";
 
 export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: [["babel-plugin-react-compiler"], [reactRefresh()]],
-      },
-    }),
-  ],
+	plugins: [react()],
+	server: {
+		port: 3000,
+		open: true,
+	},
+	build: {
+		outDir: "dist",
+		minify: "esbuild",
+		sourcemap: true,
+	},
 });

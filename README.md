@@ -1,22 +1,8 @@
-# React-Website
-Our website with ReactJS and TailwindCSS
+# React + Vite
 
-## Authors
-- Author: @olittlefoxE [little_fox_E](https://github.com/olittlefoxE)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Contributors:
-- Contributor: @MinecraftLetsPlay [Minecraft Lets Play](https://github.com/MinecraftLetsPlay)
+Currently, two official plugins are available:
 
-## What's the purpose?
-- Our website is a project designed to help us deepen our knowledge of HTML, CSS and React.
-
-- Through this Project, we aim to showcase our programming skills by presenting various projects we've created in different programming languages.
-
-- All this allows us to improve our abilities while sharing our work with others.
-
-## Software and Tools used to build our Website
-- [ChatGPT](https://chatgpt.com/) Model 4o, 4o Mini and the Icon Generator
-
-- [W3Schools](https://www.w3schools.com) For ressearching functionalities
-
-- [Visual Studio Code](https://code.visualstudio.com/) Editor used to code the Website
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

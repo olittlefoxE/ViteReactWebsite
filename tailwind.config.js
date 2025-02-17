@@ -1,13 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./public/index.html",
-    "./src/components/projects/*.{js,jsx}",
-    "./src/components/common/*.{js,jsx}",
-    "./src/components/hero/*.{js,jsx}",
-    "./src/pages/*.{js,jsx}",
-    "./src/data/*.{js,jsx}",
-    "./src/App.jsx",
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   darkMode: "class", // Enable dark mode via a class
   theme: {

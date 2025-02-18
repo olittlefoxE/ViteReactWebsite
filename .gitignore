@@ -17,6 +17,7 @@ setupTests.js
 .DS_Store
 Thumbs.db
 .prettierrc
+eslinf.config.js
 
 # Logs
 logs
@@ -26,5 +27,4 @@ npm-debug.log*
 # Debugger/workspace files
 *.code-workspace
 *.iml
-/.idea
 /.vscode

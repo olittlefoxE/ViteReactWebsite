@@ -1,20 +1,15 @@
 import { useState, useEffect } from "react";
-// hero / intro
 import { AnimationPanel } from "./components/hero/AnimationPanel.jsx";
 import { IntroTitle } from "./components/hero/IntroTitle.jsx";
-// components present in every page (common)
 import { Footer } from "./components/common/Footer.jsx";
 import { NavBar } from "./components/common/NavBar.jsx";
 import { ProjectsPanel } from "./components/common/ProjectsPanel.jsx";
 import { ToggleThemeButton } from "./components/common/ToggleThemeButton.jsx";
-// pages from the navbar
 import { AboutPage } from "./pages/AboutPage.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
 import { ProgrammingLanguagesPage } from "./pages/ProgrammingLanguagesPage.jsx";
-import { DynamicProjectsPage } from "./pages/DynamicProjectsPage.jsx"; // Dynamic page for handling the preview of projects on projects panel
-// data
+import { DynamicProjectsPage } from "./pages/DynamicProjectsPage.jsx";
 import { ProjectsPanelData } from "./data/ProjectsPanelData.js";
-// scroll button
 import { ScrollButton } from "./components/hero/ScrollButton.jsx";
 
 const App = () => {

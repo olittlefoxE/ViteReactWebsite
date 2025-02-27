@@ -17,9 +17,9 @@ export const DynamicProjectsPage = ({ projectName }) => {
 
   // Use lazy() with error handling inside the import() itself
   const ProjectComponent = lazy(() =>
-    import(`../components/projects/${projectName}`).catch(() => {
+    import(`../components/projects/${projectName}.jsx`).catch(() => {
       // Handle the error by returning a fallback component or a specific message
-      return { default: () => <div>Component &quot{projectName}&quot not found.</div> };
+      return { default: () => <div>Component &quot{projectName}.jsx&quot not found.</div> };
     }),
   );
 

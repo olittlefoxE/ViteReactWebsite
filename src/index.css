@@ -1,6 +1,5 @@
 @import "tailwindcss";
-@tailwind utilities;
-@tailwind utilities;
+@import "tailwindcss/preflight";
 
 @keyframes sunDown {
   0% {

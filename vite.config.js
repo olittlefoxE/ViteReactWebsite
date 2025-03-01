@@ -5,4 +5,5 @@ export default defineConfig({
   plugins: [
     react()
   ],
+  root: './', // This should be the root of your project
 })

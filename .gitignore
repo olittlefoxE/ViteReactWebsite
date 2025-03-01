@@ -5,9 +5,8 @@
 /build
 /dist
 
-# Miscellaneous
-.prettier
-eslint.config.js
+# configs
+
 
 # Logs
 logs

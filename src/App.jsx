@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { AnimationPanel } from "./components/hero/AnimationPanel.jsx";
-import { IntroTitle } from "./components/hero/IntroTitle.jsx";
-import { Footer } from "./components/common/Footer.jsx";
-import { NavBar } from "./components/common/NavBar.jsx";
-import { ProjectsPanel } from "./components/common/ProjectsPanel.jsx";
-import { ToggleThemeButton } from "./components/common/ToggleThemeButton.jsx";
-import { AboutPage } from "./pages/AboutPage.jsx";
-import { ContactPage } from "./pages/ContactPage.jsx";
-import { ProgrammingLanguagesPage } from "./pages/ProgrammingLanguagesPage.jsx";
-import { DynamicProjectsPage } from "./pages/DynamicProjectsPage.jsx";
-import { ProjectsPanelData } from "./data/ProjectsPanelData.js";
-import { ScrollButton } from "./components/hero/ScrollButton.jsx";
+import { AnimationPanel } from "@/components/hero/AnimationPanel.jsx";
+import { IntroTitle } from "@/components/hero/IntroTitle.jsx";
+import { Footer } from "@/components/common/Footer.jsx";
+import { NavBar } from "@/components/common/NavBar.jsx";
+import { ProjectsPanel } from "@/components/common/ProjectsPanel.jsx";
+import { ToggleThemeButton } from "@/components/common/ToggleThemeButton.jsx";
+import { AboutPage } from "@/pages/AboutPage.jsx";
+import { ContactPage } from "@/pages/ContactPage.jsx";
+import { ProgrammingLanguagesPage } from "@/pages/ProgrammingLanguagesPage.jsx";
+import { DynamicProjectsPage } from "@/pages/DynamicProjectsPage.jsx";
+import { ProjectsPanelData } from "@/data/ProjectsPanelData.js";
+import { ScrollButton } from "@/components/hero/ScrollButton.jsx";
 
 const App = () => {
 	const [currentPage, setCurrentPage] = useState("home");
@@ -52,7 +52,7 @@ const App = () => {
 				</div>
 			</section>
 
-			{/* Scroll Button to scroll to Projects Section */}
+			{/* Scroll Button to scroll to clicked content */}
 			<div className="relative flex justify-center">
 				<ScrollButton targetId="mainContent" />
 			</div>
@@ -91,6 +91,8 @@ const App = () => {
 							</div>
 						</section>
 					)}
+
+					{/* routing */}
 					{currentPage === "contact" && <ContactPage />}
 					{currentPage === "about" && <AboutPage />}
 					{currentPage === "projectPage" && projectName && (

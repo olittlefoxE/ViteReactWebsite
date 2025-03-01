@@ -1,7 +1,7 @@
-node_modules
-build
+/node_modules
+/build
 .dockerignore
-.git
+/.git
 .gitignore
 Dockerfile
 README.md

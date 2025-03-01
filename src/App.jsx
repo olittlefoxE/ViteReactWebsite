@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { AnimationPanel } from "./components/hero/AnimationPanel.jsx";
 import { IntroTitle } from "./components/hero/IntroTitle.jsx";
 import { Footer } from "./components/common/Footer.jsx";
@@ -14,7 +14,6 @@ import { ProjectsPanelData } from "./data/ProjectsPanelData.js";
 import { ScrollButton } from "./components/hero/ScrollButton.jsx";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("home");
   const [projectName, setProjectName] = useState(null);
 
   // Handle page routing
@@ -23,9 +22,7 @@ const App = () => {
     if (path.startsWith("projects/")) {
       const project = path.replace("projects/", "");
       setProjectName(project);
-      setCurrentPage("projectPage");
     } else {
-      setCurrentPage(path);
       setProjectName(null);
     }
   }, []);
@@ -33,15 +30,35 @@ const App = () => {
   const navigateTo = (page) => {
     if (page.startsWith("projects/")) {
       const project = page.replace("projects/", "");
-      setCurrentPage("projectPage");
       setProjectName(project);
       window.history.pushState(null, "", `/${page}`);
     } else {
-      setCurrentPage(page);
       setProjectName(null);
       window.history.pushState(null, "", `/${page}`);
     }
   };
+
+  const ProjectsContent = () => (
+    <section className="py-10">
+      <div className="containers min-h-4xl mx-auto max-w-5xl">
+        <h1 className="font-Exo mb-12 mt-24 text-center text-4xl font-extrabold text-forgeDark underline underline-offset-4 dark:text-forgeGrayBase">
+          Projects
+        </h1>
+        <div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          style={{
+            gridAutoRows: "1fr",
+          }}
+        >
+          {ProjectsPanelData.map((project, index) => (
+            <div key={index} className="flex justify-center">
+              <ProjectsPanel {...project} navigateTo={navigateTo} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 
   return (
     <div className="flex flex-col">
@@ -72,30 +89,8 @@ const App = () => {
         {/* Main Content Area */}
         <div className="min-h-screen bg-forgeGradientAsh dark:bg-forgeGradientIron">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <section className="py-10">
-                  <div className="containers min-h-4xl mx-auto max-w-5xl">
-                    <h1 className="font-Exo mb-12 mt-24 text-center text-4xl font-extrabold text-forgeDark underline underline-offset-4 dark:text-forgeGrayBase">
-                      Projects
-                    </h1>
-                    <div
-                      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-                      style={{
-                        gridAutoRows: "1fr", // Ensures all grid items have uniform height
-                      }}
-                    >
-                      {ProjectsPanelData.map((project, index) => (
-                        <div key={index} className="flex justify-center">
-                          <ProjectsPanel {...project} navigateTo={navigateTo} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </section>
-              }
-            />
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<ProjectsContent />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />
             {projectName && (

@@ -69,7 +69,7 @@ export const AboutPage = () => {
 						Furthermore, you can visit a corresponding website to leran more.
 						<br />
 						<br />
-						This is our first professional public website. It’s a hobby project
+						This is our first professional public website. It&apos;s a hobby project
 						born from our shared interest in programming and web development. We
 						hope you enjoy exploring it as much as we enjoyed creating it!
 					</p>

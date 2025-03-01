@@ -1,17 +1,5 @@
-import fallbackLogo from "../../assets/images/404.png"
-import PropTypes from "prop-types"
-
-ProgrammingLanguagesPanel.propTypes = {
-  language: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    logo: PropTypes.string,
-    founders: PropTypes.arrayOf(PropTypes.string),
-    year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    background: PropTypes.string,
-    relatedLanguages: PropTypes.arrayOf(PropTypes.string),
-    website: PropTypes.string
-  }).isRequired
-};
+import fallbackLogo from "../../assets/images/404.png";
+import PropTypes from "prop-types";
 
 export const ProgrammingLanguagesPanel = ({ language }) => {
   const { name, logo, founders, year, background, relatedLanguages, website } =
@@ -79,4 +67,16 @@ export const ProgrammingLanguagesPanel = ({ language }) => {
       )}
     </div>
   );
+};
+
+ProgrammingLanguagesPanel.propTypes = {
+  language: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    logo: PropTypes.string,
+    founders: PropTypes.arrayOf(PropTypes.string),
+    year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    background: PropTypes.string,
+    relatedLanguages: PropTypes.arrayOf(PropTypes.string),
+    website: PropTypes.string,
+  }).isRequired,
 };

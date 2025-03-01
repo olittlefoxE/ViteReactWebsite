@@ -1,27 +1,11 @@
 import PropTypes from 'prop-types';
 
-ProjectsPanel.propTypes = {
-  name: PropTypes.string.isRequired,
-  languages: PropTypes.arrayOf(PropTypes.string).isRequired,
-  dependencies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  usesAI: PropTypes.bool,
-  isFrontend: PropTypes.bool,
-  githubLink: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  navigateTo: PropTypes.func.isRequired
-};
-
-ProjectsPanel.defaultProps = {
-  usesAI: false,
-  isFrontend: false
-};
-
 export const ProjectsPanel = ({
   name,
   languages,
   dependencies,
-  usesAI,
-  isFrontend,
+  usesAI = false,
+  isFrontend = false,
   githubLink,
   author,
   navigateTo,
@@ -88,4 +72,15 @@ export const ProjectsPanel = ({
       </p>
     </div>
   );
+};
+
+ProjectsPanel.propTypes = {
+  name: PropTypes.string.isRequired,
+  languages: PropTypes.arrayOf(PropTypes.string).isRequired,
+  dependencies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  usesAI: PropTypes.bool,
+  isFrontend: PropTypes.bool,
+  githubLink: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  navigateTo: PropTypes.func.isRequired,
 };

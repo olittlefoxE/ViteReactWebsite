@@ -1,10 +1,6 @@
 import { Suspense, lazy } from "react";
 import PropTypes from 'prop-types';
 
-DynamicProjectsPage.propTypes = {
-  projectName: PropTypes.string.isRequired
-};
-
 export const DynamicProjectsPage = ({ projectName }) => {
   if (!projectName || typeof projectName !== "string") {
     return (
@@ -30,4 +26,8 @@ export const DynamicProjectsPage = ({ projectName }) => {
       </Suspense>
     </div>
   );
+};
+
+DynamicProjectsPage.propTypes = {
+  projectName: PropTypes.string.isRequired,
 };

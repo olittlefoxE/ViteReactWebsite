@@ -1,4 +1,5 @@
-import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export const ProjectsPanel = ({
   name,
@@ -8,11 +9,12 @@ export const ProjectsPanel = ({
   isFrontend = false,
   githubLink,
   author,
-  navigateTo,
 }) => {
+  const navigate = useNavigate();
+
   const navigateToProjectPage = () => {
     if (isFrontend) {
-      navigateTo(`projects/${name}`);
+      navigate(`/projects/${name.toLowerCase()}`);
     }
   };
 

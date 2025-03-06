@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { AnimationPanel } from "./components/hero/AnimationPanel.jsx";
 import { IntroTitle } from "./components/hero/IntroTitle.jsx";
 import { Footer } from "./components/common/Footer.jsx";
@@ -14,28 +13,10 @@ import { ProjectsPanelData } from "./data/ProjectsPanelData.js";
 import { ScrollButton } from "./components/hero/ScrollButton.jsx";
 
 const App = () => {
-  const [projectName, setProjectName] = useState(null);
-
-  // Handle page routing
-  useEffect(() => {
-    const path = window.location.pathname.replace("/", "") || "home";
-    if (path.startsWith("projects/")) {
-      const project = path.replace("projects/", "");
-      setProjectName(project);
-    } else {
-      setProjectName(null);
-    }
-  }, []);
+  const navigate = useNavigate();
 
   const navigateTo = (page) => {
-    if (page.startsWith("projects/")) {
-      const project = page.replace("projects/", "");
-      setProjectName(project);
-      window.history.pushState(null, "", `/${page}`);
-    } else {
-      setProjectName(null);
-      window.history.pushState(null, "", `/${page}`);
-    }
+    navigate(`/${page}`); // Use React Router for navigation
   };
 
   const ProjectsContent = () => (
@@ -62,7 +43,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section with Animation and Title */}
+      {/* Hero Section */}
       <section className="relative">
         <AnimationPanel />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -70,7 +51,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Scroll Button to scroll to clicked content */}
+      {/* Scroll Button */}
       <div className="relative flex justify-center">
         <ScrollButton targetId="mainContent" />
       </div>
@@ -86,20 +67,15 @@ const App = () => {
           </div>
         </section>
 
-        {/* Main Content Area */}
+        {/* Main Content */}
         <div className="min-h-screen bg-forgeGradientAsh dark:bg-forgeGradientIron">
           <Routes>
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<ProjectsContent />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />
-            {projectName && (
-              <Route
-                path="/projects/:projectName"
-                element={<DynamicProjectsPage projectName={projectName} />}
-              />
-            )}
             <Route path="/languages" element={<ProgrammingLanguagesPage />} />
+            <Route path="/projects/:projectName" element={<DynamicProjectsPage />} />
           </Routes>
         </div>
       </div>

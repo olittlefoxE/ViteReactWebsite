@@ -14,7 +14,7 @@ export const ProjectsPanelData = [
     languages: ["C#"],
     dependencies: ["Microsoft .NET"],
     usesAI: true,
-    isFronted: false,
+    isFrontend: false,
     githubLink:
       "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Digital%20Clock%20(12H%20%26%2024H)",
     author: "MinecraftLetsPlay",
@@ -25,7 +25,7 @@ export const ProjectsPanelData = [
     languages: ["C#"],
     dependencies: ["Microsoft .NET"],
     usesAI: true,
-    isFronted: false,
+    isFrontend: false,
     githubLink:
       "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Password%20Generator",
     author: "MinecraftLetsPlay",

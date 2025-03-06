@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-export const NavBar = ({ navigateTo }) => {
+export const NavBar = () => {
   // Map button labels to their corresponding routes
   const pageMap = {
     Home: "/",

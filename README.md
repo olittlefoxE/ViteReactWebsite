@@ -26,6 +26,7 @@ This is a private website project. While the code is visible for educational pur
 - ESLint 9.21.0
 
 Additional development tools:
+
 - TypeScript support (@types/react 19.0.8)
 - PostCSS 8.5.3 with Autoprefixer 10.4.20
 - SWC compiler (@vitejs/plugin-react-swc 3.5.0)

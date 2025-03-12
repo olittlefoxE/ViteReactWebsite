@@ -2,6 +2,7 @@ import AnimationPanel from "../components/hero/AnimationPanel";
 import IntroTitle from "../components/hero/IntroTitle";
 import ScrollButton from "../components/hero/ScrollButton";
 import ProjectsContent from "./ProjectsContent";
+import NavBar from "../components/common/NavBar";
 
 const HomePage = () => {
   return (
@@ -13,13 +14,15 @@ const HomePage = () => {
         </div>
       </section>
 
-      <div className="relative flex justify-center">
+      <section className="relative flex justify-center">
         <ScrollButton targetId="mainContent" />
-      </div>
+      </section>
 
-      <div id="mainContent">
+      <NavBar />
+
+      <section id="mainContent">
         <ProjectsContent />
-      </div>
+      </section>
     </>
   );
 };

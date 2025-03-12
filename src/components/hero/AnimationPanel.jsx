@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import { ashAnimation } from "../animations/ashAnimation";
+import { ashAnimation } from "../common/ashAnimation";
 
-export const AnimationPanel = () => {
+const AnimationPanel = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -23,3 +23,5 @@ export const AnimationPanel = () => {
     </div>
   );
 };
+
+export default AnimationPanel;

@@ -1,7 +1,7 @@
 import fallbackLogo from "../../assets/images/404.png";
 import PropTypes from "prop-types";
 
-export const ProgrammingLanguagesPanel = ({ language }) => {
+const ProgrammingLanguagesPanel = ({ language }) => {
   const { name, logo, founders, year, background, relatedLanguages, website } =
     language;
 
@@ -80,3 +80,5 @@ ProgrammingLanguagesPanel.propTypes = {
     website: PropTypes.string,
   }).isRequired,
 };
+
+export default ProgrammingLanguagesPanel;

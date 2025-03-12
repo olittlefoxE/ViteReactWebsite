@@ -2,14 +2,14 @@ import { useState } from "react";
 import sortedProgrammingLanguagesData from "../data/ProgrammingLanguagesData.js";
 import { ProgrammingLanguagesPanel } from "../components/common/ProgrammingLanguagesPanel.jsx";
 
-export const ProgrammingLanguagesPage = () => {
+const ProgrammingLanguagesPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortOption, setSortOption] = useState("alphabetical");
   const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown visibility
 
   const filteredLanguages = sortedProgrammingLanguagesData
     .filter((language) =>
-      language.name.toLowerCase().includes(searchQuery.toLowerCase()),
+      language.name.toLowerCase().includes(searchQuery.toLowerCase())
     )
     .sort((a, b) => {
       if (sortOption === "alphabetical") {
@@ -99,3 +99,5 @@ export const ProgrammingLanguagesPage = () => {
     </div>
   );
 };
+
+export default ProgrammingLanguagesPage;

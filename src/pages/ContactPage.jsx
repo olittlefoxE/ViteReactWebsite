@@ -1,7 +1,7 @@
 import youtubeIcon from "../assets/icons/youtubeIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 
-export const ContactPage = () => {
+const ContactPage = () => {
   return (
     <div className="mt-0 flex min-h-screen flex-col items-center justify-center overflow-visible pt-0 font-RobotoSlab">
       {/* Contact Us Section */}
@@ -59,7 +59,9 @@ export const ContactPage = () => {
               alt="YouTube Logo"
               className="max-h-8 max-w-8 flex-shrink-0"
             />
-            <span className="text-sm font-semibold">littlefoxE&apos;s YouTube</span>
+            <span className="text-sm font-semibold">
+              littlefoxE&apos;s YouTube
+            </span>
           </a>
 
           {/* MinecraftLetsPlay's YouTube */}
@@ -97,7 +99,9 @@ export const ContactPage = () => {
               alt="GitHub Logo"
               className="max-h-8 max-w-8 flex-shrink-0"
             />
-            <span className="text-sm font-semibold">olittlefoxE&apos;s GitHub</span>
+            <span className="text-sm font-semibold">
+              olittlefoxE&apos;s GitHub
+            </span>
           </a>
 
           {/* MinecraftLetsPlay's GitHub */}
@@ -124,3 +128,5 @@ export const ContactPage = () => {
     </div>
   );
 };
+
+export default ContactPage;

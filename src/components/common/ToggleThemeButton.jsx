@@ -1,15 +1,16 @@
-import { useState } from "react";
-export const ToggleThemeButton = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+import { useCallback, useEffect } from "react";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-  };
+const ToggleThemeButton = () => {
+  const [isDarkMode, setIsDarkMode] = useLocalStorage("theme", false);
+
+  const toggleTheme = useCallback(() => {
+    setIsDarkMode((prev) => !prev);
+  }, [setIsDarkMode]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+  }, [isDarkMode]);
 
   return (
     <button
@@ -17,7 +18,6 @@ export const ToggleThemeButton = () => {
       className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-bl from-forgeGrayBase via-forgeGrayWarm to-forgeGrayDeep dark:bg-gradient-to-bl dark:from-forgeDark dark:via-forgeAsh dark:to-forgeSmoke"
       aria-label="Toggle Theme"
     >
-      {/* Sun Animation */}
       <div
         className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${
           isDarkMode ? "translate-y-[150%]" : "translate-y-0"
@@ -97,7 +97,6 @@ export const ToggleThemeButton = () => {
         </svg>
       </div>
 
-      {/* Moon Animation */}
       <div
         className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${
           isDarkMode ? "translate-y-0" : "translate-y-[-150%]"
@@ -115,3 +114,5 @@ export const ToggleThemeButton = () => {
     </button>
   );
 };
+
+export default ToggleThemeButton;

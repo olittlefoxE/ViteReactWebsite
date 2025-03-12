@@ -1,4 +1,4 @@
-export const IntroTitle = () => {
+const IntroTitle = () => {
   const Heading = "Robin's & Dennis' Code Forge";
   const headingDescription = "rd-code-forge.net";
 
@@ -13,3 +13,5 @@ export const IntroTitle = () => {
     </header>
   );
 };
+
+export default IntroTitle;

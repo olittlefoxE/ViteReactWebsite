@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-export const ScrollButton = ({ targetId }) => {
+const ScrollButton = ({ targetId }) => {
   const handleClick = () => {
     const target = document.getElementById(targetId);
     if (target) {
@@ -21,3 +21,5 @@ export const ScrollButton = ({ targetId }) => {
 ScrollButton.propTypes = {
   targetId: PropTypes.string.isRequired,
 };
+
+export default ScrollButton;

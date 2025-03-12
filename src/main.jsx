@@ -3,18 +3,6 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "../index.css";
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from "web-vitals";
-
-// Performance monitoring setup
-const reportWebVitals = (onPerfEntry) => {
-  if (onPerfEntry && onPerfEntry instanceof Function) {
-    getCLS(onPerfEntry);
-    getFID(onPerfEntry);
-    getFCP(onPerfEntry);
-    getLCP(onPerfEntry);
-    getTTFB(onPerfEntry);
-  }
-};
 
 // Profiler callback for component performance
 const onRenderCallback = (
@@ -55,6 +43,3 @@ if (rootElement) {
 } else {
   console.error("Root element not found");
 }
-
-// Report web vitals
-reportWebVitals(console.log);

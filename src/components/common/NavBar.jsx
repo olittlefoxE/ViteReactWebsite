@@ -1,7 +1,7 @@
-import { ToggleThemeButton } from "./ToggleThemeButton";
+import ToggleThemeButton from "./ToggleThemeButton";
 import PropTypes from "prop-types";
 
-const NavBar = ({ navigateTo }) => {
+export const NavBar = ({ navigateTo }) => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow py-[20px] shadow-md dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh">
       <div className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-4">

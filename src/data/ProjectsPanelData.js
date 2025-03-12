@@ -1,4 +1,4 @@
-export const ProjectsPanelData = [
+const ProjectsPanelData = [
   {
     name: "Temperature Calculator",
     languages: ["JavaScript"],
@@ -31,3 +31,5 @@ export const ProjectsPanelData = [
     author: "MinecraftLetsPlay",
   },
 ];
+
+export default ProjectsPanelData;

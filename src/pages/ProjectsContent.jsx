@@ -1,5 +1,5 @@
-import { ProjectsPanel } from "../../components/common/ProjectsPanel";
-import { ProjectsPanelData } from "../../data/ProjectsPanelData";
+import ProjectsPanel from "../components/common/ProjectsPanel";
+import ProjectsPanelData from "../data/ProjectsPanelData";
 
 export const ProjectsContent = () => {
   return (

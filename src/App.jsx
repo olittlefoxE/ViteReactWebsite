@@ -1,8 +1,8 @@
 import { lazy, Suspense, useCallback } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
-import { NavBar } from "./components/common/NavBar";
-import { Footer } from "./components/common/Footer";
-import { LoadingSpinner } from "./components/common/LoadingSpinner";
+import NavBar from "./components/common/NavBar";
+import Footer from "./components/common/Footer";
+import LoadingSpinner from "./components/common/LoadingSpinner";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));

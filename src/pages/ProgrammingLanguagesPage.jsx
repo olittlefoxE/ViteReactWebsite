@@ -1,6 +1,6 @@
 import { useState } from "react";
 import sortedProgrammingLanguagesData from "../data/ProgrammingLanguagesData.js";
-import { ProgrammingLanguagesPanel } from "../components/common/ProgrammingLanguagesPanel.jsx";
+import ProgrammingLanguagesPanel from "../components/common/ProgrammingLanguagesPanel.jsx";
 
 const ProgrammingLanguagesPage = () => {
   const [searchQuery, setSearchQuery] = useState("");

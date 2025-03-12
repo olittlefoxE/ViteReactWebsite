@@ -1,7 +1,7 @@
-import { AnimationPanel } from "../../components/hero/AnimationPanel";
-import { IntroTitle } from "../../components/hero/IntroTitle";
-import { ScrollButton } from "../../components/hero/ScrollButton";
-import { ProjectsContent } from "./ProjectsContent";
+import AnimationPanel from "../components/hero/AnimationPanel";
+import IntroTitle from "../components/hero/IntroTitle";
+import ScrollButton from "../components/hero/ScrollButton";
+import ProjectsContent from "./ProjectsContent";
 
 const HomePage = () => {
   return (

@@ -2,7 +2,6 @@ import AnimationPanel from "../components/hero/AnimationPanel";
 import IntroTitle from "../components/hero/IntroTitle";
 import ScrollButton from "../components/hero/ScrollButton";
 import ProjectsContent from "./ProjectsContent";
-import NavBar from "../components/common/NavBar";
 
 const HomePage = () => {
   return (
@@ -18,8 +17,7 @@ const HomePage = () => {
         <ScrollButton targetId="mainContent" />
       </section>
 
-      <NavBar />
-
+      {/* Main Content */}
       <section id="mainContent">
         <ProjectsContent />
       </section>

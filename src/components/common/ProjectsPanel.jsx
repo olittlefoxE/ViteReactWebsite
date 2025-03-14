@@ -14,6 +14,7 @@ const ProjectsPanel = memo(
   }) => {
     const navigate = useNavigate();
 
+    // Memoized navigation function
     const navigateToProjectPage = useCallback(() => {
       if (isFrontend) {
         navigate(`/projects/${name.toLowerCase()}`);
@@ -79,10 +80,8 @@ const ProjectsPanel = memo(
   }
 );
 
-// Add displayName for debugging
 ProjectsPanel.displayName = "ProjectsPanel";
 
-// Define PropTypes
 ProjectsPanel.propTypes = {
   name: PropTypes.string.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -93,7 +92,6 @@ ProjectsPanel.propTypes = {
   author: PropTypes.string.isRequired,
 };
 
-// Define default props
 ProjectsPanel.defaultProps = {
   usesAI: false,
   isFrontend: false,

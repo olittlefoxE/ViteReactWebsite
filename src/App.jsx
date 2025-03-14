@@ -1,5 +1,5 @@
-import { lazy, Suspense, useCallback } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Footer from "./components/common/Footer";
 import NavBar from "./components/common/NavBar";
 import LoadingSpinner from "./components/common/LoadingSpinner";
@@ -10,18 +10,13 @@ const ContactPage = lazy(() => import("./pages/ContactPage"));
 const LanguagesPage = lazy(() => import("./pages/ProgrammingLanguagesPage"));
 
 const App = () => {
-  const navigate = useNavigate();
-
-  const navigateTo = useCallback(
-    (page) => {
-      navigate(page);
-    },
-    [navigate]
-  );
+  const location = useLocation();
+  const isHomePage = location.pathname === "/home"; // Check if on homepage
 
   return (
     <div className="flex min-h-screen flex-col">
-      <NavBar />
+      {/* Show NavBar only if NOT on the homepage */}
+      {!isHomePage && <NavBar />}
 
       <main className="flex-grow bg-forgeGradientAsh dark:bg-forgeGradientIron">
         <Suspense fallback={<LoadingSpinner />}>

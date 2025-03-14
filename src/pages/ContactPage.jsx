@@ -45,7 +45,7 @@ const ContactPage = () => {
         </div>
 
         {/* Follow Us Section */}
-        <div className="mt-10 w-full max-w-lg rounded-lg border border-forgeGrayWarm bg-gradient-to-tl from-emberSpark via-emberHeat to-forgeGrayDark p-8 text-forgeGrayAsh shadow-xl dark:border-forgeGrayDeep dark:text-forgeGrayLight">
+        <div className="mt-10 w-full max-w-lg rounded-lg border border-forgeGrayWarm bg-gradient-to-tl from-emberSpark via-emberHeat to-forgeGrayDark p-8 shadow-xl dark:border-forgeGrayDeep">
           <h1 className="mb-6 text-center text-3xl font-bold">Follow Us</h1>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {/* littlefoxE's YouTube */}
@@ -103,7 +103,7 @@ const ContactPage = () => {
                 alt="GitHub Logo"
                 className="max-h-8 max-w-8 flex-shrink-0"
               />
-              <span className="text-sm font-semibold">
+              <span className="text-sm font-semibold text-forgeGrayLight">
                 olittlefoxE&apos;s GitHub
               </span>
             </a>
@@ -123,7 +123,7 @@ const ContactPage = () => {
                 alt="GitHub Logo"
                 className="max-h-8 max-w-8 flex-shrink-0"
               />
-              <span className="text-sm font-semibold">
+              <span className="text-sm font-semibold text-forgeGrayLight">
                 Minecraftletsplay&apos;s GitHub
               </span>
             </a>

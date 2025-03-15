@@ -15,10 +15,10 @@ const AnimationPanel = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-screen bg-forgeGradient dark:bg-forgeGradientDark">
+    <div className="relative h-screen w-screen bg-forgeGradient dark:bg-forgeGradientDark pointer-events-none">
       <canvas
         ref={canvasRef}
-        className="absolute left-0 top-0 h-full w-full"
+        className="absolute left-0 top-0 h-full w-full pointer-events-none"
       ></canvas>
     </div>
   );

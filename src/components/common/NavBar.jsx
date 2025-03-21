@@ -11,7 +11,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`w-full bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow py-4 shadow-md dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh
+      className={`w-screen bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow py-4 shadow-md dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh overflow-hidden
         ${
           isHomePage ? "relative" : "fixed top-0 left-0 z-50"
         } transition-all duration-300 ease-in-out`}

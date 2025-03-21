@@ -7,25 +7,27 @@ import NavBar from "../components/common/NavBar"; // Import NavBar
 const HomePage = () => {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative">
-        <AnimationPanel />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <IntroTitle />
-        </div>
-      </section>
+      <main className="min-w-screen min-h-screen overflow-hidden">
+        {/* Hero Section */}
+        <section className="relative">
+          <AnimationPanel />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <IntroTitle />
+          </div>
+        </section>
 
-      <section className="relative flex justify-center">
-        <ScrollButton targetId="mainContent" />
-      </section>
+        <section className="relative flex justify-center">
+          <ScrollButton targetId="mainContent" />
+        </section>
 
-      {/* NavBar placed between AnimationPanel and ProjectsContent */}
-      <NavBar />
+        {/* NavBar placed between AnimationPanel and ProjectsContent */}
+        <NavBar />
 
-      {/* Main Content */}
-      <section id="mainContent">
-        <ProjectsContent />
-      </section>
+        {/* Main Content */}
+        <section id="mainContent">
+          <ProjectsContent />
+        </section>
+      </main>
     </>
   );
 };

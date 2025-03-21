@@ -42,7 +42,7 @@ const ProgrammingLanguagesPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen py-10">
+    <div className="min-h-screen min-w-screen overflow-hidden py-10">
       <div className="container mx-auto max-w-6xl">
         <h1 className="font-Exo mb-12 mt-24 text-center text-4xl font-extrabold text-forgeDark underline underline-offset-4 dark:text-forgeGrayBase">
           Programming Languages

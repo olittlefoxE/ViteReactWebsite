@@ -16,7 +16,7 @@ const teamMembers = [
 const AboutPage = () => {
   return (
     <>
-      <div className="min-h-screen py-10">
+      <div className="min-h-screen min-w-screen py-10">
         <div className="container mx-auto max-w-5xl rounded-lg font-RobotoSlab">
           <h1 className="mb-12 mt-24 text-center text-4xl font-extrabold text-forgeDark underline underline-offset-4 dark:text-forgeGrayBase">
             About Us
@@ -25,7 +25,7 @@ const AboutPage = () => {
             <p className="text-lg leading-relaxed">
               Welcome to{" "}
               <span className="font-semibold text-forgeDark dark:text-forgeGrayBase">
-                Robin & Dennis&apos Code Forge!
+                Robin & Dennis&apos; Code Forge!
               </span>
               <br />
               <br />

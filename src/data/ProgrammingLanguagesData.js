@@ -66,7 +66,7 @@ const ProgrammingLanguagesData = [
     background:
       "C++ is an extension of the C programming language. It is widely used for systems programming, game development, and performance-critical applications.",
     relatedLanguages: ["C", "Rust", "Objective-C"],
-    website: "https://www.w3schools.com/cpp/",
+    website: "https://cplusplus.com",
   },
   {
     name: "C#",

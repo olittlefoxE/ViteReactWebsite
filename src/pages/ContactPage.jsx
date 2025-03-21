@@ -6,7 +6,7 @@ const ContactPage = () => {
     <>
       <div className="flex min-h-screen min-w-screen flex-col items-center justify-center overflow-hidden font-RobotoSlab">
         {/* Contact Us Section */}
-        <div className="w-full max-w-lg rounded-lg border border-forgeGrayWarm leading-relaxed bg-gradient-to-tl from-emberSpark via-emberHeat to-forgeGrayDark p-8 text-forgeGrayAsh shadow-xl dark:border-forgeGrayDeep dark:text-forgeGrayLight">
+        <div className="mt-20 w-full max-w-lg rounded-lg border border-forgeGrayWarm leading-relaxed bg-gradient-to-tl from-emberSpark via-emberHeat to-forgeGrayDark p-8 text-forgeGrayAsh shadow-xl dark:border-forgeGrayDeep dark:text-forgeGrayLight">
           <h1 className="mb-6 text-center text-4xl font-extrabold">
             Contact Us
           </h1>

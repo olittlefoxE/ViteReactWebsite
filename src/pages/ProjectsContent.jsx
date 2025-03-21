@@ -18,7 +18,7 @@ export const ProjectsContent = memo(() => {
 
   return (
     <>
-      <div className="containers min-h-4xl mx-auto max-w-5xl">
+      <div className="container mb-12 min-h-4xl mx-auto max-w-5xl">
         <h1 className="font-Exo mb-12 mt-24 text-center text-4xl font-extrabold text-forgeDark underline underline-offset-4 dark:text-forgeGrayBase">
           Projects
         </h1>

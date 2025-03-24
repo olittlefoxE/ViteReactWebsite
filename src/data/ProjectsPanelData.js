@@ -1,6 +1,6 @@
 const ProjectsPanelData = [
   {
-    name: "Temperature Calculator",
+    name: "TemperatureCalculator",
     languages: ["JavaScript"],
     dependencies: ["React", "TailwindCSS"],
     usesAI: true,

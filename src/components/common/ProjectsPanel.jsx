@@ -17,7 +17,8 @@ const ProjectsPanel = memo(
     // Memoized navigation function
     const navigateToProjectPage = useCallback(() => {
       if (isFrontend) {
-        navigate(`/projects/${name.toLowerCase()}`);
+        const projectPath = name.toLowerCase().replace(/ /g, '').replace(/\s+/g, '');
+        navigate(`/projects/${projectPath}`);
       }
     }, [isFrontend, name, navigate]);
 

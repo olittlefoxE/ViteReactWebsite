@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 const convertTemperature = (value, fromUnit, toUnit) => {
   if (value === "" || isNaN(value)) return "";
 
@@ -61,7 +62,7 @@ const TemperatureCalculator = () => {
   };
 
   return (
-    <div className="mx-auto max-w-sm rounded-lg border-[1px] border-gray-300 bg-gray-100 p-6 shadow-md dark:border-gray-400 dark:bg-gray-800">
+    <div className="mx-auto mt-64 max-w-sm rounded-lg border-[1px] border-gray-300 bg-gray-100 p-6 shadow-md dark:border-gray-400 dark:bg-gray-800">
       <h1 className="mb-4 text-center text-xl font-bold text-gray-800 dark:text-gray-200">
         Temperature Converter
       </h1>

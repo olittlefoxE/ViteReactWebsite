@@ -4,6 +4,7 @@ import Footer from "./components/common/Footer";
 import NavBar from "./components/common/NavBar";
 import LoadingSpinner from "./components/common/LoadingSpinner";
 
+const TemperatureCalculator = lazy(() => import("./components/projects/TemperatureCalculator"));
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
@@ -11,11 +12,10 @@ const LanguagesPage = lazy(() => import("./pages/ProgrammingLanguagesPage"));
 
 const App = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === "/home"; // Check if on homepage
+  const isHomePage = location.pathname === "/home";
 
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Show NavBar only if NOT on the homepage */}
       {!isHomePage && <NavBar />}
 
       <main className="flex-grow bg-forgeGradientAsh dark:bg-forgeGradientIron">
@@ -26,6 +26,7 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/languages" element={<LanguagesPage />} />
+            <Route path="/projects/temperaturecalculator" element={<TemperatureCalculator />} />
           </Routes>
         </Suspense>
       </main>

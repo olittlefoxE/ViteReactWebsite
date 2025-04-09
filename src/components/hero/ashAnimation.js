@@ -67,3 +67,83 @@ export function ashAnimation(canvas) {
     cancelAnimationFrame(animate);
   };
 }
+
+class EmberParticle {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.x = Math.random() * canvas.width;
+    this.y = canvas.height + 10;
+    this.size = Math.random() * 4 + 2;
+    this.speedY = -(Math.random() * 1.5 + 1); // Langsamere Aufstiegsgeschwindigkeit
+    this.speedX = (Math.random() - 0.5) * 1; // Reduzierte horizontale Bewegung
+    this.opacity = Math.random() * 0.8 + 0.2;
+    this.color = `rgba(255, ${Math.random() * 100 + 155}, 0, ${this.opacity})`;
+    this.life = 2; // Längere Lebensdauer
+    this.maxLife = 2;
+  }
+
+  update() {
+    this.y += this.speedY;
+    this.x += this.speedX;
+    this.life -= 0.004; // Langsamerer Verfall
+    
+    // Smooth opacity transition
+    this.opacity = (this.life / this.maxLife) * 0.8;
+    this.color = `rgba(255, ${Math.random() * 100 + 155}, 0, ${this.opacity})`;
+  }
+
+  draw(ctx) {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  }
+}
+
+export const activateForgeEffect = () => {
+  const canvas = document.querySelector('#ashCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const embers = [];
+  let isActive = true;
+
+  // Initiale Partikel
+  for (let i = 0; i < 30; i++) {
+    embers.push(new EmberParticle(canvas));
+  }
+
+  document.documentElement.classList.add('forge-active');
+
+  const animate = () => {
+    if (!isActive) return;
+
+    // Kontinuierlich neue Partikel spawnen
+    if (embers.length < 100) { // Maximale Anzahl von Partikeln
+      if (Math.random() < 0.1) { // 10% Chance pro Frame
+        embers.push(new EmberParticle(canvas));
+      }
+    }
+
+    // Aktualisiere und zeichne bestehende Partikel
+    for (let i = embers.length - 1; i >= 0; i--) {
+      const ember = embers[i];
+      ember.update();
+      ember.draw(ctx);
+      
+      if (ember.life <= 0 || ember.y < -50) {
+        embers.splice(i, 1);
+      }
+    }
+
+    requestAnimationFrame(animate);
+  };
+
+  animate();
+
+  // Reset nach 60 Sekunden
+  setTimeout(() => {
+    isActive = false;
+    document.documentElement.classList.remove('forge-active');
+  }, 60000);
+};

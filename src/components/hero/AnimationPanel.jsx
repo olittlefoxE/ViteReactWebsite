@@ -17,6 +17,7 @@ const AnimationPanel = () => {
   return (
     <div className="relative h-screen w-screen bg-forgeGradient dark:bg-forgeGradientDark pointer-events-none">
       <canvas
+        id="ashCanvas"
         ref={canvasRef}
         className="absolute left-0 top-0 h-full w-full pointer-events-none"
       ></canvas>

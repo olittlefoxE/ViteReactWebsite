@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { activateForgeEffect } from "./ashAnimation";
 
 const FINAL_TITLE = "Robin's & Dennis' Code Forge";
 const CHARACTERS =
@@ -6,6 +7,19 @@ const CHARACTERS =
 
 const IntroTitle = () => {
   const [displayText, setDisplayText] = useState(FINAL_TITLE.split(""));
+  const [canActivate, setCanActivate] = useState(true);
+
+  const handleForgeClick = () => {
+    if (!canActivate) return;
+
+    activateForgeEffect();
+    setCanActivate(false);
+
+    // Abklingzeit von 60 Sekunden
+    setTimeout(() => {
+      setCanActivate(true);
+    }, 60000);
+  };
 
   useEffect(() => {
     let timeouts = [];
@@ -52,7 +66,16 @@ const IntroTitle = () => {
   return (
     <header className="z-10 text-center drop-shadow-lg">
       {/* Forge-inspired Title */}
-      <h1 className="bg-gradient-to-r from-gray-800 via-red-600 to-orange-500 bg-clip-text font-[Blacksmith] text-5xl font-extrabold text-transparent drop-shadow-xl">
+      <h1
+        onClick={handleForgeClick}
+        className={`
+          bg-gradient-to-r from-gray-800 via-red-600 to-orange-500 
+          bg-clip-text font-[Blacksmith] text-5xl font-extrabold 
+          text-transparent drop-shadow-xl cursor-pointer 
+          transition-all duration-300
+          ${!canActivate ? 'opacity-75' : 'hover:scale-105'}
+        `}
+      >
         {displayText.map((char, i) => (
           <span key={i} className="inline-block">
             {char}

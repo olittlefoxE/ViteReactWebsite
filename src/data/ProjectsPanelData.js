@@ -10,26 +10,24 @@ const ProjectsPanelData = [
   },
 
   {
-    name: "Digital Clock",
-    languages: ["C#"],
-    dependencies: ["Microsoft .NET"],
+    name: "UnitConverter",
+    languages: ["JavaScript"],
+    dependencies: ["React", "TailwindCSS"],
     usesAI: true,
-    isFrontend: false,
-    githubLink:
-      "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Digital%20Clock%20(12H%20%26%2024H)",
+    isFrontend: true,
+    githubLink: "",
     author: "MinecraftLetsPlay",
   },
 
   {
-    name: "Password Generator",
+    name: "Multitool",
     languages: ["C#"],
-    dependencies: ["Microsoft .NET"],
+    dependencies: ["Microsoft .NET Runtime 4.7.2"],
     usesAI: true,
     isFrontend: false,
-    githubLink:
-      "https://github.com/MinecraftLetsPlay/CS-Projects/tree/main/Password%20Generator",
+    githubLink: "https://github.com/MinecraftLetsPlay/Multitool",
     author: "MinecraftLetsPlay",
-  },
+  }
 ];
 
 export default ProjectsPanelData;

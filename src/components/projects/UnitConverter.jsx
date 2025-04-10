@@ -310,19 +310,16 @@ const UNIT_TYPES = {
 };
 
 const UnitConverter = () => {
-  // Basis-State für Input, Output und ausgewählte Einheiten
-  const [inputValue, setInputValue] = useState('');
-  const [result, setResult] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('temperature'); // z.B. temperature, length, weight etc.
-  const [fromUnit, setFromUnit] = useState('');
-  const [toUnit, setToUnit] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [result, setResult] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("temperature");
+  const [fromUnit, setFromUnit] = useState("");
+  const [toUnit, setToUnit] = useState("");
 
-  // Basis-Handler für Änderungen
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
-    
-    // Konvertierung durchführen wenn alle Werte vorhanden
+
     if (value && fromUnit && toUnit) {
       const converted = UNIT_TYPES[selectedCategory].convert(
         parseFloat(value),
@@ -333,30 +330,32 @@ const UnitConverter = () => {
     }
   };
 
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
-    setFromUnit(''); // Reset units when category changes
-    setToUnit('');
-    setResult(''); // Optional: Also reset result
-  };
-
   const handleUnitChange = (e, setter) => {
     const value = e.target.value;
     setter(value);
-    
+
     if (inputValue && fromUnit && toUnit) {
       const converted = UNIT_TYPES[selectedCategory].convert(
         parseFloat(inputValue),
-        fromUnit,
-        toUnit
+        fromUnit === "" ? value : fromUnit,
+        toUnit === "" ? value : toUnit
       );
       setResult(Number(converted).toFixed(2));
     }
   };
 
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+    setFromUnit("");
+    setToUnit("");
+    setResult("");
+  };
+
   const handleReset = () => {
-    setInputValue('');
-    setResult('');
+    setInputValue("");
+    setResult("");
+    setFromUnit("");
+    setToUnit("");
   };
 
   return (
@@ -382,7 +381,6 @@ const UnitConverter = () => {
           <option value="volume">Volume</option>
           <option value="speed">Speed</option>
           <option value="time">Time</option>
-          {/* Weitere Kategorien hier */}
         </select>
       </div>
 

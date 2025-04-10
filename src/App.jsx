@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Footer from "./components/common/Footer";
 import NavBar from "./components/common/NavBar";
 import LoadingSpinner from "./components/common/LoadingSpinner";
+import UnitConverter from "./components/projects/UnitConverter";
 
 const TemperatureCalculator = lazy(() => import("./components/projects/TemperatureCalculator"));
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -27,7 +28,7 @@ const App = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/languages" element={<LanguagesPage />} />
             <Route path="/projects/temperaturecalculator" element={<TemperatureCalculator />} />
-            <Route path="/projects/unitconverter" element={<TemperatureCalculator />} />
+            <Route path="/projects/unitconverter" element={<UnitConverter />} />
           </Routes>
         </Suspense>
       </main>

@@ -441,13 +441,30 @@ const UnitConverter = () => {
         <p className="text-lg font-bold dark:text-gray-300">Result: {result}</p>
       </div>
 
-      {/* Reset Button */}
-      <button
-        onClick={handleReset}
-        className="w-full rounded-md bg-red-600 px-4 py-2 text-white"
-      >
-        Reset
-      </button>
+      {/* Buttons */}
+      <div className="flex justify-between gap-4">
+        <button
+          onClick={handleReset}
+          className="w-full rounded-md bg-red-600 px-4 py-2 text-white"
+        >
+          Reset
+        </button>
+        <button
+          onClick={() => {
+            if (inputValue && fromUnit && toUnit) {
+              const converted = UNIT_TYPES[selectedCategory].convert(
+                parseFloat(inputValue),
+                fromUnit,
+                toUnit
+              );
+              setResult(Number(converted).toFixed(2));
+            }
+          }}
+          className="w-full rounded-md bg-blue-600 px-4 py-2 text-white"
+        >
+          Calculate
+        </button>
+      </div>
     </div>
   );
 };

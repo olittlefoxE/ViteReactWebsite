@@ -27,6 +27,7 @@ const App = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/languages" element={<LanguagesPage />} />
             <Route path="/projects/temperaturecalculator" element={<TemperatureCalculator />} />
+            <Route path="/projects/unitconverter" element={<TemperatureCalculator />} />
           </Routes>
         </Suspense>
       </main>

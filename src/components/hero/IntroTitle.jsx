@@ -94,6 +94,10 @@ const IntroTitle = () => {
           transition-all duration-300
           ${!canActivate ? "opacity-75" : "hover:scale-105"}
         `}
+        style={{
+          lineHeight: "1.1", // Erhöht den Zeilenabstand
+          paddingBottom: "0.1em", // Fügt Platz unterhalb des Textes hinzu
+        }}
       >
         {displayText.map((char, i) => (
           <span key={i} className="inline-block">

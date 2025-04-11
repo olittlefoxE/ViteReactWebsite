@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * @description AboutPage component that displays information about the project and the team members.
+ * @param {Array} teamMembers - An array of team members with their names, nicknames, and bios.
+ * @param {Function} map - Function to iterate over the team members array.
+ * @param {Function} Fragment - Function to create a fragment for each team member.
+ * @param {Function} key - Function to assign a unique key to each fragment.
+ * @returns {JSX.Element} <AboutPage /> - The rendered about page component.
+ */
+
 const teamMembers = [
   {
     name: "Robin Stiller",

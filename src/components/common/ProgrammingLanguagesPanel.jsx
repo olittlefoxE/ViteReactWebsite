@@ -1,7 +1,25 @@
 import fallbackLogo from "../../assets/images/404.png";
 import PropTypes from "prop-types";
 import { Suspense, useMemo, useCallback } from "react";
-import LoadingSpinner from "../common/LoadingSpinner"; // Ensure correct path
+import LoadingSpinner from "../common/LoadingSpinner";
+
+/**
+ * @description ProgrammingLanguagesPanel component
+ * @param {Object} language - The programming language object containing details like name, logo, founders, year, background, related languages, and website.
+ * @param {string} language.name - The name of the programming language.
+ * @param {string} language.logo - The URL of the logo image for the programming language.
+ * @param {Array<string>} language.founders - An array of founders' names.
+ * @param {string|number} language.year - The year the programming language was founded.
+ * @param {string} language.background - Background information about the programming language.
+ * @param {Array<string>} language.relatedLanguages - An array of related programming languages.
+ * @param {string} language.website - The official website URL of the programming language.
+ * @param {Hook} useMemo - Hook to memoize derived data to prevent unnecessary recalculations.
+ * @param {Hook} useCallback - Hook to memoize functions to prevent unnecessary re-creations.
+ * @param {Hook} Suspense - React component for handling loading states.
+ * @param {Function} LoadingSpinner - Component to show a loading spinner while data is being fetched.
+ * @param {Function<Object>} fallbackLogo - Fallback logo image in case the logo URL is not available.
+ * @returns {JSX.Element} <ProgrammingLanguagesPanel /> - The rendered programming languages panel component.
+ */
 
 const ProgrammingLanguagesPanel = ({ language }) => {
   const { name, logo, founders, year, background, relatedLanguages, website } =

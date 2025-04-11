@@ -2,6 +2,20 @@ import { useNavigate } from "react-router-dom";
 import { memo, useCallback } from "react";
 import PropTypes from "prop-types";
 
+/**
+ * @description ProjectsPanel component
+ * @param {Object} props - The properties object.
+ * @param {string} props.name - The name of the project.
+ * @param {Array<string>} props.languages - An array of programming languages used in the project.
+ * @param {Array<string>} props.dependencies - An array of dependencies used in the project.
+ * @param {boolean} [props.usesAI=false] - Indicates if the project uses AI.
+ * @param {boolean} [props.isFrontend=false] - Indicates if the project is a frontend project.
+ * @param {string} props.githubLink - The GitHub link for the project.
+ * @param {string} props.author - The author of the project.
+ * @param {Function} useNavigate - Hook from react-router-dom for programmatic navigation.
+ * @returns {JSX.Element} <ProjectsPanel /> - The rendered projects panel component.
+ */
+
 const ProjectsPanel = memo(
   ({
     name,
@@ -17,7 +31,10 @@ const ProjectsPanel = memo(
     // Memoized navigation function
     const navigateToProjectPage = useCallback(() => {
       if (isFrontend) {
-        const projectPath = name.toLowerCase().replace(/ /g, '').replace(/\s+/g, '');
+        const projectPath = name
+          .toLowerCase()
+          .replace(/ /g, "")
+          .replace(/\s+/g, "");
         navigate(`/projects/${projectPath}`);
       }
     }, [isFrontend, name, navigate]);

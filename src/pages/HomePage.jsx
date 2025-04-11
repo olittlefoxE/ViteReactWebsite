@@ -2,7 +2,12 @@ import AnimationPanel from "../components/hero/AnimationPanel";
 import IntroTitle from "../components/hero/IntroTitle";
 import ScrollButton from "../components/hero/ScrollButton";
 import ProjectsContent from "./ProjectsContent";
-import NavBar from "../components/common/NavBar"; // Import NavBar
+import NavBar from "../components/common/NavBar";
+
+/**
+ * @description HomePage component that serves as the main entry point for the application.
+ * @returns {JSX.Element} <HomePage /> - The rendered home page component.
+ */
 
 const HomePage = () => {
   return (

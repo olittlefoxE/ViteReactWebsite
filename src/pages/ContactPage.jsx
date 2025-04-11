@@ -1,6 +1,11 @@
 import youtubeIcon from "../assets/icons/youtubeIcon.svg";
 import githubIcon from "../assets/icons/githubIcon.svg";
 
+/**
+ * @description ContactPage component that displays contact information and social media links.
+ * @returns {JSX.Element} <ContactPage /> - The rendered contact page component.
+ */
+
 const ContactPage = () => {
   return (
     <>

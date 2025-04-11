@@ -1,6 +1,22 @@
 import { memo, useMemo, Suspense, lazy } from "react";
 import ProjectsPanelData from "../data/ProjectsPanelData";
 
+/**
+ * @description ProjectsContent component that displays a list of projects with lazy loading.
+ * @param {Hook} memo - React function to memoize components to prevent unnecessary re-renders.
+ * @param {Hook} useMemo - Hook to memoize derived data to prevent unnecessary recalculations.
+ * @param {Hook} Suspense - React component for handling loading states.
+ * @param {Hook} lazy - React function to dynamically import components for better performance.
+ * @param {Function} ProjectsPanelData - Array of project data to be displayed.
+ * @param {Function} ProjectsPanel - Component to display individual project cards.
+ * @param {Function} ProjectsContent - Component to display the projects content page.
+ * @param {Function} ProjectsPanelData.map - Function to iterate over the project data array.
+ * @param {Function} index - Function to assign a unique key to each project card.
+ * @param {Function} ProjectsPanel - Component to display individual project cards.
+ * @param {Function} key - Function to assign a unique key to each project card.
+ * @returns {JSX.Element} <ProjectsContent /> - The rendered projects content component.
+ */
+
 // Lazy load ProjectsPanel for better performance
 const ProjectsPanel = lazy(() => import("../components/common/ProjectsPanel"));
 

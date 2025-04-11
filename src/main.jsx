@@ -4,6 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "../index.css";
 
+/**
+ * @description Main entry point for the application.
+ */
+
 // Profiler callback for component performance
 const onRenderCallback = (
   id,

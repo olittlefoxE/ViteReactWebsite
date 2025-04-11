@@ -1,6 +1,25 @@
 import { useEffect, useState } from "react";
 import { activateForgeEffect } from "./ashAnimation";
 
+/**
+ * @description IntroTitle component that displays a title with a forge effect.
+ * @param {Hook} - Hook to manage state for the displayed text and activation status.
+ * @param {Hook} - Hook to perform side effects in function components.
+ * @param {Function} activateForgeEffect - Function to activate the forge effect.
+ * @param {string} FINAL_TITLE - The final title to be displayed.
+ * @param {string} CHARACTERS - The characters used for the scrambling effect.
+ * @param {Function} setDisplayText - Function to update the displayed text.
+ * @param {Function} setCanActivate - Function to update the activation status.
+ * @param {Function} handleForgeClick - Function to handle the click event on the title.
+ * @param {Function} scrambleEffect - Function to apply the scrambling effect to each character.
+ * @param {Function} setTimeout - Function to set a timer for the activation cooldown.
+ * @param {Function} clearTimeout - Function to clear the timer.
+ * @param {Function} setInterval - Function to set a timer for the scrambling effect.
+ * @param {Function} clearInterval - Function to clear the timer.
+ * @param {Function} FINAL_TITLE.split - Function to split the final title into characters.
+ * @returns {JSX.Element} <IntroTitle /> - The rendered intro title component.
+ */
+
 const FINAL_TITLE = "Robin's & Dennis' Code Forge";
 const CHARACTERS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=";
@@ -73,7 +92,7 @@ const IntroTitle = () => {
           bg-clip-text font-[Blacksmith] text-5xl font-extrabold 
           text-transparent drop-shadow-xl cursor-pointer 
           transition-all duration-300
-          ${!canActivate ? 'opacity-75' : 'hover:scale-105'}
+          ${!canActivate ? "opacity-75" : "hover:scale-105"}
         `}
       >
         {displayText.map((char, i) => (

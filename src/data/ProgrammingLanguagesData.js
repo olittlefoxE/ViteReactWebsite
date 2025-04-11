@@ -487,7 +487,7 @@ const ProgrammingLanguagesData = [
       "VBScript (Visual Basic Scripting Edition) is a lightweight, active scripting language developed by Microsoft. It is modeled on Visual Basic and designed for automation of tasks in Windows environments.",
     relatedLanguages: ["Visual Basic", "Batch", "PowerShell"],
     website: "https://en.wikipedia.org/wiki/VBScript"
-}
+  }
 ];
 
 // Sorting Logic

@@ -1,6 +1,21 @@
-import { m } from 'framer-motion';
-import { useState } from 'react';
+import { useState } from "react";
 
+/**
+ * @description Converts various units between different measurement systems.
+ * @param {string} category - The category of units to convert (e.g., temperature, length, weight).
+ * @funcction convert - The function to perform the conversion between units.
+ * @function handleInputChange - The function to handle changes in the input value.
+ * @function handleUnitChange - The function to handle changes in the selected units.
+ * @function handleCategoryChange - The function to handle changes in the selected category.
+ * @function handleReset - The function to reset the input and result values.
+ * @param {string[]} units - The array of units available for conversion in the selected category.
+ * @param {number} value - The value to convert.
+ * @param {string} fromUnit - The unit of the input value.
+ * @param {string} toUnit - The unit to convert the value to.
+ * @returns {number} - The converted value.
+ * @throws {Error} - Throws an error if the input value is not a number or if the conversion fails.
+ * @returns {JSX.Element} - The rendered unit converter component.
+ */
 const UNIT_TYPES = {
   temperature: {
     units: ["Celsius", "Fahrenheit", "Kelvin"],
@@ -20,22 +35,32 @@ const UNIT_TYPES = {
         default:
           return 0;
       }
-      
+
       // Dann von Celsius zur Zieleinheit
       switch (toUnit) {
         case "Celsius":
           return celsius;
         case "Fahrenheit":
-          return (celsius * 9/5) + 32;
+          return (celsius * 9) / 5 + 32;
         case "Kelvin":
           return celsius + 273.15;
         default:
           return 0;
       }
-    }
+    },
   },
   length: {
-    units: ["Kilometer", "Meter", "Decimeter", "Centimeter", "Millimeter", "Mile", "Yard", "Foot", "Inch"],
+    units: [
+      "Kilometer",
+      "Meter",
+      "Decimeter",
+      "Centimeter",
+      "Millimeter",
+      "Mile",
+      "Yard",
+      "Foot",
+      "Inch",
+    ],
     convert: (value, fromUnit, toUnit) => {
       // Erst zu Meter konvertieren
       let meters;
@@ -70,7 +95,7 @@ const UNIT_TYPES = {
         default:
           return 0;
       }
-      
+
       // Dann von Meter zur Zieleinheit
       switch (toUnit) {
         case "Kilometer":
@@ -94,219 +119,239 @@ const UNIT_TYPES = {
         default:
           return 0;
       }
-    }
+    },
   },
   weight: {
     units: ["Ton", "Kilogram", "Gram", "Miligram", "Pound", "Ounce"],
     convert: (value, fromUnit, toUnit) => {
-        // Erst zu Kilogramm konvertieren
-        let kilograms;
-        switch (fromUnit) {
-            case "Ton":
-            kilograms = value * 1000;
-            break;
-            case "Kilogram":
-            kilograms = value;
-            break;
-            case "Gram":
-            kilograms = value / 1000;
-            break;
-            case "Milligram":
-            kilograms = value / 1000000;
-            break;
-            case "Pound":
-            kilograms = value * 0.45359237;
-            break;
-            case "Ounce":
-            kilograms = value * 0.0283495;
-            break;
-            default:
-            return 0;
-        }
-        
-        // Dann von Kilogramm zur Zieleinheit
-        switch (toUnit) {
-            case "Ton":
-            return kilograms / 1000;
-            case "Kilogram":
-            return kilograms;
-            case "Gram":
-            return kilograms * 1000;
-            case "Milligram":
-            return kilograms * 1000000;
-            case "Pound":
-            return kilograms / 0.45359237;
-            case "Ounce":
-            return kilograms / 0.0283495;
-            default:
-            return 0;
-        }
-    }
+      // Erst zu Kilogramm konvertieren
+      let kilograms;
+      switch (fromUnit) {
+        case "Ton":
+          kilograms = value * 1000;
+          break;
+        case "Kilogram":
+          kilograms = value;
+          break;
+        case "Gram":
+          kilograms = value / 1000;
+          break;
+        case "Milligram":
+          kilograms = value / 1000000;
+          break;
+        case "Pound":
+          kilograms = value * 0.45359237;
+          break;
+        case "Ounce":
+          kilograms = value * 0.0283495;
+          break;
+        default:
+          return 0;
+      }
+
+      // Dann von Kilogramm zur Zieleinheit
+      switch (toUnit) {
+        case "Ton":
+          return kilograms / 1000;
+        case "Kilogram":
+          return kilograms;
+        case "Gram":
+          return kilograms * 1000;
+        case "Milligram":
+          return kilograms * 1000000;
+        case "Pound":
+          return kilograms / 0.45359237;
+        case "Ounce":
+          return kilograms / 0.0283495;
+        default:
+          return 0;
+      }
+    },
   },
   area: {
-    units: ["Square milimeter", "Square centimeter", "Square decimeter", "Square meter", "Hectare", "Acre"],
+    units: [
+      "Square milimeter",
+      "Square centimeter",
+      "Square decimeter",
+      "Square meter",
+      "Hectare",
+      "Acre",
+    ],
     convert: (value, fromUnit, toUnit) => {
-        // Erst zu Quadratmeter konvertieren
-        let squareMeters;
-        switch (fromUnit) {
-            case "Square milimeter":
-            squareMeters = value / 1000000;
-            break;
-            case "Square centimeter":
-            squareMeters = value / 10000;
-            break;
-            case "Square decimeter":
-            squareMeters = value / 100;
-            break;
-            case "Square meter":
-            squareMeters = value;
-            break;
-            case "Hectare":
-            squareMeters = value * 10000;
-            break;
-            case "Acre":
-            squareMeters = value * 4046.86;
-            break;
-            default:
-            return 0;
-        }
-        
-        // Dann von Quadratmeter zur Zieleinheit
-        switch (toUnit) {
-            case "Square milimeter":
-            return squareMeters * 1000000;
-            case "Square centimeter":
-            return squareMeters * 10000;
-            case "Square decimeter":
-            return squareMeters * 100;
-            case "Square meter":
-            return squareMeters;
-            case "Hectare":
-            return squareMeters / 10000;
-            case "Acre":
-            return squareMeters / 4046.86;
-            default:
-            return 0;
-        }
-    }
+      // Erst zu Quadratmeter konvertieren
+      let squareMeters;
+      switch (fromUnit) {
+        case "Square milimeter":
+          squareMeters = value / 1000000;
+          break;
+        case "Square centimeter":
+          squareMeters = value / 10000;
+          break;
+        case "Square decimeter":
+          squareMeters = value / 100;
+          break;
+        case "Square meter":
+          squareMeters = value;
+          break;
+        case "Hectare":
+          squareMeters = value * 10000;
+          break;
+        case "Acre":
+          squareMeters = value * 4046.86;
+          break;
+        default:
+          return 0;
+      }
+
+      // Dann von Quadratmeter zur Zieleinheit
+      switch (toUnit) {
+        case "Square milimeter":
+          return squareMeters * 1000000;
+        case "Square centimeter":
+          return squareMeters * 10000;
+        case "Square decimeter":
+          return squareMeters * 100;
+        case "Square meter":
+          return squareMeters;
+        case "Hectare":
+          return squareMeters / 10000;
+        case "Acre":
+          return squareMeters / 4046.86;
+        default:
+          return 0;
+      }
+    },
   },
   volume: {
-    units: ["Cubic millimeter", "Cubic centimeter", "Cubic decimeter","Cubic meter", "Liter", "Milliliter", "Centiliter"],
+    units: [
+      "Cubic millimeter",
+      "Cubic centimeter",
+      "Cubic decimeter",
+      "Cubic meter",
+      "Liter",
+      "Milliliter",
+      "Centiliter",
+    ],
     convert: (value, fromUnit, toUnit) => {
-        // Erst zu Kubikmeter konvertieren
-        let cubicMeters;
-        switch (fromUnit) {
-            case "Cubic millimeter":
-            cubicMeters = value / 1000000000;
-            break;
-            case "Cubic centimeter":
-            cubicMeters = value / 1000000;
-            break;
-            case "Cubic meter":
-            cubicMeters = value;
-            break;
-            case "Liter":
-            cubicMeters = value / 1000;
-            break;
-            case "Milliliter":
-            cubicMeters = value / 1000000;
-            break;
-            default:
-            return 0;
-        }
-        
-        // Dann von Kubikmeter zur Zieleinheit
-        switch (toUnit) {
-            case "Cubic millimeter":
-            return cubicMeters * 1000000000;
-            case "Cubic centimeter":
-            return cubicMeters * 1000000;
-            case "Cubic meter":
-            return cubicMeters;
-            case "Liter":
-            return cubicMeters * 1000;
-            case "Milliliter":
-            return cubicMeters * 1000000;
-            default:
-            return 0;
-        }
-    }
-  },
-    speed: {
-      units: ["Kilometer per hour", "Meter per second", "Mile per hour", "Foot per second"],
-      convert: (value, fromUnit, toUnit) => {
-          // Erst zu Meter pro Sekunde konvertieren
-          let metersPerSecond;
-          switch (fromUnit) {
-              case "Kilometer per hour":
-              metersPerSecond = value / 3.6;
-              break;
-              case "Meter per second":
-              metersPerSecond = value;
-              break;
-              case "Mile per hour":
-              metersPerSecond = value * 0.44704;
-              break;
-              case "Foot per second":
-              metersPerSecond = value * 0.3048;
-              break;
-              default:
-              return 0;
-          }
-        
-          // Dann von Meter pro Sekunde zur Zieleinheit
-          switch (toUnit) {
-              case "Kilometer per hour":
-              return metersPerSecond * 3.6;
-              case "Meter per second":
-              return metersPerSecond;
-              case "Mile per hour":
-              return metersPerSecond / 0.44704;
-              case "Foot per second":
-              return metersPerSecond / 0.3048;
-              default:
-              return 0;
-          }
+      // Erst zu Kubikmeter konvertieren
+      let cubicMeters;
+      switch (fromUnit) {
+        case "Cubic millimeter":
+          cubicMeters = value / 1000000000;
+          break;
+        case "Cubic centimeter":
+          cubicMeters = value / 1000000;
+          break;
+        case "Cubic meter":
+          cubicMeters = value;
+          break;
+        case "Liter":
+          cubicMeters = value / 1000;
+          break;
+        case "Milliliter":
+          cubicMeters = value / 1000000;
+          break;
+        default:
+          return 0;
       }
+
+      // Dann von Kubikmeter zur Zieleinheit
+      switch (toUnit) {
+        case "Cubic millimeter":
+          return cubicMeters * 1000000000;
+        case "Cubic centimeter":
+          return cubicMeters * 1000000;
+        case "Cubic meter":
+          return cubicMeters;
+        case "Liter":
+          return cubicMeters * 1000;
+        case "Milliliter":
+          return cubicMeters * 1000000;
+        default:
+          return 0;
+      }
+    },
+  },
+  speed: {
+    units: [
+      "Kilometer per hour",
+      "Meter per second",
+      "Mile per hour",
+      "Foot per second",
+    ],
+    convert: (value, fromUnit, toUnit) => {
+      // Erst zu Meter pro Sekunde konvertieren
+      let metersPerSecond;
+      switch (fromUnit) {
+        case "Kilometer per hour":
+          metersPerSecond = value / 3.6;
+          break;
+        case "Meter per second":
+          metersPerSecond = value;
+          break;
+        case "Mile per hour":
+          metersPerSecond = value * 0.44704;
+          break;
+        case "Foot per second":
+          metersPerSecond = value * 0.3048;
+          break;
+        default:
+          return 0;
+      }
+
+      // Dann von Meter pro Sekunde zur Zieleinheit
+      switch (toUnit) {
+        case "Kilometer per hour":
+          return metersPerSecond * 3.6;
+        case "Meter per second":
+          return metersPerSecond;
+        case "Mile per hour":
+          return metersPerSecond / 0.44704;
+        case "Foot per second":
+          return metersPerSecond / 0.3048;
+        default:
+          return 0;
+      }
+    },
     // Weitere Kategorien hier...
   },
-    time: {
-        units: ["Second", "Minute", "Hour", "Day"],
-        convert: (value, fromUnit, toUnit) => {
-            // Erst zu Sekunden konvertieren
-            let seconds;
-            switch (fromUnit) {
-                case "Second":
-                    seconds = value;
-                    break;
-                case "Minute":
-                    seconds = value * 60;
-                    break;
-                case "Hour":
-                    seconds = value * 3600;
-                    break;
-                case "Day":
-                    seconds = value * 86400;
-                    break;
-                default:
-                    return 0;
-            }
-            
-            // Dann von Sekunden zur Zieleinheit
-            switch (toUnit) {
-                case "Second":
-                    return seconds;
-                case "Minute":
-                    return seconds / 60;
-                case "Hour":
-                    return seconds / 3600;
-                case "Day":
-                    return seconds / 86400;
-                default:
-                    return 0;
-            }
-        }
-    }
+  time: {
+    units: ["Second", "Minute", "Hour", "Day"],
+    convert: (value, fromUnit, toUnit) => {
+      // Erst zu Sekunden konvertieren
+      let seconds;
+      switch (fromUnit) {
+        case "Second":
+          seconds = value;
+          break;
+        case "Minute":
+          seconds = value * 60;
+          break;
+        case "Hour":
+          seconds = value * 3600;
+          break;
+        case "Day":
+          seconds = value * 86400;
+          break;
+        default:
+          return 0;
+      }
+
+      // Dann von Sekunden zur Zieleinheit
+      switch (toUnit) {
+        case "Second":
+          return seconds;
+        case "Minute":
+          return seconds / 60;
+        case "Hour":
+          return seconds / 3600;
+        case "Day":
+          return seconds / 86400;
+        default:
+          return 0;
+      }
+    },
+  },
 };
 
 const UnitConverter = () => {

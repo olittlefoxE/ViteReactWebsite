@@ -2,6 +2,20 @@ import ToggleThemeButton from "./ToggleThemeButton";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
+/**
+ * @description Navigation bar component for the website, providing links to different sections and a theme toggle button.
+ * @param {HTMLNavElement} nav - The navigation element containing the links and theme toggle button.
+ * @param {Hook} useNavigate - Hook from react-router-dom for programmatic navigation.
+ * @param {Hook} useLocation - Hook from react-router-dom to get the current location object.
+ * @param {Function} motion - Animation library for React, used to create smooth transitions and animations.
+ * @param {Function} ToggleThemeButton - Component for toggling the website's theme between light and dark modes.
+ * @param {string} location.pathname - The current URL path, used to determine if we are on the home page.
+ * @param {Function} navigate - Function to programmatically navigate to different routes.
+ * @param {string} isHomePage - Boolean indicating if the current page is the home page.
+ * @param {Function} map - Function to iterate over an array and render buttons for each section.
+ * @returns {JSX.Element} <NavBar /> - The rendered navigation bar component.
+ */
+
 const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -10,6 +24,7 @@ const NavBar = () => {
   const isHomePage = location.pathname === "/home";
 
   return (
+    // Navigation bar with gradient background and subtle animations
     <nav
       className={`w-screen bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow py-4 shadow-md dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh overflow-hidden
         ${

@@ -2,6 +2,19 @@ import { useState, useMemo, useCallback, Suspense, lazy } from "react";
 import sortedProgrammingLanguagesData from "../data/ProgrammingLanguagesData.js";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 
+/**
+ * @description ProgrammingLanguagesPage component that displays a list of programming languages with search and sort functionality.
+ * @param {Hook} useState - Hook to manage state for search query, sort option, and dropdown open state.
+ * @param {Hook} useMemo - Hook to memoize derived data to prevent unnecessary recalculations.
+ * @param {Hook} useCallback - Hook to memoize functions to prevent unnecessary re-creations.
+ * @param {Hook} lazy - React function to dynamically import components for better performance.
+ * @param {Hook} Suspense - React component for handling loading states.
+ * @param {Function} sortedProgrammingLanguagesData - Array of programming languages data sorted by name.
+ * @param {Function} LoadingSpinner - Component to display a loading spinner while data is being fetched.
+ * @param {Function} ProgrammingLanguagesPanel - Component to display individual programming language cards.
+ * @returns {JSX.Element} <ProgrammingLanguagesPage /> - The rendered programming languages page component.
+ */
+
 // Lazy load the ProgrammingLanguagesPanel for better performance
 const ProgrammingLanguagesPanel = lazy(() =>
   import("../components/common/ProgrammingLanguagesPanel")

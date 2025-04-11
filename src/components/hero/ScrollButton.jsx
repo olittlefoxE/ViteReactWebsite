@@ -1,5 +1,12 @@
 import PropTypes from "prop-types";
 
+/**
+ * @description A button that scrolls to a target element when clicked.
+ * @param {Object} props - The component props.
+ * @param {string} props.targetId - The ID of the target element to scroll to.
+ * @returns {JSX.Element} The ScrollButton component.
+ */
+
 const ScrollButton = ({ targetId }) => {
   const handleClick = () => {
     const target = document.getElementById(targetId);

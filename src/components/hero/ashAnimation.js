@@ -1,3 +1,11 @@
+/** 
+ * @description: This code creates an ash animation effect on a canvas element, simulating the appearance of ash particles rising and fading away. The animation is designed to be responsive to window resizing and can be activated or deactivated based on user interactions or conditions.
+ * @function ashAnimation - Initializes the ash animation on a given canvas element.
+ * @param {HTMLCanvasElement} canvas - The canvas element where the animation will be drawn.
+ * @class AshParticle - Represents an ash particle with properties such as position, velocity, size, and opacity. It includes methods to update its position and draw itself on the canvas.
+ * @returns {Function} - A cleanup function to remove event listeners and cancel the animation frame when the animation is no longer needed.
+ */
+
 export function ashAnimation(canvas) {
   const ctx = canvas.getContext("2d");
 
@@ -86,7 +94,7 @@ class EmberParticle {
     this.y += this.speedY;
     this.x += this.speedX;
     this.life -= 0.004; // Langsamerer Verfall
-    
+
     // Smooth opacity transition
     this.opacity = (this.life / this.maxLife) * 0.8;
     this.color = `rgba(255, ${Math.random() * 100 + 155}, 0, ${this.opacity})`;
@@ -130,7 +138,7 @@ export const activateForgeEffect = () => {
       const ember = embers[i];
       ember.update();
       ember.draw(ctx);
-      
+
       if (ember.life <= 0 || ember.y < -50) {
         embers.splice(i, 1);
       }

@@ -1,3 +1,9 @@
+/**
+ * @description Footer component for the website, providing copyright information and branding.
+ * @param {HTMLfooterElement} footer - The footer element containing the branding and copyright information.
+ * @returns {JSX.Element} <Footer /> - The rendered footer component.
+ */
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-forgeAsh via-forgeSmoke to-fireGlow pb-4 pt-4 font-Poppins text-forgeGrayBase dark:from-forgeDark dark:via-forgeGrayDark dark:to-emberAsh">

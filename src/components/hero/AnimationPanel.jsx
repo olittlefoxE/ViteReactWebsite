@@ -1,11 +1,21 @@
 import { useEffect, useRef } from "react";
 import { ashAnimation } from "./ashAnimation";
 
+/**
+ * @description AnimationPanel component that renders a canvas element for the ash animation.
+ * @param {Function} useRef - Hook to create a mutable ref object.
+ * @param {Function} useEffect - Hook to perform side effects in function components.
+ * @param {Function} ashAnimation - Function to initialize the ash animation on the canvas.
+ * @returns {JSX.Element} <AnimationPanel /> - The rendered animation panel component.
+ */
+
 const AnimationPanel = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     // Initialize the ash animation
+    // Mount the canvas to the DOM
+    if (!canvasRef.current) return;
     const cleanup = ashAnimation(canvasRef.current);
 
     // Cleanup on component unmount

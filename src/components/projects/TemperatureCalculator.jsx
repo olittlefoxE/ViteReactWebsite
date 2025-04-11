@@ -1,4 +1,15 @@
-import { useState } from 'react';
+import { useState } from "react";
+
+/**
+ * @description Converts temperature between Celsius, Fahrenheit, and Kelvin.
+ * @param {number} value - The temperature value to convert.
+ * @param {string} fromUnit - The unit of the input temperature value.
+ * @param {string} toUnit - The unit to convert the temperature value to.
+ * @returns {number} - The converted temperature value.
+ * @throws {Error} - Throws an error if the input value is not a number or if the conversion fails.
+ * @returns {string} - Returns an empty string if the input value is empty or not a number.
+ * @returns {JSX.Element} - Returns a JSX element representing the temperature calculator component.
+ */
 
 const convertTemperature = (value, fromUnit, toUnit) => {
   if (value === "" || isNaN(value)) return "";

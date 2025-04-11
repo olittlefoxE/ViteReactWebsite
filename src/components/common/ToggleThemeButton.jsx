@@ -1,6 +1,20 @@
 import { useCallback, useEffect } from "react";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 
+/**
+ * @description ToggleThemeButton component
+ * @param {Hook} useLocalStorage - Custom hook for managing local storage state.
+ * @param {string} key - The key for local storage.
+ * @param {boolean} initialValue - Initial value for the theme state.
+ * @param {Hook} useCallback - Hook to memoize the toggle function.
+ * @param {Hook} useEffect - Hook to apply the theme class to the document element.
+ * @param {Function} setIsDarkMode - Function to update the theme state.
+ * @param {boolean} isDarkMode - Current theme state.
+ * @param {Function} toggleTheme - Function to toggle the theme state.
+ * @param {Function} document - Global object representing the HTML document.
+ * @returns {JSX.Element} <ToggleThemeButton /> - The rendered toggle theme button component.
+ */
+
 const ToggleThemeButton = () => {
   const [isDarkMode, setIsDarkMode] = useLocalStorage("theme", false);
 
@@ -20,7 +34,7 @@ const ToggleThemeButton = () => {
     >
       <div
         className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${
-          isDarkMode ? "translate-y-[150%]" : "translate-y-0"
+          isDarkMode ? "translate-y-[150%]" : "translate-y-0" // Move the sun icon up when dark mode is active
         }`}
       >
         <svg

@@ -57,3 +57,5 @@ This is a private website project. While we appreciate interest in our work, we 
 - Dennis Plischke (MinecraftLetsPlay)
 
 ## License
+
+[Licence](License.txt)

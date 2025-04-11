@@ -72,17 +72,14 @@ export default {
         // Forge Gradients
         forgeGradient: "linear-gradient(135deg, #212121, #424242, #D32F2F)", // Original forge gradient
         forgeGradientDark: "linear-gradient(135deg, #121212, #1C1C1C, #B71C1C)", // Original dark forge gradient
-        forgeGradientSteel:
-          "linear-gradient(220deg, #1B1B1B, #333333, #CCCCCC)", // Forge steel tones
+        forgeGradientSteel: "linear-gradient(220deg, #1B1B1B, #333333, #CCCCCC)", // Forge steel tones
         forgeGradientAsh: "linear-gradient(135deg, #424242, #757575, #BDBDBD)", // Forge ash tones
         forgeGradientIron: "linear-gradient(135deg, #212121, #333333, #1B1B1B)", // Forge iron tones
-        forgeGradientShadow:
-          "linear-gradient(135deg, #1B1B1B, #212121, #121212)", // Subtle shadow gradient
+        forgeGradientShadow: "linear-gradient(135deg, #1B1B1B, #212121, #121212)", // Subtle shadow gradient
 
         // Ember-Inspired Gradients
         emberGradient: "radial-gradient(circle, #F44336, #B71C1C, #212121)", // Original ember-inspired radial gradient
-        emberGradientFlare:
-          "radial-gradient(circle, #FF9E00, #FF5722, #E65100)", // Ember flare
+        emberGradientFlare: "radial-gradient(circle, #FF9E00, #FF5722, #E65100)", // Ember flare
         emberGradientHeat: "radial-gradient(circle, #FF6F61, #A52A2A, #1A0F0F)", // Heat-inspired gradient
         emberGradientGlow: "radial-gradient(circle, #FF7043, #FF5722, #121212)", // Subtle ember glow
       },
